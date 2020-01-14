@@ -27,8 +27,7 @@ lessons:
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 2**'
 
   - title: '<i class="fas fa-star"></i> **Exam 1**'
-    assignment: "01-exam"
-    
+
   - title: '<span class="fake-header-table">2. Production Theory</span>'
     header: True
 

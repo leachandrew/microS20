@@ -12,10 +12,9 @@ library(tibble)
 library(pander)
 ```
 
-- [<i class="fas fa-file-pdf"></i> `Download as PDF (Section 1 TuTh)`](/files/syllabus-s1-pdf.pdf)
-- [<i class="fas fa-file-pdf"></i> `Download as PDF (Section 2 MW)`](/files/syllabus-s2-pdf.pdf)
+- [<i class="fas fa-file-pdf"></i> `Download as PDF`](/files/syllabus-pdf.pdf)
 
-- **Last Updated**: September 6, 2019
+- **Last Updated**: January 14, 2019
 
 > "The curious task of economics is to demonstrate to men how little they really know about what they imagine they can design." - F.A. Hayek, 1974 Economics Nobel Laureate
 
