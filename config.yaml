@@ -1,4 +1,4 @@
-baseurl: "https://microf19.classes.ryansafner.com/"
+baseurl: "https://microS20.classes.ryansafner.com/"
 languageCode: "en-us"
 title: "Microeconomic Analysis"
 theme: "ath-tufte-hugo_18-19"
@@ -44,18 +44,18 @@ params:
     office: 118 Rosenstock
   course:
     number: ECON 306
-    semester: Fall 2019
-    days: "TuTh (§1); MW (§2)"
-    time: "11:30 AM-12:45 PM (§1); 2:00 PM-3:15 PM (§2)"
-    location: "Rosenstock 215 (§1); Hodson 236 (§)"
+    semester: Spring 2020
+    days: "TuTh"
+    time: "11:30 AM–12:45 PM"
+    location: "Rosenstock 218"
     twitter: ryansafner
     dates: >-
-      August 26–December 10, 2019
-    github: "ryansafner/microf19"
+      January 15–May 8, 2020
+    github: "ryansafner/microS20"
     #slack: "https://hoodeconometrics.slack.com/"
-    copyrightYear: "2019"
+    copyrightYear: "2020"
     contactDetails: >-
-      Office hours: TuTh 10:30--11:30AM
+      Office hours: TuTh 3:30–5:00PM
   university: 
     name: Hood College
     url: "https://www.hood.edu"

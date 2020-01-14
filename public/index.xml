@@ -2,50 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microeconomic Analysis</title>
-    <link>https://microf19.classes.ryansafner.com/</link>
+    <link>https://microS20.classes.ryansafner.com/</link>
     <description>Recent content on Microeconomic Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 May 2016 21:48:51 -0700</lastBuildDate>
     
-	<atom:link href="https://microf19.classes.ryansafner.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://microS20.classes.ryansafner.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://microf19.classes.ryansafner.com/about/</link>
+      <link>https://microS20.classes.ryansafner.com/about/</link>
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
-      <guid>https://microf19.classes.ryansafner.com/about/</guid>
+      <guid>https://microS20.classes.ryansafner.com/about/</guid>
       <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
     </item>
     
     <item>
       <title>Assignments</title>
-      <link>https://microf19.classes.ryansafner.com/assignments/</link>
+      <link>https://microS20.classes.ryansafner.com/assignments/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://microf19.classes.ryansafner.com/assignments/</guid>
+      <guid>https://microS20.classes.ryansafner.com/assignments/</guid>
       <description>Grade Calculator   Grade Calculator  Use this tool to calculate your final course grade and predict what grades you would need on remaining assignments to obtain a desired course grade.
 Homeworks There will be roughly a homework assignment for every lesson. These questions will help check your understanding and mastery of the material, and will be a combination of quantitative, graph, and short answer questions of examples. These will also be good indicators of what to expect on the exams.</description>
     </item>
     
     <item>
       <title>Reference</title>
-      <link>https://microf19.classes.ryansafner.com/reference/</link>
+      <link>https://microS20.classes.ryansafner.com/reference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://microf19.classes.ryansafner.com/reference/</guid>
+      <guid>https://microS20.classes.ryansafner.com/reference/</guid>
       <description>Contents  Tips for Success Math Review List of Math Appendices Interactive Examples   Look here over the course of the semester for resources, links, and tips on how to succeed in the course, how to write well, and other things of interest related to microeconomics.
 Tips for Success Take notes. On paper. Yes. Studies show that using pen and paper trump taking notes on a device. The main reason is because you cannot possibly write down everything I am saying by hand.</description>
     </item>
     
     <item>
       <title>Schedule</title>
-      <link>https://microf19.classes.ryansafner.com/schedule/</link>
+      <link>https://microS20.classes.ryansafner.com/schedule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://microf19.classes.ryansafner.com/schedule/</guid>
+      <guid>https://microS20.classes.ryansafner.com/schedule/</guid>
       <description>This page contains all of the following resources for each class meeting:
   Readings include textbook chapters and occasional journal articles  Assignments are due by the beginning of class unless otherwise stated  Class materials contain extra explanations, math/statistical properties &amp;amp; proofs, and other helpful resourcesThese “online appendices” keep the slides nice and de-cluttered!
   Slides are “Xaringan” presentations in html that can be opened in any browserFile &amp;gt; Print &amp;gt; Save as PDF if you wish to download them</description>
@@ -53,10 +53,10 @@ Tips for Success Take notes. On paper. Yes. Studies show that using pen and pape
     
     <item>
       <title>Syllabus</title>
-      <link>https://microf19.classes.ryansafner.com/syllabus/</link>
+      <link>https://microS20.classes.ryansafner.com/syllabus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://microf19.classes.ryansafner.com/syllabus/</guid>
+      <guid>https://microS20.classes.ryansafner.com/syllabus/</guid>
       <description>Download as PDF (Section 1 TuTh)
   Download as PDF (Section 2 MW)
  Last Updated: September 6, 2019
@@ -66,7 +66,7 @@ Dr. Ryan Safner
  118 Rosenstock
 safner@hood.edu
 @ryansafner
- Office hours: TuTh 10:30&amp;ndash;11:30AM</description>
+ Office hours: TuTh 3:30–5:00PM</description>
     </item>
     
   </channel>
