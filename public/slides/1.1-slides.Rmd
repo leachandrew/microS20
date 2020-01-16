@@ -28,7 +28,15 @@ output:
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(echo=F,
                       message=F,
-                      warning=F)
+                      warning=F,
+                      fig.retina=3,
+                      fig.align = "center")
+library("tidyverse")
+
+theme_slides <- theme_light() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
 ```
 
 # *Micro*-economics
@@ -54,7 +62,7 @@ knitr::opts_chunk$set(echo=F,
 ]
 
 .pull-right[
-![:scale 80%](https://www.dropbox.com/s/zd4izfode9qxq6s/macroeconomics.jpg?raw=1)
+![:scale 100%](https://www.dropbox.com/s/zd4izfode9qxq6s/macroeconomics.jpg?raw=1)
 ]
 
 ---
@@ -148,7 +156,7 @@ knitr::opts_chunk$set(echo=F,
 # Economics $\neq$ Business or $$$
 
 .center[
-![:scale 70%](https://www.dropbox.com/s/8bfcb5gvvihcl3n/tweetmoney2.png?raw=1)
+![:scale 65%](https://www.dropbox.com/s/8bfcb5gvvihcl3n/tweetmoney2.png?raw=1)
 ]
 
 ---
@@ -163,7 +171,7 @@ class: inverse, center, middle
 
 .pull-left[
 
-- Economics is a .whisper[way of thinking] based on a few core ideas:
+- Economics is a .hi-purple[way of thinking] based on a few core ideas:
 ]
 
 ---
@@ -172,9 +180,9 @@ class: inverse, center, middle
 
 .pull-left[
 
-- Economics is a .whisper[way of thinking] based on a few core ideas:
+- Economics is a .hi-purple[way of thinking] based on a few core ideas:
 
-- .shout[People respond to incentives]
+- .hi[People respond to incentives]
     - Money, punishment, taxes and subsidies, risk of injury, reputation, profits, sex, effort, morals
 
 ]
@@ -192,14 +200,13 @@ class: inverse, center, middle
 
 .pull-left[
 
-- Economics is a .whisper[way of thinking] based on a few core ideas:
+- Economics is a .hi-purple[way of thinking] based on a few core ideas:
 
-- .shout[People respond to incentives]
+- .hi[People respond to incentives]
     - Money, punishment, taxes and subsidies, risk of injury, reputation, profits, sex, effort, morals
 
-- .shout[Environments adjust until they are in equilibrium]
-    - Prices adjust until supply and demand are balanced
-    - Competing agents adjust their strategies until each is optimal given others’ actions
+- .hi[Environments adjust until they are in equilibrium]
+    - People make adjustments until their choices are optimal given others’ actions
 ]
 
 .pull-right[
@@ -226,7 +233,7 @@ The NYC Subway bans dogs unless they can be ["enclosed in a container"](https://
 # Incentives Example: Subway II
 
 .center[
-![:scale 40%](https://www.dropbox.com/s/zwtmw8gl4yx194s/dogsubway2.jpg?raw=1) ![:scale 25%](https://www.dropbox.com/s/hwzk9j6tdrak1zg/dogsubway1.jpg?raw=1)
+![:scale 40%](https://www.dropbox.com/s/zwtmw8gl4yx194s/dogsubway2.jpg?raw=1) ![:scale 27%](https://www.dropbox.com/s/hwzk9j6tdrak1zg/dogsubway1.jpg?raw=1)
 
 Pictures [Source](https://www.rover.com/blog/nyc-subway-dogs-fs/)
 ]
@@ -273,15 +280,15 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 .pull-left[
 
-- People respond to (changes in) incentives<sup>1</sup>
+- People respond to (changes in) incentives
 
-- People have different goals they seek to attain
+- People have goals they seek to attain
 
-- Blocking one alternative $\neq$ people stop persuing their goals
+- Blocking one alternative $\neq$ people *stop* persuing their goals
 
 - People will seek (less preferred) alternative methods of attaining their goals
 
-- People are creative, and many consequences are *unintended*
+- People are creative, and many consequences are .hi-purple[unintended]
 
 ] 
 
@@ -291,8 +298,6 @@ Some governments pay bounties to reduce pest populations such as rats.
 ![](https://www.dropbox.com/s/wp97bsk0yni31k9/incentive2.jpg?raw=1)
 ]
 ]
-
-.footnote[<sup>1</sup> Later we'll call these *prices*.]
 
 ---
 
@@ -305,6 +310,14 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 ---
 
+# Takeaways About Incentives III
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/aovtp296wj7pwdq/freelancer.png?raw=1)
+]
+
+---
+
 # Equilibrium Example I
 
 .pull-left[
@@ -344,7 +357,7 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 - Highway travel time: 1 hour (always)
 
-- Assume people .shout[optimize]: choose road to minimize travel time between cities
+- Assume people .hi[optimize]: choose road to **minimize travel time** between cities
 ]
 
 ---
@@ -436,13 +449,39 @@ Some governments pay bounties to reduce pest populations such as rats.
 ]
 
 .pull-right[
-
+.smaller[
 - Suppose the State *doubles the capacity* of the local road
 
-- Local road travel time: 30 min + 0.5 min/car
+- Local road travel time: .hi-purple[30 min + 0.5 min/car]
+
+- Highway travel time: 1 hour (always)
+]
+]
+
+---
+
+# Equilibrium Example V
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/fnj6xps8tk4gbwh/eq5.png?raw=1)
+]
+]
+
+.pull-right[
+.smaller[
+- Suppose the State *doubles the capacity* of the local road
+
+- Local road travel time: .hi-purple[30 min + 0.5 min/car]
 
 - Highway travel time: 1 hour (always)
 
+- Will this reduce travel time? 
+
+- Yes! says the State:
+    - 30 cars use the local road, takes 1 hour
+    - With wider road it takes 45 min!
+]
 ]
 
 ---
@@ -457,35 +496,10 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 .pull-right[
 
-- Suppose the State doubles the width of the local road
+.smaller[
+- Suppose the State *doubles the capacity* of the local road
 
-- Local road travel time: 30 min + 0.5 min/car
-
-- Highway travel time: 1 hour (always)
-
-- Will this reduce travel time? 
-
-- Yes! says the State:
-    - 30 cars use the local road, takes 1 hour
-    - With wider road it takes them 45 minutes!
-
-]
-
----
-
-# Equilibrium Example V
-
-.pull-left[
-.center[
-![](https://www.dropbox.com/s/fnj6xps8tk4gbwh/eq5.png?raw=1)
-]
-]
-
-.pull-right[
-
-- Suppose the State doubles the width of the local road
-
-- Local road travel time: 30 min + 0.5 min/car
+- Local road travel time: .hi-purple[30 min + 0.5 min/car]
 
 - Highway travel time: 1 hour (always)
 
@@ -493,11 +507,11 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 - Yes! says the State:
     - 30 cars use the local road, takes 1 hour
-    - With wider road, now it takes them only 45 minutes!
+    - With wider road it takes 45 min!
 
-- .shout[Is this an equilibrium?]
+- .hi[Is this an equilibrium?]
 ]
-
+]
 
 ---
 
@@ -511,10 +525,9 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 # Comparative Statics
 
-- .shout[Comparative statics]: examining changes in equilibria cased by an external change (in incentives, constraints, etc.)
+- .hi[Comparative statics]: examining changes in equilibria cased by an external change (in incentives, constraints, etc.)
 
-```{r, echo = F, message = F, warning = F, fig.align = "center", fig.width = 6, fig.asp = 0.618, fig.retina = 2}
-library("tidyverse")
+```{r, echo = F, message = F, warning = F, fig.align = "center", fig.width = 12, fig.asp = 0.618, fig.retina = 3}
 library("ggrepel")
 
 plot_eqs <- tibble(x = c(1, 3),
@@ -558,19 +571,6 @@ ggplot(plot_eqs, aes(x = x,
 ]
 ]
 
-
----
-
-# Reminder: Positive vs Normative Economics
-
-- You may vehemently disagree with certain policies, institutions, or market outcomes
-- All I ask is you allow us to explain *why* they occur
-- You will miss useful explanations (and the ability to improve things you disapprove of) if you are blinded by your judgment
-- You may disapprove of gravity, but you are bound by it
-
-.center[
-![:scale 50%](https://www.dropbox.com/s/7l05ucw4hfwlsyc/economics1.jpg?raw=1)
-]
 
 ---
 
@@ -656,11 +656,11 @@ ggplot(plot_eqs, aes(x = x,
 
 ## Optimization
 
-- Agents have objectives they value
+- Agents have .hi[objectives] they value
 
-- Agents face constraints
+- Agents face .hi[constraints]
 
-- Make tradeoffs to maximize objectives within constraints
+- Make .hi[tradeoffs] to maximize objectives within constraints
 
 .center[
 ![](https://www.dropbox.com/s/qvr240t5j6t3arm/optimize.jpeg?raw=1)
@@ -673,80 +673,16 @@ ggplot(plot_eqs, aes(x = x,
 
 ## Equilibrium
 
-- Agents face competition from others that affect prices
+- Agents .hi[compete] with others over **scarce** resources
 
-- Agents adjust their behaviors based on prices
+- Agents .hi[adjust] behaviors based on prices
 
-- Stable outcomes result where all agents cease adjusting
+- .hi[Stable outcomes] when adjustments stop
 
 .center[
 ![](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
 ]
 
-]
-
----
-
-# Model 1: Optimization
-
-.pull-left[
-
-- .shout[Optimization]: which action(s) best achieve an *objective*? 
-    - How long should I keep my old car before buying a new one?
-    - Should the U.S. legalize marijuana?
-    - Which college courses should I pick?
-    - Which political campaign platform will win the most votes?
-    - Which path minimizes travel time? 
-
-- Find the *optimum* using .whisper[marginal analysis]
-]
-
-.pull-right[
-.center[
-![](https://www.dropbox.com/s/qvr240t5j6t3arm/optimize.jpeg?raw=1)
-]
-]
-
----
-
-# Model 2: Equilibrium
-
-.pull-left[
-
-- .shout[Equilibrium]: how do stable outcomes emerge in the world (and change)? 
-    - Why is there a shortage of affordable housing in big cities?
-    - Why is the price of Apple iPhones so high?
-    - Why is there only one provider of electricity in a city?
-    - Why did the recent election turn out the way it did?
-
-- Find the outcome where *no agents change their behavior* using .whisper[supply and demand]
-]
-
-.pull-right[
-.center[
-![](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
-]
-]
-
----
-
-# Model 3: Game Theory
-
-.pull-left[
-
-- .shout[Game Theory]: what outcome will we *jointly* reach if our choices are **strategic**?
-    - Can big companies secretly all raise prices together?
-    - Are markets with only a few sellers actually competitive?
-    - How can we coordinate our actions to reduce climate change?
-    - Why is doping so prevalent in professional sports?
-
-- Find the outcome where *no agents change their behavior* (again, but slightly different!)
-]
-
-.pull-right[
-.center[
-![](https://www.dropbox.com/s/tymdsxbqaq2scxq/chessknights.jpg?raw=1)
-]
 ]
 
 ---
@@ -771,6 +707,37 @@ ggplot(plot_eqs, aes(x = x,
 ![](https://www.dropbox.com/s/17cb7ceqipgi8fs/citymodel.jpg?raw=1)
 ]
 ]
+
+---
+
+# Economics Uses, but Is Not Limited to, Math
+
+```{r, fig.width=12}
+red_pink <- "#e64173"
+blue <- "#2b59c3"
+
+venn_colors <- c(red_pink, blue)
+venn_lines <- rep("solid", 10)
+# Locations of circles
+venn_df <- tibble(
+  x  = c( 0.0,   2.0),
+  y  = c( 0.0,   0.0),
+  r  = c( 2.0,   2.0),
+  l  = c( "Math \n Modeling", "Thinking Like \n an Economist"),
+  xl = c( -1.0,    3.0),
+  yl = c( 0.0,   0.0))
+# Venn
+ggplot(data = venn_df, aes(x0 = x, y0 = y, r = r, fill = l, color = l)) +
+ggforce::geom_circle(aes(linetype = l), alpha = 0.3, size = 0.75) +
+theme_void() +
+theme(legend.position = "none") +
+scale_fill_manual(values = venn_colors) +
+scale_color_manual(values = venn_colors) +
+scale_linetype_manual(values = venn_lines) +
+  geom_text(aes(x = xl, y = yl, label = l), size = 8, family = "Fira Sans Condensed") +
+coord_equal()
+```
+
 ---
 
 class: inverse, middle, center
@@ -794,8 +761,6 @@ By the end of this course, you will:
 # Assignments
 
 ```{r}
-library(tidyverse)
-
 assignments <- tribble(
   ~"",  ~Assignment, ~Percent,
   1     , "Opinion-Editorial", "20%",
@@ -811,7 +776,7 @@ knitr::kable(assignments, "html")
 # Your "Textbook"
 
 .center[
-![:scale 45%](https://www.dropbox.com/s/2uehxiwnwpjkteh/microtextbook.jpg?raw=1)
+![:scale 40%](https://www.dropbox.com/s/2uehxiwnwpjkteh/microtextbook.jpg?raw=1)
 ]
 
 ---
