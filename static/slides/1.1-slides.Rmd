@@ -54,7 +54,7 @@ knitr::opts_chunk$set(echo=F,
 ]
 
 .pull-right[
-![:scale 80%](https://www.dropbox.com/s/zd4izfode9qxq6s/macroeconomics.jpg?raw=1)
+![:scale 100%](https://www.dropbox.com/s/zd4izfode9qxq6s/macroeconomics.jpg?raw=1)
 ]
 
 ---
@@ -148,7 +148,7 @@ knitr::opts_chunk$set(echo=F,
 # Economics $\neq$ Business or $$$
 
 .center[
-![:scale 70%](https://www.dropbox.com/s/8bfcb5gvvihcl3n/tweetmoney2.png?raw=1)
+![:scale 65%](https://www.dropbox.com/s/8bfcb5gvvihcl3n/tweetmoney2.png?raw=1)
 ]
 
 ---
@@ -163,7 +163,7 @@ class: inverse, center, middle
 
 .pull-left[
 
-- Economics is a .whisper[way of thinking] based on a few core ideas:
+- Economics is a .hi-purple[way of thinking] based on a few core ideas:
 ]
 
 ---
@@ -172,9 +172,9 @@ class: inverse, center, middle
 
 .pull-left[
 
-- Economics is a .whisper[way of thinking] based on a few core ideas:
+- Economics is a .hi-purple[way of thinking] based on a few core ideas:
 
-- .shout[People respond to incentives]
+- .hi[People respond to incentives]
     - Money, punishment, taxes and subsidies, risk of injury, reputation, profits, sex, effort, morals
 
 ]
@@ -192,14 +192,13 @@ class: inverse, center, middle
 
 .pull-left[
 
-- Economics is a .whisper[way of thinking] based on a few core ideas:
+- Economics is a .hi-purple[way of thinking] based on a few core ideas:
 
-- .shout[People respond to incentives]
+- .hi[People respond to incentives]
     - Money, punishment, taxes and subsidies, risk of injury, reputation, profits, sex, effort, morals
 
-- .shout[Environments adjust until they are in equilibrium]
-    - Prices adjust until supply and demand are balanced
-    - Competing agents adjust their strategies until each is optimal given others’ actions
+- .hi[Environments adjust until they are in equilibrium]
+    - People make adjustments until their choices are optimal given others’ actions
 ]
 
 .pull-right[
@@ -273,11 +272,11 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 .pull-left[
 
-- People respond to (changes in) incentives<sup>1</sup>
+- People respond to (changes in) incentives
 
-- People have different goals they seek to attain
+- People have goals they seek to attain
 
-- Blocking one alternative $\neq$ people stop persuing their goals
+- Blocking one alternative $\neq$ people *stop* persuing their goals
 
 - People will seek (less preferred) alternative methods of attaining their goals
 
@@ -291,8 +290,6 @@ Some governments pay bounties to reduce pest populations such as rats.
 ![](https://www.dropbox.com/s/wp97bsk0yni31k9/incentive2.jpg?raw=1)
 ]
 ]
-
-.footnote[<sup>1</sup> Later we'll call these *prices*.]
 
 ---
 
@@ -344,7 +341,7 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 - Highway travel time: 1 hour (always)
 
-- Assume people .shout[optimize]: choose road to minimize travel time between cities
+- Assume people .hi[optimize]: choose road to minimize travel time between cities
 ]
 
 ---
@@ -436,13 +433,39 @@ Some governments pay bounties to reduce pest populations such as rats.
 ]
 
 .pull-right[
-
+.smaller[
 - Suppose the State *doubles the capacity* of the local road
 
-- Local road travel time: 30 min + 0.5 min/car
+- Local road travel time: .hi-purple[30 min + 0.5 min/car]
+
+- Highway travel time: 1 hour (always)
+]
+]
+
+---
+
+# Equilibrium Example V
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/fnj6xps8tk4gbwh/eq5.png?raw=1)
+]
+]
+
+.pull-right[
+.smaller[
+- Suppose the State *doubles the capacity* of the local road
+
+- Local road travel time: .hi-purple[30 min + 0.5 min/car]
 
 - Highway travel time: 1 hour (always)
 
+- Will this reduce travel time? 
+
+- Yes! says the State:
+    - 30 cars use the local road, takes 1 hour
+    - With wider road it takes 45 min!
+]
 ]
 
 ---
@@ -457,35 +480,10 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 .pull-right[
 
-- Suppose the State doubles the width of the local road
+.smaller[
+- Suppose the State *doubles the capacity* of the local road
 
-- Local road travel time: 30 min + 0.5 min/car
-
-- Highway travel time: 1 hour (always)
-
-- Will this reduce travel time? 
-
-- Yes! says the State:
-    - 30 cars use the local road, takes 1 hour
-    - With wider road it takes them 45 minutes!
-
-]
-
----
-
-# Equilibrium Example V
-
-.pull-left[
-.center[
-![](https://www.dropbox.com/s/fnj6xps8tk4gbwh/eq5.png?raw=1)
-]
-]
-
-.pull-right[
-
-- Suppose the State doubles the width of the local road
-
-- Local road travel time: 30 min + 0.5 min/car
+- Local road travel time: .hi-purple[30 min + 0.5 min/car]
 
 - Highway travel time: 1 hour (always)
 
@@ -493,11 +491,11 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 - Yes! says the State:
     - 30 cars use the local road, takes 1 hour
-    - With wider road, now it takes them only 45 minutes!
+    - With wider road it takes 45 min!
 
-- .shout[Is this an equilibrium?]
+- .hi[Is this an equilibrium?]
 ]
-
+]
 
 ---
 
@@ -511,9 +509,9 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 # Comparative Statics
 
-- .shout[Comparative statics]: examining changes in equilibria cased by an external change (in incentives, constraints, etc.)
+- .hi[Comparative statics]: examining changes in equilibria cased by an external change (in incentives, constraints, etc.)
 
-```{r, echo = F, message = F, warning = F, fig.align = "center", fig.width = 6, fig.asp = 0.618, fig.retina = 2}
+```{r, echo = F, message = F, warning = F, fig.align = "center", fig.width = 12, fig.asp = 0.618, fig.retina = 3}
 library("tidyverse")
 library("ggrepel")
 
@@ -656,11 +654,11 @@ ggplot(plot_eqs, aes(x = x,
 
 ## Optimization
 
-- Agents have objectives they value
+- Agents have .hi[objectives] they value
 
-- Agents face constraints
+- Agents face .hi[constraints]
 
-- Make tradeoffs to maximize objectives within constraints
+- Make .hi[tradeoffs] to maximize objectives within constraints
 
 .center[
 ![](https://www.dropbox.com/s/qvr240t5j6t3arm/optimize.jpeg?raw=1)
@@ -673,11 +671,11 @@ ggplot(plot_eqs, aes(x = x,
 
 ## Equilibrium
 
-- Agents face competition from others that affect prices
+- Agents .hi[compete] with others over **scarce** resources
 
-- Agents adjust their behaviors based on prices
+- Agents .hi[adjust] behaviors based on prices
 
-- Stable outcomes result where all agents cease adjusting
+- .hi[Stable outcomes] when adjustments stop
 
 .center[
 ![](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
@@ -691,19 +689,19 @@ ggplot(plot_eqs, aes(x = x,
 
 .pull-left[
 
-- .shout[Optimization]: which action(s) best achieve an *objective*? 
+- .hi[Optimization]: which action(s) best achieve an *objective*? 
     - How long should I keep my old car before buying a new one?
     - Should the U.S. legalize marijuana?
     - Which college courses should I pick?
     - Which political campaign platform will win the most votes?
     - Which path minimizes travel time? 
 
-- Find the *optimum* using .whisper[marginal analysis]
+- Find the *optimum* using .hi-purple[marginal analysis]
 ]
 
 .pull-right[
 .center[
-![](https://www.dropbox.com/s/qvr240t5j6t3arm/optimize.jpeg?raw=1)
+![:scale 100%](https://www.dropbox.com/s/qvr240t5j6t3arm/optimize.jpeg?raw=1)
 ]
 ]
 
@@ -713,18 +711,18 @@ ggplot(plot_eqs, aes(x = x,
 
 .pull-left[
 
-- .shout[Equilibrium]: how do stable outcomes emerge in the world (and change)? 
+- .hi[Equilibrium]: how do stable outcomes emerge in the world (and change)? 
     - Why is there a shortage of affordable housing in big cities?
     - Why is the price of Apple iPhones so high?
     - Why is there only one provider of electricity in a city?
     - Why did the recent election turn out the way it did?
 
-- Find the outcome where *no agents change their behavior* using .whisper[supply and demand]
+- Find the outcome where *no agents change their behavior* using .hi-purple[supply and demand]
 ]
 
 .pull-right[
 .center[
-![](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
+![:scale 100%](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
 ]
 ]
 
@@ -734,9 +732,8 @@ ggplot(plot_eqs, aes(x = x,
 
 .pull-left[
 
-- .shout[Game Theory]: what outcome will we *jointly* reach if our choices are **strategic**?
+- .hi[Game Theory]: what outcome will we *jointly* reach if our choices are **strategic**?
     - Can big companies secretly all raise prices together?
-    - Are markets with only a few sellers actually competitive?
     - How can we coordinate our actions to reduce climate change?
     - Why is doping so prevalent in professional sports?
 
@@ -811,7 +808,7 @@ knitr::kable(assignments, "html")
 # Your "Textbook"
 
 .center[
-![:scale 45%](https://www.dropbox.com/s/2uehxiwnwpjkteh/microtextbook.jpg?raw=1)
+![:scale 40%](https://www.dropbox.com/s/2uehxiwnwpjkteh/microtextbook.jpg?raw=1)
 ]
 
 ---
