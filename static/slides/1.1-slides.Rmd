@@ -1,7 +1,7 @@
 ---
 title: "1.1: The Tools of Microeconomics"
-subtitle: "ECON 306 · Microeconomic Analysis · Fall 2019"
-author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/microf19"><i class="fa fa-github fa-fw"></i> ryansafner/microf19</a><br> <a href="https://microF19.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> microF19.classes.ryansafner.com</a><br>'
+subtitle: "ECON 306 · Microeconomic Analysis · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/microS20"><i class="fa fa-github fa-fw"></i> ryansafner/microS20</a><br> <a href="https://microS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> microS20.classes.ryansafner.com</a><br>'
 #date:
 output:
   xaringan::moon_reader:
@@ -133,6 +133,22 @@ knitr::opts_chunk$set(echo=F,
 .center[
 ![:scale 100%](https://www.dropbox.com/s/vrf805179hkg0f4/expert.png?raw=1)
 ]
+]
+
+---
+
+# Economics $\neq$ Business or $$$
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/g8dwk8j5x2fj1uh/tweetmoney.png?raw=1)
+]
+
+---
+
+# Economics $\neq$ Business or $$$
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/8bfcb5gvvihcl3n/tweetmoney2.png?raw=1)
 ]
 
 ---
@@ -485,6 +501,14 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 ---
 
+# In the Long Run...(& Repeating the Same Mistake)
+
+.center[
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">1970: One more lane will fix it.<br>1980: One more lane will fix it.<br>1990: One more lane will fix it.<br>2000: One more lane will fix it.<br>2010: One more lane will fix it.<br>2020: ?<a href="https://t.co/NjS1IPORG2">pic.twitter.com/NjS1IPORG2</a><br>via <a href="https://twitter.com/avelezig?ref_src=twsrc%5Etfw">@avelezig</a></p>&mdash; Urban Planning &amp; Mobility 🚲🚶
+♂️🚆 (@urbanthoughts11) <a href="https://twitter.com/urbanthoughts11/status/1191295205187686400?ref_src=twsrc%5Etfw">November 4, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> ]
+
+---
+
 # Comparative Statics
 
 - .shout[Comparative statics]: examining changes in equilibria cased by an external change (in incentives, constraints, etc.)
@@ -533,7 +557,7 @@ ggplot(plot_eqs, aes(x = x,
 ![:scale 70%](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
 ]
 ]
-]
+
 
 ---
 
@@ -797,7 +821,7 @@ knitr::kable(assignments, "html")
 .center[
 ![:scale 30%](https://www.dropbox.com/s/63ht5z4yi2qg19l/micro_hex.png?raw=1)
 
-[microf19.classes.ryansafner.com](http://microf19.classes.ryansafner.com)
+[microS20.classes.ryansafner.com](http://microS20.classes.ryansafner.com)
 ]
 
 ---
@@ -813,7 +837,7 @@ knitr::kable(assignments, "html")
 
 - You are learning how to learn
 
-- See the [reference page](http://microf19.classes.ryansafner.com/reference) for more
+- See the [reference page](http://microS20.classes.ryansafner.com/reference) for more
 ]
 
 .pull-right[

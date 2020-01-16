@@ -1,35 +1,26 @@
----
-title: "1.1: The Tools of Microeconomics"
-subtitle: "ECON 306 · Microeconomic Analysis · Spring 2020"
-author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/microS20"><i class="fa fa-github fa-fw"></i> ryansafner/microS20</a><br> <a href="https://microS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> microS20.classes.ryansafner.com</a><br>'
-#date:
-output:
-  xaringan::moon_reader:
-    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
-    lib_dir: libs
-    #seal: false
-    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
-    nature:
-      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
-      highlightStyle: ocean #rainbow #monokai rainbow solarized-light #tomorrow-night -blue -eighties zenburn
-      highlightLines: true
-      countIncrementalSlides: false
-      ratio: "16:9"
-      slideNumberFormat: |
-        <div class="progress-bar-container">
-          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
-          </div>
-        </div>
-    includes:
-      in_header: header.html # for font awesome, used in title  
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>1.1: The Tools of Microeconomics</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner  Assistant Professor of Economics    safner@hood.edu    ryansafner/microS20    microS20.classes.ryansafner.com" />
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+    <link rel="stylesheet" href="custom-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 1.1: The Tools of Microeconomics
+## ECON 306 · Microeconomic Analysis · Spring 2020
+### Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/microS20"><i class="fa fa-github fa-fw"></i> ryansafner/microS20</a><br> <a href="https://microS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> microS20.classes.ryansafner.com</a><br>
+
 ---
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(echo=F,
-                      message=F,
-                      warning=F)
-```
+
+
 
 # *Micro*-economics
 
@@ -45,11 +36,11 @@ knitr::opts_chunk$set(echo=F,
 
 - What is "an economy?"
 
-- Where do aggregates (GDP, unemployment, & inflation) come from? 
+- Where do aggregates (GDP, unemployment, &amp; inflation) come from? 
 
 - Micro: [modelling] Choices and consequences
 
-- Macro: [modelling] Systemic interaction of choosers & emergent behavior
+- Macro: [modelling] Systemic interaction of choosers &amp; emergent behavior
 
 ]
 
@@ -61,15 +52,15 @@ knitr::opts_chunk$set(echo=F,
 
 # Where You Are Now
 
-- Basic concepts of markets, individuals (consumers & firms), economies:
+- Basic concepts of markets, individuals (consumers &amp; firms), economies:
     - ECON 205: Principles of Macroeconomics
     - ECON 206: Principles of Microeconomics
 
-- Modelling markets, individuals (consumers & firms), economies
+- Modelling markets, individuals (consumers &amp; firms), economies
     - ECON 306: Microeconomic Analysis
-    - ECON 305: Macroeconomic Analysis<sup>1</sup>
+    - ECON 305: Macroeconomic Analysis&lt;sup&gt;1&lt;/sup&gt;
     
-.footnote[<sup>1</sup> Required for ECON majors only. Calculus I is required.]
+.footnote[&lt;sup&gt;1&lt;/sup&gt; Required for ECON majors only. Calculus I is required.]
 
 ---
 
@@ -79,7 +70,7 @@ knitr::opts_chunk$set(echo=F,
 
 - Terms you "know" from ordinary life mean *very different things* to economists:
 
-> Cost, efficiency, welfare, competition, marginal, equilibrium, profit, public good, discrimination, elasticity
+&gt; Cost, efficiency, welfare, competition, marginal, equilibrium, profit, public good, discrimination, elasticity
 
 - Using these words' "ordinary" meanings will lead to wrong economic conclusions!
 
@@ -101,7 +92,7 @@ knitr::opts_chunk$set(echo=F,
 
 - You'll need to master a new vocabulary:
 
-> externality, marginal rate of transformation, marginal cost, consumer surplus, allocative efficiency
+&gt; externality, marginal rate of transformation, marginal cost, consumer surplus, allocative efficiency
 
 - I will try to avoid jargon, but many of these concepts are useful in the real world! 
 
@@ -137,7 +128,7 @@ knitr::opts_chunk$set(echo=F,
 
 ---
 
-# Economics $\neq$ Business or $$$
+# Economics `\(\neq\)` Business or $$$
 
 .center[
 ![:scale 80%](https://www.dropbox.com/s/g8dwk8j5x2fj1uh/tweetmoney.png?raw=1)
@@ -145,7 +136,7 @@ knitr::opts_chunk$set(echo=F,
 
 ---
 
-# Economics $\neq$ Business or $$$
+# Economics `\(\neq\)` Business or $$$
 
 .center[
 ![:scale 70%](https://www.dropbox.com/s/8bfcb5gvvihcl3n/tweetmoney2.png?raw=1)
@@ -273,11 +264,11 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 .pull-left[
 
-- People respond to (changes in) incentives<sup>1</sup>
+- People respond to (changes in) incentives&lt;sup&gt;1&lt;/sup&gt;
 
 - People have different goals they seek to attain
 
-- Blocking one alternative $\neq$ people stop persuing their goals
+- Blocking one alternative `\(\neq\)` people stop persuing their goals
 
 - People will seek (less preferred) alternative methods of attaining their goals
 
@@ -292,15 +283,15 @@ Some governments pay bounties to reduce pest populations such as rats.
 ]
 ]
 
-.footnote[<sup>1</sup> Later we'll call these *prices*.]
+.footnote[&lt;sup&gt;1&lt;/sup&gt; Later we'll call these *prices*.]
 
 ---
 
 # Takeaways About Incentives II
 
 .center[
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Whenever I am working on policy decisions I think of this image... 🚴
-♂️ <a href="https://t.co/GE3yyDmjs0">pic.twitter.com/GE3yyDmjs0</a></p>&mdash; Councillor Peter Fortune (@PeterTFortune) <a href="https://twitter.com/PeterTFortune/status/1159176114230763520?ref_src=twsrc%5Etfw">August 7, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Whenever I am working on policy decisions I think of this image... 🚴
+♂️ &lt;a href="https://t.co/GE3yyDmjs0"&gt;pic.twitter.com/GE3yyDmjs0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Councillor Peter Fortune (@PeterTFortune) &lt;a href="https://twitter.com/PeterTFortune/status/1159176114230763520?ref_src=twsrc%5Etfw"&gt;August 7, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 ]
 
 ---
@@ -501,11 +492,11 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 ---
 
-# In the Long Run...(& Repeating the Same Mistake)
+# In the Long Run...(&amp; Repeating the Same Mistake)
 
 .center[
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">1970: One more lane will fix it.<br>1980: One more lane will fix it.<br>1990: One more lane will fix it.<br>2000: One more lane will fix it.<br>2010: One more lane will fix it.<br>2020: ?<a href="https://t.co/NjS1IPORG2">pic.twitter.com/NjS1IPORG2</a><br>via <a href="https://twitter.com/avelezig?ref_src=twsrc%5Etfw">@avelezig</a></p>&mdash; Urban Planning &amp; Mobility 🚲🚶
-♂️🚆 (@urbanthoughts11) <a href="https://twitter.com/urbanthoughts11/status/1191295205187686400?ref_src=twsrc%5Etfw">November 4, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> ]
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;1970: One more lane will fix it.&lt;br&gt;1980: One more lane will fix it.&lt;br&gt;1990: One more lane will fix it.&lt;br&gt;2000: One more lane will fix it.&lt;br&gt;2010: One more lane will fix it.&lt;br&gt;2020: ?&lt;a href="https://t.co/NjS1IPORG2"&gt;pic.twitter.com/NjS1IPORG2&lt;/a&gt;&lt;br&gt;via &lt;a href="https://twitter.com/avelezig?ref_src=twsrc%5Etfw"&gt;@avelezig&lt;/a&gt;&lt;/p&gt;&amp;mdash; Urban Planning &amp;amp; Mobility 🚲🚶
+♂️🚆 (@urbanthoughts11) &lt;a href="https://twitter.com/urbanthoughts11/status/1191295205187686400?ref_src=twsrc%5Etfw"&gt;November 4, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; ]
 
 ---
 
@@ -513,30 +504,7 @@ Some governments pay bounties to reduce pest populations such as rats.
 
 - .shout[Comparative statics]: examining changes in equilibria cased by an external change (in incentives, constraints, etc.)
 
-```{r, echo = F, message = F, warning = F, fig.align = "center", fig.width = 6, fig.asp = 0.618, fig.retina = 2}
-library("tidyverse")
-library("ggrepel")
-
-plot_eqs <- tibble(x = c(1, 3),
-                 y = c(1, 1),
-                 lab = c("Equilibrium 1", "Equilibrium 2"))
-
-plot_shock <- tibble(x = c(2),
-                 y = c(1),
-                 lab = c("Change"))
-
-ggplot(plot_eqs, aes(x = x,
-                   y = y))+
-  geom_point(data = plot_eqs, shape = 22, size = 40, fill = "limegreen")+ # shape for equilibria
-  geom_point(data = plot_shock, shape = 23, size = 28, fill = "firebrick2")+ # shape for shock
-  geom_text(data = plot_eqs, mapping = aes(label = lab), color = "white")+ # text for equilibria
-  geom_text(data = plot_shock, mapping = aes(label = lab), color = "white")+ # text for shock
-  scale_x_continuous(expand = c(0.125,0.125))+
-  scale_y_continuous(breaks=c(0.99, 1.01), limits = c(0.99, 1.01), expand = c(0,0))+
-  annotate("segment", x = 1.25, xend = 1.75, y = 1, yend = 1, colour = "#000000", size=0.5, linetype = 2, alpha=1, arrow=arrow(length=unit(0.25,"cm"), ends="last", type="closed"))+
-  annotate("segment", x = 2.25, xend = 2.75, y = 1, yend = 1, colour = "#000000", size=0.5, linetype = 2, alpha=1, arrow=arrow(length=unit(0.25,"cm"), ends="last", type="closed"))+
-  theme_void()
-```
+&lt;img src="1.1-slides_files/figure-html/unnamed-chunk-1-1.png" width="432" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -638,7 +606,7 @@ ggplot(plot_eqs, aes(x = x,
     - Purposive, strategic human beings 
     - Introspective understanding
 
-> "All models lie. The art is telling useful lies." - George Box
+&gt; "All models lie. The art is telling useful lies." - George Box
 
 ]
 
@@ -793,18 +761,32 @@ By the end of this course, you will:
 
 # Assignments
 
-```{r}
-library(tidyverse)
-
-assignments <- tribble(
-  ~"",  ~Assignment, ~Percent,
-  1     , "Opinion-Editorial", "20%",
-  "n"  , "Homeworks (Average)", "20%",
-  3      , "Exams", "20% each",
-)
-
-knitr::kable(assignments, "html")
-```
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Assignment &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Percent &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Opinion-Editorial &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 20% &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; n &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Homeworks (Average) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 20% &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Exams &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 20% each &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 ---
 
@@ -853,3 +835,98 @@ knitr::kable(assignments, "html")
 .center[
 ![:scale 75%](https://www.dropbox.com/s/za9h5a9z38lz9g1/micro_flowchart_blankbg.png?raw=1)
 ]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "ocean",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div> "
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
