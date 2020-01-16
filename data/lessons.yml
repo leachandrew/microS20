@@ -82,7 +82,5 @@ lessons:
     header: True
 
   - title: '<i class="fas fa-laptop-code"></i> **Op-Ed due last day of class**'
-    assignment: "op-ed"
 
   - title: '<i class="fas fa-star"></i> **Final Exam**'
-    assignment: "03-exam"
