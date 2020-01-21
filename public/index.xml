@@ -2,13 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microeconomic Analysis</title>
-    <link>https://microS20.classes.ryansafner.com/</link>
+    <link>https://microS20.classes.ryansafner.com/index.html</link>
     <description>Recent content on Microeconomic Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 May 2016 21:48:51 -0700</lastBuildDate>
     
 	<atom:link href="https://microS20.classes.ryansafner.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>pe="application/rss+xml" />
     
     
     <item>
@@ -38,6 +41,16 @@ Slides   Lecture Slides  Preliminary Survey Please take the preliminary survey o
       <guid>https://microS20.classes.ryansafner.com/assignments/</guid>
       <description>Grade Calculator   Grade Calculator  Use this tool to calculate your final course grade and predict what grades you would need on remaining assignments to obtain a desired course grade.
 Homeworks There will be roughly a homework assignment for every lesson. These questions will help check your understanding and mastery of the material, and will be a combination of quantitative, graph, and short answer questions of examples. These will also be good indicators of what to expect on the exams.</description>
+    </item>
+    
+    <item>
+      <title>Class 2: Scarcity, Choice, and Cost</title>
+      <link>https://microS20.classes.ryansafner.com/class/1.2-class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://microS20.classes.ryansafner.com/class/1.2-class/</guid>
+      <description> Contents  Overview Slides Survey   Overview Before we jump into our optimization models to descibe and predict (changes in) individual choices and behavior, we cover the basic principles of choice and action in a world of scarcity. This is what motivates economics.
+Slides   Lecture Slides  Survey </description>
     </item>
     
     <item>
@@ -78,7 +91,7 @@ Tips for Success Take notes. On paper. Yes. Studies show that using pen and pape
       
       <guid>https://microS20.classes.ryansafner.com/syllabus/</guid>
       <description>Download as PDF
- Last Updated: January 14, 2019
+ Last Updated: January 20, 2019
    “The curious task of economics is to demonstrate to men how little they really know about what they imagine they can design.” - F.A. Hayek, 1974 Economics Nobel Laureate
  Microeconomic Analysis&amp;#8853;Instructor
 Dr. Ryan Safner
