@@ -1,0 +1,55 @@
+---
+title: "1.4 Preferences I: Indifference Curves - Class Notes"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+*Tuesday, January 28, 2020*
+
+# Overview
+
+We continue with our model of how individuals choose. Our focus for this class, and next, is what are people's *objectives*? How can we operationalize their preferences in a meaningful way? Today we will discuss one tool - indifference curves - and start an explanation of *utility* and how we can model people as trying to "maximize" it (we will wrap that up in the next class). 
+
+# Slides
+
+- [<i class="fas fa-external-link-square-alt"></i> Lecture Slides](/slides/1.4-slides.html)
+
+
+# Practice Problems
+
+[Answers](/practice/1.3-practice-answers.pdf) to the practice problems from the previous class (on budget constraints) have been posted. 
+
+# Math Appendix
+
+## Utility Functions and PMTs
+
+Two utility functions $u(\cdot)$ and $v(\cdot)$ represent the same preferences iff there is a *strictly* increasing function} $f$ such that $v(\cdot)=f\left[u(\cdot)\right]$
+
+$$\begin{aligned}
+a&=(1,2)\\
+b&=(2,2)\\
+c&=(4,3)\\
+\end{aligned}$$
+
+The following utility functions express the same preferences:
+
+| $u(\cdot)$ | $v(\cdot)$ |
+|------------|------------|
+| $u(a)=1$   | $v(a)=2$   |
+| $u(b)=2$   | $v(b)=4$   |
+| $u(c)=3$   | $v(c)=6$   |
+
+$$v(\cdot)=2\left[u(\cdot)\right]$$
+
+A **positive monotonic transformation (PMT)** transforms quantities such that the rank order of the quantities is preserved.
+
+- Examples: $v(u)=u+2; \, v(u)=4u; \, v(u)=u^3; \, v(u)=ln(u)$
+
+*Any PMT of a utility function contains the same preferences!*
