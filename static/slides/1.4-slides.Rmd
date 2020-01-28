@@ -329,9 +329,9 @@ class: inverse, center, middle
 
 - Cartographers have the answer for us
 
-- On a map, *contour lines* link areas of equal height
+- On a map, **contour lines** link areas of **equal height**
 
-- We will use .hi["indifference curves"] to link bundles of *equal preference*
+- We will use .hi["indifference curves"] to link bundles of **equal preference**
 
 ]
 
@@ -578,7 +578,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 .pull-left[
 
 .content-box-green[
-.green[**Example**]: Suppose you are hunting for an apartment. You value *both* the size of the apartment and the number of friends that live nearby. 
+.green[**Example**]:
 
 - Apt. *A* has 1 friend nearby and is 1,200 $ft^2$
 
@@ -618,7 +618,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 .pull-left[
 
 .content-box-green[
-.green[**Example**]: Suppose you are hunting for an apartment. You value *both* the size of the apartment and the number of friends that live nearby. 
+.green[**Example**]:
 
 - Apt. *A* has 1 friend nearby and is 1,200 $ft^2$
 
@@ -660,7 +660,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 .pull-left[
 
 .content-box-green[
-.green[**Example**]: Suppose you are hunting for an apartment. You value *both* the size of the apartment and the number of friends that live nearby. 
+.green[**Example**]:
 
 - Apt. *A* has 1 friend nearby and is 1,200 $ft^2$
 
@@ -703,7 +703,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- .hi-blue[Indifferent] between all apartments on the same curve
+- .hi-blue[Indifferent] between all apartments on the **same** curve
 ]
 
 .pull-right[
@@ -738,7 +738,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- .hi-blue[Indifferent] between all apts on the same curve
+- .hi-blue[Indifferent] between all apartments on the **same** curve
 
 - Apts **above** curve are .hi-green[preferred over] apts on curve
   - $D \succ A \sim B \sim C$
@@ -796,7 +796,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- .hi-blue[Indifferent] between all apts on the same curve
+- .hi-blue[Indifferent] between all apartments on the **same** curve
 
 - Apts **above** curve are .hi-green[preferred over] apts on curve
   - $D \succ A \sim B \sim C$
@@ -1040,11 +1040,11 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 - Take a (weighted) average of any two apartments on curve
 
-- Any "good balance" of the two goods (e.g. $C) \prec$ "unbalanced" $(A$ or $B)$
+- Any **"good balance"** of the two goods (e.g. $C) \succ$ "unbalanced" $(A$ or $B)$
 
-- Observation: people prefer variety in consumption
+- .hi-purple[People prefer variety in consumption]
 
-- Mathematically: **convex** $\implies$ a line connecting two points on function lies *above* the function
+- Math: **convex function** $\implies$ line connecting 2 points lies *above* function
 
 ]
 .pull-right[
@@ -1098,14 +1098,10 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 - .hi-purple[Indifference curves can never cross]: preferences are transitive
 
 - Suppose two curves crossed:
-
-- .blue[`\\(A \sim B\\)`]
-
-- .orange[`\\(B \sim C\\)`]
-
-- But .orange[`\\(C\\)`] $\succ$ .blue[`\\(B\\)`]!
-
-- Preferences are not transitive!
+  - .blue[`\\(A \sim B\\)`]
+  - .orange[`\\(B \sim C\\)`]
+  - But .orange[`\\(C\\)`] $\succ$ .blue[`\\(B\\)`]!
+  - Preferences are not transitive!
 
 ]
 .pull-right[
