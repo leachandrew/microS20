@@ -2,16 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microeconomic Analysis</title>
-    <link>https://microS20.classes.ryansafner.com/index.html</link>
+    <link>https://microS20.classes.ryansafner.com/</link>
     <description>Recent content on Microeconomic Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 05 May 2016 21:48:51 -0700</lastBuildDate>
     
 	<atom:link href="https://microS20.classes.ryansafner.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-  </channel>
-</rss>pe="application/rss+xml" />
     
     
     <item>
@@ -113,6 +110,17 @@ Homeworks There will be roughly a homework assignment for every lesson. These qu
       <guid>https://microS20.classes.ryansafner.com/class/1.2-class/</guid>
       <description> Contents  Overview Slides Survey   Overview Before we jump into our optimization models to descibe and predict (changes in) individual choices and behavior, we cover the basic principles of choice and action in a world of scarcity. This is what motivates economics.
 Slides   Lecture Slides  Survey </description>
+    </item>
+    
+    <item>
+      <title>Opinion-Editorial Assignment</title>
+      <link>https://microS20.classes.ryansafner.com/assignment/op-ed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://microS20.classes.ryansafner.com/assignment/op-ed/</guid>
+      <description>Due by the last day of class
+  How to Write Well See examples of good student Op-eds on Blackboard (Course Documents)   “How can I know what I think until I see what I say?” — E. M. Forster on Writing
+ Overview Your task is to write an Opinion-Editorial (Op-ed) piece that applies the economic way of thinking to some public policy-relevant issue. An op-ed is a newspaper article that expresses the opinions of a writer who is unaffiliated with the newspaper or its editorial board.</description>
     </item>
     
     <item>
