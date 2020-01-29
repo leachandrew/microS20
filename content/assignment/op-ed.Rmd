@@ -12,7 +12,7 @@ source(file.path(here::here(), "lib", "graphics.R"))
 
 *Due by the last day of class*
 
-- [<i class="fas fa-external-link-square-alt"></i> How to Write Well](/slides/paper-slides.html)
+- [<i class="fas fa-chalkboard-teacher"></i> How to Write a Good Paper](/slides/paper-slides.html)
 - See examples of good student Op-eds on Blackboard (Course Documents)
 
 > "How can I know what I think until I see what I say?" --- E. M. Forster on Writing
