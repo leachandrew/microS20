@@ -1,0 +1,127 @@
+---
+title: "1.5 Preferences II: MRS and Marginal Utility - Class Notes"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- BLOGDOWN-HEAD -->
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="/rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="/rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/plotly-main/plotly-latest.min.js"></script>
+<!-- /BLOGDOWN-HEAD -->
+
+<h2>Contents</h2>
+<div id="TOC">
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#slides">Slides</a></li>
+<li><a href="#practice-problems">Practice Problems</a></li>
+<li><a href="#math-appendix">Math Appendix</a><ul>
+<li><a href="#graphing-indifference-curves">Graphing Indifference Curves</a></li>
+<li><a href="#utility-functions-for-perfect-complements">Utility Functions for Perfect Complements</a></li>
+<li><a href="#utility-functions-for-perfect-complements-1">Utility Functions for Perfect Complements</a></li>
+<li><a href="#cobb-douglas-functions">Cobb-Douglas Functions</a></li>
+</ul></li>
+</ul>
+</div>
+
+<h2 id="overview">Overview</h2>
+<p>We continue with our model of how individuals choose. Our focus for this class is to wrap up what we mean by “maximizing utility” as a person’s <em>objective.</em> We will do some practice problems on understanding indifference curves and utility functions. Then we will finally be ready to put our tools together next class to solve the consumer’s problem.</p>
+<h2 id="slides">Slides</h2>
+<ul>
+<li><a href="/slides/05-slides.html"><i class="fas fa-external-link-square-alt"></i> Lecture Slides</a></li>
+</ul>
+<h2 id="practice-problems">Practice Problems</h2>
+<p>Today you will be working on <a href="/practice/05-practice.html">practice problems</a>. Answers will be posted later.</p>
+<h2 id="math-appendix">Math Appendix</h2>
+<h3 id="graphing-indifference-curves">Graphing Indifference Curves</h3>
+<p>I will not ask you to formally graph indifference curves (just roughly sketch them where appropriate). If you wanted to graph them, and express them in a graphable (slope-intercept form) equation, simply solve for the good on the vertical axis.</p>
+<p><strong>Example</strong>: Suppose we have a typical<span><label for="sn-1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-1" class="margin-toggle"/><span class="sidenote">Cobb-Douglas!<br />
+<br />
+</span></span> indifference curve for apples <span class="math inline">\((a)\)</span> and bananas <span class="math inline">\((b)\)</span>:
+<span class="math display">\[u(a,b)=ab\]</span></p>
+<div id="htmlwidget-1" style="width:672px;height:528px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"visdat":{"114921377fbb6":["function () ","plotlyVisDat"]},"cur_data":"114921377fbb6","attrs":{"114921377fbb6":{"x":[0,1,2,3,4,5,6,7,8,9,10],"y":[0,1,2,3,4,5,6,7,8,9,10],"z":[[0,0,0,0,0,0,0,0,0,0],[0,1,2,3,4,5,6,7,8,9],[0,2,4,6,8,10,12,14,16,18],[0,3,6,9,12,15,18,21,24,27],[0,4,8,12,16,20,24,28,32,36],[0,5,10,15,20,25,30,35,40,45],[0,6,12,18,24,30,36,42,48,54],[0,7,14,21,28,35,42,49,56,63],[0,8,16,24,32,40,48,56,64,72],[0,9,18,27,36,45,54,63,72,81]],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"surface","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"a"},"yaxis":{"title":"b"},"zaxis":{"title":"Utility"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"showSendToCloud":false},"data":[{"colorbar":{"title":"","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":true,"x":[0,1,2,3,4,5,6,7,8,9,10],"y":[0,1,2,3,4,5,6,7,8,9,10],"z":[[0,0,0,0,0,0,0,0,0,0],[0,1,2,3,4,5,6,7,8,9],[0,2,4,6,8,10,12,14,16,18],[0,3,6,9,12,15,18,21,24,27],[0,4,8,12,16,20,24,28,32,36],[0,5,10,15,20,25,30,35,40,45],[0,6,12,18,24,30,36,42,48,54],[0,7,14,21,28,35,42,49,56,63],[0,8,16,24,32,40,48,56,64,72],[0,9,18,27,36,45,54,63,72,81]],"type":"surface","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Each indifference curve (or contour) is one level of utility (all points on the curve give a specific level of utility). So, set that level of utility equal to some constant, <span class="math inline">\(k\)</span>.</p>
+<p><span class="math display">\[ab=k\]</span></p>
+<p>Then, if we are putting <span class="math inline">\(b\)</span> on the vertical axis, we simply solve this for <span class="math inline">\(b\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+ab&amp;=k\\
+b&amp;=\frac{k}{a}\\
+\end{align*}\]</span></p>
+<p>This is the general equation for all indifference curves of this utility function: each utility level (value of <span class="math inline">\(k)\)</span> can be graphed as an indifference curve with that equation. Thus, for example, for a utility level of <span class="math inline">\(10\)</span>, the equation for that indifference curve is
+<span class="math display">\[b=\frac{10}{a}\]</span>.</p>
+<p><img src="/class/1.5-class_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<h3 id="utility-functions-for-perfect-complements">Utility Functions for Perfect Complements</h3>
+<p>Perfect complements produce straight lines for indifference curves. A straight line has a constant slope, which is interpretted as the MRS being constant - you should always be willing to substitute between the two goods at the same rate. The utility function looks like:</p>
+<p><span class="math display">\[u(x,y)=w_xx+w_yy\]</span></p>
+<p>Where each <span class="math inline">\(w_i\)</span> is a relative weight (intensity of relative preference). These are often known as <strong>linear preferences</strong> because the utility of the two goods are related by addition.</p>
+<p>Notice, having some of one good and none of the other still provides positive utility (unlike utility functions where the quantities of goods are multiplied!). This is precisely because of the substitutability between the goods!</p>
+<h4 id="example">Example</h4>
+<p>Consider 1-Liter bottles of Coke <span class="math inline">\(L_{1}\)</span> and 2-Liter bottles of Coke <span class="math inline">\(L_{2}\)</span>. You should always be willing to substitute between one 2-Liter bottle and two 1-Liter bottles.</p>
+<p><span class="math display">\[u_{L_{1},L_{2}}=1L_{1}+2L_{2}\]</span></p>
+<p>The relative weights here are 1 for 1-Liter bottles and 2 for 2-Liter bottles, because 2-Liter bottles are “worth” twice as much for you (it takes two 1-Liter bottles to match a 2-Liter bottle!).</p>
+<p><span class="math inline">\(MRS_{L_{1},L_{2}}=-\frac{w_x}{w_y} = -\frac{1}{2}\)</span></p>
+<p><img src="/class/1.5-class_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<h3 id="utility-functions-for-perfect-complements-1">Utility Functions for Perfect Complements</h3>
+<p>Perfect complements produce right angles for indifference curves. This is technically not a mathematical function, since each <span class="math inline">\(X\)</span> value must be mapped to a single <span class="math inline">\(Y\)</span> value (i.e. no vertical lines). Thus, the utility function for perfect complements <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is quite unique:</p>
+<p><span class="math display">\[u(x,y)=min\{w_xx,w_yy\}\]</span></p>
+<p>Where each <span class="math inline">\(w_i\)</span> is a relative weight (intensity of relative preference). Utility is determined by the <em>lesser</em> value of what you have, <span class="math inline">\(x\)</span> (weighted by <span class="math inline">\(w_x\)</span>) or <span class="math inline">\(y\)</span> (weighted by <span class="math inline">\(w_y\)</span>). These are sometimes called “<strong>Leontief preferences</strong>”.</p>
+<p>The marginal rate of substitution alternates between <span class="math inline">\(0\)</span> (horizontal line) and <span class="math inline">\(\infty\)</span> (vertical line).</p>
+<h4 id="example-1">Example</h4>
+<p>Consider consuming hot dogs <span class="math inline">\((H)\)</span> and buns <span class="math inline">\((B)\)</span>, that must be consumed together as a package 1:1. The utility function would be:
+<span class="math display">\[u(H,B)=min\{H,B\}\]</span></p>
+<p>Having 2 hot dogs and 3 buns only yields a utility of 2. Having 3 hot dogs and 2 buns also only yields a utility of 2.</p>
+<p><img src="/class/1.5-class_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<h3 id="cobb-douglas-functions">Cobb-Douglas Functions</h3>
+<p>Cobb-Douglas functions (both for utility and production) are one of the most common functional forms in economics. Despite their somewhat frightening presence on the surface, they have very neat mathematical properties, and have been empirically useful as well. A Cobb-Douglas function (for utility) looks like:</p>
+<p><span class="math display">\[u(x, y)=x^a y^b\]</span></p>
+<h4 id="mrs-and-positive-monotonic-transformations">MRS and Positive Monotonic Transformations</h4>
+<p>The marginal rate of substitution, using the above equation is:
+<span class="math display">\[\begin{align*}
+    MRS_{x, y}  &amp;=\frac{MU_{x}}{MU_{y}} &amp;&amp; \text{The definition of MRS}\\
+    &amp;= \cfrac{\big(\frac{\partial }{\partial x}\big)}{\big(\frac{\partial}{\partial y}\big)} &amp;&amp; \text{Using the definition of marginal utility as partial derivative}\\
+    &amp;= \frac{a x^{a-1}y^b}{b x^a y^{b-1}} &amp;&amp; \text{Differentiating }u \text{ w.r.t }x \text{ on top and }y \text{ on bottom}\\
+    &amp;=\frac{a}{b} x^{(a-1)-a}y^{b-(b-1)} &amp;&amp; \text{Using exponent rules for division}\\
+    &amp;= \frac{a}{b} x^{-1}y^{1} &amp;&amp; \text{Simplifying exponents}\\
+    &amp;=\frac{a}{b} \frac{y}{x} &amp;&amp; \text{Using exponent rules for negative exponents}\\ \end{align*}\]</span></p>
+<p>Using logarithms, we can take a positive monotonic transformation of the original utility function <span class="math inline">\(u\)</span>:</p>
+<p><span class="math display">\[v(x, y)=a \: ln \: x + b \: ln \: y\]</span></p>
+<p>The MRS using the logarithmic form is:</p>
+<p><span class="math display">\[\begin{align*}
+    MRS_{x, y}  &amp;=\frac{MU_{x}}{MU_{y}} &amp;&amp; \text{The definition of MRS}\\
+    &amp;= \cfrac{\big(\frac{\partial }{\partial x}\big)}{\big(\frac{\partial}{\partial y}\big)} &amp;&amp; \text{Using the definition of marginal utility as partial derivative}\\
+    &amp;= \cfrac{\big(\frac{a}{x}\big)}{\big(\frac{b}{y}\big)} &amp;&amp; \text{Differentiating }u \text{ w.r.t }x \text{ on top and }y \text{ on bottom}\\
+    &amp;=\frac{a}{b} \frac{y}{x} &amp;&amp; \text{Multiplying the righthand side by the reciprocal of the denominator,} \frac{y}{b}\\ \end{align*}\]</span></p>
+<p>Which of course, is the same, because we know any positive monotonic transformation of a utility function preserves the same preferences!</p>
+<h4 id="example-2">EXAMPLE</h4>
+<p>Find the marginal rate of substitution for the utility function:</p>
+<p><span class="math display">\[u(x, y) = \sqrt{x, y}\]</span></p>
+<p>First, recognize that square roots are equivalent to saying <span class="math inline">\(x^{0.5} y^{0.5}\)</span>. The marginal rate of substitution would be:</p>
+<p><span class="math display">\[\begin{align*}
+        MRS_{x, y}  &amp;=\frac{MU_{x}}{MU_{y}} &amp;&amp; \text{The definition of MRS}\\
+    &amp;= \cfrac{\big(\frac{\partial }{\partial x}\big)}{\big(\frac{\partial}{\partial y}\big)} &amp;&amp; \text{Using the definition of marginal utility as partial derivative}\\
+    &amp;= \frac{0.5 x^{-0.5}y^{0.5}}{0.5x^{0.5}y^{-0.5}} &amp;&amp; \text{Differentiating }u \text{ w.r.t }x \text{ on top and }y \text{ on bottom}\\
+    &amp;=\frac{0.5}{0.5} x^{0.5-0.5}y^{0.5-(-0.5)} &amp;&amp; \text{Using exponent rules for division}\\
+    &amp;=  x^{-1}y^{1} &amp;&amp; \text{Simplifying exponents, and cancelling} \frac{0.5}{0.5}\\
+    &amp;=\frac{y}{x} &amp;&amp; \text{Using exponent rules for negative exponents}\\ \end{align*}\]</span></p>
+<p>Note we could find this equivalently again by taking logs of the original utility function.</p>
+<p><span class="math display">\[v(x,y)=0.5 \: ln \: x+0.5\: ln\: y\]</span></p>
+<p><span class="math display">\[\begin{align*}
+        MRS_{x, y}  &amp;=\frac{MU_{x}}{MU_{y}} &amp;&amp; \text{The definition of MRS}\\
+    &amp;= \cfrac{\big(\frac{\partial }{\partial x}\big)}{\big(\frac{\partial}{\partial y}\big)} &amp;&amp; \text{Using the definition of marginal utility as partial derivative}\\
+    &amp;= \cfrac{\big(\frac{0.5}{x}\big)}{\big(\frac{0.5}{y}\big)} &amp;&amp; \text{Differentiating }u \text{ w.r.t }x \text{ on top and }y \text{ on bottom}\\
+    &amp;=\frac{y}{x} &amp;&amp; \text{Multiplying the righthand side by the reciprocal of the denominator,} \frac{y}{0.5}\\ \end{align*}\]</span></p>
+<p>Which again, gives us the same marginal rate of substitution.</p>

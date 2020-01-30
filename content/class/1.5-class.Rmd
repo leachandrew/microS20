@@ -1,0 +1,233 @@
+---
+title: "1.5 Preferences II: MRS and Marginal Utility - Class Notes"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+# Overview
+
+We continue with our model of how individuals choose. Our focus for this class is to wrap up what we mean by "maximizing utility" as a person's *objective.* We will do some practice problems on understanding indifference curves and utility functions. Then we will finally be ready to put our tools together next class to solve the consumer's problem.
+
+# Slides
+
+- [<i class="fas fa-external-link-square-alt"></i> Lecture Slides](/slides/05-slides.html)
+
+# Practice Problems
+
+Today you will be working on [practice problems](/practice/05-practice.html). Answers will be posted later.
+
+# Math Appendix
+
+## Graphing Indifference Curves
+
+I will not ask you to formally graph indifference curves (just roughly sketch them where appropriate). If you wanted to graph them, and express them in a graphable (slope-intercept form) equation, simply solve for the good on the vertical axis. 
+
+**Example**: Suppose we have a typical^[Cobb-Douglas!] indifference curve for apples $(a)$ and bananas $(b)$: 
+$$u(a,b)=ab$$
+
+```{r, fig.retina=3, fig.height=5.5}
+library("plotly")
+x_vec = seq(0,10,1)
+y_vec = seq(0,10,1)
+x_matrix = matrix(c(x_vec), nrow = 10, ncol = 1)
+y_matrix = matrix(c(y_vec), nrow = 1, ncol = 10)
+z_matrix = matrix(c(x_matrix %*% y_matrix),nrow=10,ncol=10)
+
+plot_ly(x = x_vec,
+           y = y_vec,
+           z = z_matrix) %>%
+  add_surface() %>%
+  layout(scene = list(xaxis = list(title="a"),
+                      yaxis = list(title="b"),
+                      zaxis = list(title="Utility")))
+```
+
+Each indifference curve (or contour) is one level of utility (all points on the curve give a specific level of utility). So, set that level of utility equal to some constant, $k$. 
+
+$$ab=k$$
+
+Then, if we are putting $b$ on the vertical axis, we simply solve this for $b$:
+
+$$\begin{align*}
+ab&=k\\
+b&=\frac{k}{a}\\
+\end{align*}$$
+
+This is the general equation for all indifference curves of this utility function: each utility level (value of $k)$ can be graphed as an indifference curve with that equation. Thus, for example, for a utility level of $10$, the equation for that indifference curve is
+$$b=\frac{10}{a}$$.
+
+```{r, fig.retina=3, fig.height=5.5}
+library("mosaic")
+update_geom_defaults("label", list(family = "Fira Sans Condensed"))
+
+IC_50=function(x){50/x}
+IC_25=function(x){25/x}
+IC_10=function(x){10/x}
+
+colors<-c("b=50/a" = "#20A387FF", "b=25/a" = "#39568CFF", "b=10/a" = "#481567FF")
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=IC_50, geom="line", size=2, aes(color = "b=50/a"))+
+  stat_function(fun=IC_25, geom="line", size=2, aes(color = "b=25/a"))+
+  stat_function(fun=IC_10, geom="line", size=2, aes(color = "b=10/a"))+
+  geom_label(aes(x=9,y=IC_50(9)), color = "#20A387FF", label="u=50", size = 6)+
+  geom_label(aes(x=9,y=IC_25(9)), color = "#39568CFF", label="u=25", size = 6)+
+  geom_label(aes(x=9,y=IC_10(9)), color = "#481567FF", label="u=10", size = 6)+
+    scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_colour_manual("I.C. equations", values = colors)+
+  labs(x = "a",
+       y = "b",
+       title = "Indifference curves for u(a,b)=ab")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+```
+
+## Utility Functions for Perfect Complements
+
+Perfect complements produce straight lines for indifference curves. A straight line has a constant slope, which is interpretted as the MRS being constant - you should always be willing to substitute between the two goods at the same rate. The utility function looks like: 
+
+$$u(x,y)=w_xx+w_yy$$
+
+Where each $w_i$ is a relative weight (intensity of relative preference). These are often known as **linear preferences** because the utility of the two goods are related by addition.
+
+Notice, having some of one good and none of the other still provides positive utility (unlike utility functions where the quantities of goods are multiplied!). This is precisely because of the substitutability between the goods!
+
+### Example 
+
+Consider 1-Liter bottles of Coke $L_{1}$ and 2-Liter bottles of Coke $L_{2}$. You should always be willing to substitute between one 2-Liter bottle and two 1-Liter bottles.
+
+$$u_{L_{1},L_{2}}=1L_{1}+2L_{2}$$
+
+The relative weights here are 1 for 1-Liter bottles and 2 for 2-Liter bottles, because 2-Liter bottles are "worth" twice as much for you (it takes two 1-Liter bottles to match a 2-Liter bottle!). 
+
+$MRS_{L_{1},L_{2}}=-\frac{w_x}{w_y} = -\frac{1}{2}$
+
+```{r, echo=F, fig.retina=3, fig.align="center"}
+ggplot(data.frame(x=c(0,5)), aes(x=x))+
+  geom_segment(aes(x=0, xend=2, y=1, yend=0), size=1, color="#453781FF")+
+  geom_segment(aes(x=0, xend=4, y=2, yend=0), size=1, color="#20A387FF")+
+  geom_label(aes(x=1, y=0.5), size=6, color="#453781FF", label="u=1")+
+  geom_label(aes(x=1, y=1.5), size=6, color="#20A387FF", label="u=2")+
+  scale_x_continuous(breaks=seq(0,5,1),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,5,1),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "1-Liter Bottles",
+       y = "2-Liter Bottles")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+```
+
+## Utility Functions for Perfect Complements
+
+Perfect complements produce right angles for indifference curves. This is technically not a mathematical function, since each $X$ value must be mapped to a single $Y$ value (i.e. no vertical lines). Thus, the utility function for perfect complements $x$ and $y$ is quite unique: 
+
+$$u(x,y)=min\{w_xx,w_yy\}$$
+
+Where each $w_i$ is a relative weight (intensity of relative preference). Utility is determined by the *lesser* value of what you have, $x$ (weighted by $w_x$) or $y$ (weighted by $w_y$). These are sometimes called "**Leontief preferences**".
+
+The marginal rate of substitution alternates between $0$ (horizontal line) and $\infty$ (vertical line). 
+
+### Example
+
+Consider consuming hot dogs $(H)$ and buns $(B)$, that must be consumed together as a package 1:1. The utility function would be: 
+$$u(H,B)=min\{H,B\}$$
+
+Having 2 hot dogs and 3 buns only yields a utility of 2. Having 3 hot dogs and 2 buns also only yields a utility of 2. 
+
+```{r, echo=F, fig.retina=3, fig.align="center"}
+ggplot(data.frame(x=c(0,5)), aes(x=x))+
+  geom_segment(aes(x=1, xend=1, y=5, yend=1), size=1, color="#453781FF")+
+  geom_segment(aes(x=1, xend=5, y=1, yend=1), size=1, color="#453781FF")+
+  geom_segment(aes(x=2, xend=2, y=5, yend=2), size=1, color="#20A387FF")+
+  geom_segment(aes(x=2, xend=5, y=2, yend=2), size=1, color="#20A387FF")+
+  geom_label(aes(x=4, y=1), size=6, color="#453781FF", label="u=1")+
+  geom_label(aes(x=4, y=2), size=6, color="#20A387FF", label="u=2")+
+  scale_x_continuous(breaks=seq(0,5,1),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,5,1),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Hot Dogs",
+       y = "Buns")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+```
+
+## Cobb-Douglas Functions
+
+Cobb-Douglas functions (both for utility and production) are one of the most common functional forms in economics. Despite their somewhat frightening presence on the surface, they have very neat mathematical properties, and have been empirically useful as well. A Cobb-Douglas function (for utility) looks like: 
+
+$$u(x, y)=x^a y^b$$
+		
+### MRS and Positive Monotonic Transformations
+
+The marginal rate of substitution, using the above equation is: 
+$$\begin{align*}
+	MRS_{x, y}	&=\frac{MU_{x}}{MU_{y}} && \text{The definition of MRS}\\
+	&= \cfrac{\big(\frac{\partial }{\partial x}\big)}{\big(\frac{\partial}{\partial y}\big)} && \text{Using the definition of marginal utility as partial derivative}\\
+	&= \frac{a x^{a-1}y^b}{b x^a y^{b-1}} && \text{Differentiating }u \text{ w.r.t }x \text{ on top and }y \text{ on bottom}\\
+	&=\frac{a}{b} x^{(a-1)-a}y^{b-(b-1)} && \text{Using exponent rules for division}\\
+	&= \frac{a}{b} x^{-1}y^{1} && \text{Simplifying exponents}\\
+	&=\frac{a}{b} \frac{y}{x} && \text{Using exponent rules for negative exponents}\\ \end{align*}$$
+
+Using logarithms, we can take a positive monotonic transformation of the original utility function $u$:
+
+$$v(x, y)=a \: ln \: x + b \: ln \: y$$
+
+The MRS using the logarithmic form is:
+
+$$\begin{align*}
+	MRS_{x, y}	&=\frac{MU_{x}}{MU_{y}} && \text{The definition of MRS}\\
+	&= \cfrac{\big(\frac{\partial }{\partial x}\big)}{\big(\frac{\partial}{\partial y}\big)} && \text{Using the definition of marginal utility as partial derivative}\\
+	&= \cfrac{\big(\frac{a}{x}\big)}{\big(\frac{b}{y}\big)} && \text{Differentiating }u \text{ w.r.t }x \text{ on top and }y \text{ on bottom}\\
+	&=\frac{a}{b} \frac{y}{x} && \text{Multiplying the righthand side by the reciprocal of the denominator,} \frac{y}{b}\\ \end{align*}$$
+	
+Which of course, is the same, because we know any positive monotonic transformation of a utility function preserves the same preferences! 
+
+### EXAMPLE
+
+Find the marginal rate of substitution for the utility function: 
+
+$$u(x, y) = \sqrt{x, y}$$
+
+First, recognize that square roots are equivalent to saying $x^{0.5} y^{0.5}$. The marginal rate of substitution would be: 
+
+$$\begin{align*}
+		MRS_{x, y}	&=\frac{MU_{x}}{MU_{y}} && \text{The definition of MRS}\\
+	&= \cfrac{\big(\frac{\partial }{\partial x}\big)}{\big(\frac{\partial}{\partial y}\big)} && \text{Using the definition of marginal utility as partial derivative}\\
+	&= \frac{0.5 x^{-0.5}y^{0.5}}{0.5x^{0.5}y^{-0.5}} && \text{Differentiating }u \text{ w.r.t }x \text{ on top and }y \text{ on bottom}\\
+	&=\frac{0.5}{0.5} x^{0.5-0.5}y^{0.5-(-0.5)} && \text{Using exponent rules for division}\\
+	&=  x^{-1}y^{1} && \text{Simplifying exponents, and cancelling} \frac{0.5}{0.5}\\
+	&=\frac{y}{x} && \text{Using exponent rules for negative exponents}\\ \end{align*}$$
+
+Note we could find this equivalently again by taking logs of the original utility function. 
+
+$$v(x,y)=0.5 \: ln \: x+0.5\: ln\: y$$
+ 	
+$$\begin{align*}
+		MRS_{x, y}	&=\frac{MU_{x}}{MU_{y}} && \text{The definition of MRS}\\
+	&= \cfrac{\big(\frac{\partial }{\partial x}\big)}{\big(\frac{\partial}{\partial y}\big)} && \text{Using the definition of marginal utility as partial derivative}\\
+	&= \cfrac{\big(\frac{0.5}{x}\big)}{\big(\frac{0.5}{y}\big)} && \text{Differentiating }u \text{ w.r.t }x \text{ on top and }y \text{ on bottom}\\
+	&=\frac{y}{x} && \text{Multiplying the righthand side by the reciprocal of the denominator,} \frac{y}{0.5}\\ \end{align*}$$
+
+Which again, gives us the same marginal rate of substitution.
+

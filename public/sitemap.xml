@@ -56,6 +56,14 @@
   </url>
   
   <url>
+    <loc>https://microS20.classes.ryansafner.com/class/1.5-class/</loc>
+  </url>
+  
+  <url>
+    <loc>https://microS20.classes.ryansafner.com/practice/1.5-practice/</loc>
+  </url>
+  
+  <url>
     <loc>https://microS20.classes.ryansafner.com/assignment/</loc>
     <priority>0</priority>
   </url>

@@ -1,7 +1,7 @@
 ---
 title: "1.4: Preferences I: Indifference Curves"
 subtitle: "ECON 306 · Microeconomic Analysis · Spring 2020"
-author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/microf19"><i class="fa fa-github fa-fw"></i> ryansafner/microf19</a><br> <a href="https://microF19.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> microF19.classes.ryansafner.com</a><br>'
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/microS20"><i class="fa fa-github fa-fw"></i> ryansafner/microS20</a><br> <a href="https://microS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> microS20.classes.ryansafner.com</a><br>'
 #date:
 output:
   xaringan::moon_reader:

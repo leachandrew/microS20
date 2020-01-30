@@ -25,7 +25,11 @@ lessons:
     reading: "1.4-reading"
 
   - title: "1.5 Preferences II: MRS and Utility Functions"
-
+    class: "1.5-class"
+    slides: "1.5-slides"
+    reading: "1.5-reading"
+    practice: "1.5-practice"
+    
   - title: "1.6 Solving the Consumer's Problem"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 1**'
