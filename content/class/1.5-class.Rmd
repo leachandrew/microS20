@@ -99,9 +99,9 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
   theme_classic(base_family = "Fira Sans Condensed", base_size=20)
 ```
 
-## Utility Functions for Perfect Complements
+## Utility Functions for Perfect Substitutes
 
-Perfect complements produce straight lines for indifference curves. A straight line has a constant slope, which is interpretted as the MRS being constant - you should always be willing to substitute between the two goods at the same rate. The utility function looks like: 
+Perfect substitutes produce straight lines for indifference curves. A straight line has a constant slope, which is interpretted as the MRS being constant - you should always be willing to substitute between the two goods at the same rate. The utility function looks like: 
 
 $$u(x,y)=w_xx+w_yy$$
 

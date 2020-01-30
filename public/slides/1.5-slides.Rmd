@@ -40,9 +40,9 @@ set.seed(256)
 # Utility Functions and Indifference Curves I
 
 .pull-left[
-- Two tools to represent preferences: indifference curves and utility functions
+- Two tools to represent preferences: .hi[indifference curves] and .hi[utility functions]
 
-- Indifference curve: all equally preferred bundles $\iff$ same utility level
+- Indifference curve: all **equally preferred** bundles $\iff$ **same utility level**
 
 - Each indifference curve represents one level (or contour) of utility surface (function)
 
@@ -256,16 +256,8 @@ p
 
 - .hi[Marginal utility]: change in utility from a marginal increase in consumption
 
-.content-box-green[
-.green[**Marginal utility of `\\(x\\)`**]: $MU_x = \frac{\Delta u(x,y)}{\Delta x}$
-]
-
-.content-box-green[
-.green[**Marginal utility of `\\(y\\)`**]: $MU_y = \frac{\Delta u(x,y)}{\Delta y}$
-]
-
 - Math (calculus): "*marginal*" means "*derivative with respect to*"
-- I will always derive marginal utility functions for you
+  - I will always derive marginal utility functions for you
 
 ]
 .pull-right[
@@ -482,9 +474,9 @@ ggplot(data.frame(x=c(0,5)), aes(x=x))+
   theme_classic(base_family = "Fira Sans Condensed", base_size=20)
 ```
 
-.smaller[
+.smallest[
 - Vertical curves $\implies$ indifference between having more or less Downloads
-- Downloads are a .hi[neutral] (neither good nor bad)
+- Downloads are a .hi[neutral]
 - $MRS_{T,D}=\infty$; give up $\infty$ (or undefined) Downloads to get more Tickets
 ]
 ]
@@ -519,9 +511,9 @@ ggplot(data.frame(x=c(0,5)), aes(x=x))+
   theme_classic(base_family = "Fira Sans Condensed", base_size=20)
 ```
 
-.smaller[
+.smallest[
 - Horizontal curves $\implies$ indifference between having more or less Tickets
-- Tickets are a .hi[neutral] (neither good nor bad)
+- Tickets are a .hi[neutral]
 - $MRS_{T,D}=0$;  give up $0$ Downloads to get more Tickets
 ]
 ]
@@ -599,7 +591,7 @@ ggplot(data.frame(x=c(0,5)), aes(x=x))+
 - More precise ways to classify objects:
 
 - A .hi[good] enters utility function positively
-    - $\uparrow$ good $\implies$ $\uparrow$ utility (and vice versa)
+    - $\uparrow$ good $\implies$ $\uparrow$ utility
     - Willing to pay (give up other goods) to *acquire more* (monotonic)
 ]
 
@@ -640,14 +632,6 @@ ggplot(data.frame(x=c(0,5)), aes(x=x))+
 
 - More precise ways to classify objects:
 
-- A .hi[good] enters utility function positively
-    - $\uparrow$ good $\implies$ $\uparrow$ utility
-    - Willing to pay (give up other goods) to *acquire more* (monotonic)
-    
-- A .hi[bad] enters utility function negatively
-    - $\uparrow$ good $\implies$ $\downarrow$ utility
-    - Willing to pay (give up other goods) to *get rid of*
-    
 - A .hi[neutral] does not enter utility function at all
     - $\uparrow, \downarrow$ has no effect on utility
 ]
@@ -734,7 +718,7 @@ ggplot(data.frame(x=c(0,5)), aes(x=x))+
 
 - .hi[Perfect complements]: goods that can be consumed together in same fixed proportion and yield same utility
 
-- MRS: ?
+- $MRS_{H,B}=$ ?
 
 ]
 
