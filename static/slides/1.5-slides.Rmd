@@ -477,7 +477,6 @@ ggplot(data.frame(x=c(0,5)), aes(x=x))+
 .smallest[
 - Vertical curves $\implies$ indifference between having more or less Downloads
 - Downloads are a .hi[neutral]
-- $MRS_{T,D}=\infty$; give up $\infty$ (or undefined) Downloads to get more Tickets
 ]
 ]
 --
@@ -514,7 +513,6 @@ ggplot(data.frame(x=c(0,5)), aes(x=x))+
 .smallest[
 - Horizontal curves $\implies$ indifference between having more or less Tickets
 - Tickets are a .hi[neutral]
-- $MRS_{T,D}=0$;  give up $0$ Downloads to get more Tickets
 ]
 ]
 ---
