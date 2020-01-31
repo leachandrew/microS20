@@ -12,6 +12,9 @@ source(file.path(here::here(), "lib", "graphics.R"))
 
 *Due by the last day of class*
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W0zli4P6IPM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 - [<i class="fas fa-chalkboard-teacher"></i> How to Write a Good Paper](/slides/paper-slides.html)
 - See examples of good student Op-eds on Blackboard (Course Documents)
 
