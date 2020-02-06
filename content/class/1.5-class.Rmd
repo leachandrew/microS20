@@ -17,6 +17,8 @@ knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE)
 ```
 
+*Thursday, January 30, 2020*
+
 # Overview
 
 We continue with our model of how individuals choose. Our focus for this class is to wrap up what we mean by "maximizing utility" as a person's *objective.* We will do some practice problems on understanding indifference curves and utility functions. Then we will finally be ready to put our tools together next class to solve the consumer's problem.

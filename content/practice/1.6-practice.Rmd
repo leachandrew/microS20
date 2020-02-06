@@ -1,0 +1,33 @@
+---
+title: "1.6 Solving the Consumer's Problem - Practice Problems"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(pander)
+source(file.path(here::here(), "lib", "graphics.R"))
+```
+
+- [<i class="fas fa-file-pdf"></i> `Download as PDF`](/practice/06-practice.pdf)
+- [<i class="fas fa-file-pdf"></i> `Answer Key`](/practice/06-practice-answers.pdf)
+
+
+You can get utility from consuming Soda $(s)$ and Hot dogs $(h)$, according to the utility function:
+
+$$u(s,h)=\sqrt{sh}$$
+
+The marginal utilities are:
+
+$$\begin{align*}
+MU_s&=0.5s^{-0.5}h^{0.5}	\\
+MU_h&=0.5s^{0.5}h^{-0.5} \\ \end{align*}$$
+
+You have an income of $12, the price of Soda is $2, and the price of a Hot dog is $3. Put Soda on the horizontal axis and Hot dogs on the vertical axis.
+
+## 1. 
+#### What is your utility-maximizing bundle of Soda and Hot dogs?
+
+## 2. 
+#### How much utility does this provide?
