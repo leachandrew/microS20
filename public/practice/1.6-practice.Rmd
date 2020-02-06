@@ -1,7 +1,7 @@
 ---
 title: "1.6 Solving the Consumer's Problem - Practice Problems"
 author: "Ryan Safner"
-date: "ECON 306 - Fall 2019"
+date: "ECON 306 - Spring 2020"
 output: pdf_document
 ---
 
