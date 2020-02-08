@@ -1,0 +1,45 @@
+---
+title: "1.7 Building a Demand Function - Class Notes"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+*Tuesday, February 11, 2020*
+
+# Overview
+
+Solving a single constrained optimum problem might be useful in certain contexts, but the *dynamics* of change are more interesting: how do people optimally respond to changes in constraints? The remaining few classes before Exam 1 are about how people respond to changes in prices and income. If we can describe this set of behaviors in an equation and graphically, it is the origin of a demand curve.
+
+Today, we look at how changes in *income* or changes in the prices of *other* goods can affect your quantity demanded for a good. 
+
+In doing so, we also introduce a major empirical tool that we will return to many times: an *elasticity.* You've seen one elasticity before: the price elasticity of demand, and probably calculated it using the "midpoint formula." There's a lot more to elasticity (and a lot of other kinds of elasticities!) than that. We will see two varieties today, and will spend most of a lecture on price elasticity, two class periods from now.
+
+
+# Slides
+
+- [<i class="fas fa-external-link-square-alt"></i> Lecture Slides](/slides/1.7-slides.html)
+
+# Practice Problems
+
+Today you will be working on [practice problems](/practice/1.7-practice.html). Answers will be posted later today (along with last classes' problems answers).
+
+# Assignments: Problem Sets 1, 2, and Exam 1
+
+[Problem set 1](/assignment/01-problem-set) (on classes 1.1-1.6) is posted, and is due by Thursday February 13.
+
+[Problem set 2](/assignment/02-problem-set) (on classes 1.7-1.9) is also posted, and is due by Thursday February 20. You will not be able to do everything on it until we complete class 1.9.
+
+We will do a review day on Thursday, February 20. Expect Exam 1 to be on Tuesday, February 25.

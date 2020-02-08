@@ -36,15 +36,21 @@ lessons:
     reading: "1.6-reading"
     practice: "1.6-practice"
 
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 1**'
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 1** due Thurs Feb 13'
     assignment: "01-problem-set"
     
   - title: "1.7 Building a Demand Function"
+    reading: "1.7-reading"
+    class: "1.7-class"
+    slides: "1.7-slides"
+    practice: "1.7-practice"
 
   - title: "1.8 Income and Substitution Effects"
-
+    reading: "1.8-reading"
+    
   - title: "1.9 Price Elasticity"
-
+    reading: "1.9-reading"
+    
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 2**'
 
   - title: '<i class="fas fa-star"></i> **Exam 1**'

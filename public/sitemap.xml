@@ -76,6 +76,26 @@
   </url>
   
   <url>
+    <loc>https://microS20.classes.ryansafner.com/class/1.7-class/</loc>
+  </url>
+  
+  <url>
+    <loc>https://microS20.classes.ryansafner.com/practice/1.7-practice/</loc>
+  </url>
+  
+  <url>
+    <loc>https://microS20.classes.ryansafner.com/reading/1.7-reading/</loc>
+  </url>
+  
+  <url>
+    <loc>https://microS20.classes.ryansafner.com/reading/1.8-reading/</loc>
+  </url>
+  
+  <url>
+    <loc>https://microS20.classes.ryansafner.com/reading/1.9-reading/</loc>
+  </url>
+  
+  <url>
     <loc>https://microS20.classes.ryansafner.com/assignment/</loc>
     <priority>0</priority>
   </url>
@@ -108,6 +128,10 @@
   
   <url>
     <loc>https://microS20.classes.ryansafner.com/assignment/01-problem-set/</loc>
+  </url>
+  
+  <url>
+    <loc>https://microS20.classes.ryansafner.com/assignment/02-problem-set/</loc>
   </url>
   
   <url>
