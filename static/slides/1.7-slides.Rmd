@@ -1,7 +1,7 @@
 ---
 title: "1.7: Deriving a Demand Function"
-subtitle: "ECON 306 · Microeconomic Analysis · Fall 2019"
-author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/microf19"><i class="fa fa-github fa-fw"></i> ryansafner/microf19</a><br> <a href="https://microF19.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> microF19.classes.ryansafner.com</a><br>'
+subtitle: "ECON 306 · Microeconomic Analysis · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/microS20"><i class="fa fa-github fa-fw"></i> ryansafner/microS20</a><br> <a href="https://microS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> microS20.classes.ryansafner.com</a><br>'
 #date:
 output:
   xaringan::moon_reader:
@@ -41,7 +41,7 @@ set.seed(256)
 
 .pull-left[
 
-- Now that we know ho consumers optimally choose (in a *static* case), we can explore the *dynamics* of how consumers *respond* to changes in their constraints
+- We now can explore the .hi-purple[dynamics] of how consumers .hi-purple[optimally respond to changes] in their constraints
 
 - We know the problem is: 
 
@@ -62,17 +62,17 @@ set.seed(256)
 
 ---
 
-# A Demand Function
+# A Demand Function for Good X
 
 .pull-left[
+.smallest[
+- A consumer's .hi[demand] (for good x) depends on current prices & income:
 
-- A consumer's .shout[quantity demanded] (of good x), $q_x^D$ is a function of their .shout[demand for good x], which depends on current market prices and their income
+$$q_x^D = q_x^D(m, p_x, p_y)$$
 
-$$q_x^D = D(m, p_x, p_y)$$
-
-- We now want to examine how **quantity demanded for x** changes as each of these parameters change:
+- How does **demand for x** change?
 ]
-
+]
 .pull-right[
 .center[
 ![](https://www.dropbox.com/s/nw0v6bsho0ab4zq/choices.jpg?raw=1)
@@ -84,14 +84,37 @@ $$q_x^D = D(m, p_x, p_y)$$
 # A Demand Function
 
 .pull-left[
+.smallest[
+- A consumer's .hi[demand] (for good x) depends on current prices & income:
 
-- A consumer's .shout[quantity demanded] (of good x), $q_x^D$ is a function of their .shout[demand for good x], which depends on current market prices and their income
+$$q_x^D = q_x^D(m, p_x, p_y)$$
 
-$$q_x^D = D(m, p_x, p_y)$$
+- How does **demand for x** change?
 
-- We now want to examine how **quantity demanded for x** changes as each of these parameters change:
+1. .hi-purple[Income effects] $\left(\frac{\Delta q_x^D}{\Delta m}\right)$: how $q_x^D$ changes with changes in income
+]
+]
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/nw0v6bsho0ab4zq/choices.jpg?raw=1)
+]
+]
 
-1. .whisper[Income effects] $\left(\frac{\Delta q_x^D}{\Delta m}\right)$: how $q_x^D$ changes with changes in income
+---
+
+# A Demand Function for Good X
+
+.pull-left[
+.smallest[
+- A consumer's .hi[demand] (for good x) depends on current prices & income:
+
+$$q_x^D = q_x^D(m, p_x, p_y)$$
+
+- How does **demand for x** change?
+
+1. .hi-purple[Income effects] $\left(\frac{\Delta q_x^D}{\Delta m}\right)$: how $q_x^D$ changes with changes in income
+2. .hi-purple[Cross-price effects] $\left(\frac{\Delta q_x^D}{\Delta p_y}\right)$: how $q_x^D$ changes with changes in prices of *other* goods (e.g. $y)$
+]
 ]
 
 .pull-right[
@@ -102,44 +125,21 @@ $$q_x^D = D(m, p_x, p_y)$$
 
 ---
 
-# A Demand Function
+# A Demand Function for Good X
 
 .pull-left[
+.smallest[
+- A consumer's .hi[demand] (for good x) depends on current prices & income:
 
-- A consumer's .shout[quantity demanded] (of good x), $q_x^D$ is a function of their .shout[demand for good x], which depends on current market prices and their income
+$$q_x^D = q_x^D(m, p_x, p_y)$$
 
-$$q_x^D = D(m, p_x, p_y)$$
+- How does **demand for x** change?
 
-- We now want to examine how **quantity demanded for x** changes as each of these parameters change:
-
-1. .whisper[Income effects] $\left(\frac{\Delta q_x^D}{\Delta m}\right)$: how $q_x^D$ changes with changes in income
-2. .whisper[Cross-price effects] $\left(\frac{\Delta q_x^D}{\Delta p_y}\right)$: how $q_x^D$ changes with changes in prices of *other* goods (e.g. $y)$
-
-]
-
-.pull-right[
-.center[
-![](https://www.dropbox.com/s/nw0v6bsho0ab4zq/choices.jpg?raw=1)
+1. .hi-purple[Income effects] $\left(\frac{\Delta q_x^D}{\Delta m}\right)$: how $q_x^D$ changes with changes in income
+2. .hi-purple[Cross-price effects] $\left(\frac{\Delta q_x^D}{\Delta p_y}\right)$: how $q_x^D$ changes with changes in prices of *other* goods (e.g. $y)$
+3. .hi-purple[(Own) Price effects] $\left(\frac{\Delta q_x^D}{\Delta p_x}\right)$: how $q_x^D$ changes with changes in price (of $x)$
 ]
 ]
-
----
-
-# A Demand Function
-
-.pull-left[
-
-- A consumer's .shout[quantity demanded] (of good x), $q_x^D$ is a function of their .shout[demand for good x], which depends on current market prices and their income
-
-$$q_x^D = D(m, p_x, p_y)$$
-
-- We now want to examine how **quantity demanded for x** changes as each of these parameters change:
-
-1. .whisper[Income effects] $\left(\frac{\Delta q_x^D}{\Delta m}\right)$: how $q_x^D$ changes with changes in income
-2. .whisper[Cross-price effects] $\left(\frac{\Delta q_x^D}{\Delta p_y}\right)$: how $q_x^D$ changes with changes in prices of *other* goods (e.g. $y)$
-3. .whisper[(Own) Price effects] $\left(\frac{\Delta q_x^D}{\Delta p_x}\right)$: how $q_x^D$ changes with changes in price (of $x)$
-]
-
 .pull-right[
 .center[
 ![](https://www.dropbox.com/s/nw0v6bsho0ab4zq/choices.jpg?raw=1)
@@ -158,7 +158,7 @@ class: inverse, center, middle
 
 .pull-left[
 
-- .shout[Income effect]: change in optimal consumption of a good associated with a change in (nominal) income, holding relative prices constant
+- .hi[Income effect]: change in optimal consumption of a good associated with a change in (nominal) income, holding relative prices constant
 
 $$\frac{\Delta q_D}{\Delta m} >^{?}< 0$$
 ]
@@ -279,7 +279,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 - At new optimum $(B)$, consumes more of both
 
-- Then both goods are .shout[normal goods]
+- Then both goods are .hi[normal goods]
 
 ]
 
@@ -428,7 +428,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 - At new optimum $(B)$, consumes more steak, less ramen
 
-- Steak is a .shout[normal good], ramen is an .shout[inferior good]
+- Steak is a .hi[normal good], ramen is an .hi[inferior good]
 
 ]
 
@@ -477,9 +477,9 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 $$\frac{\Delta q_D}{\Delta m} >^{?}< 0$$
 
-- .whisper[Normal goods]: consumption increases with more income (and vice versa)
+- .hi-purple[Normal goods]: consumption increases with more income (and vice versa)
 
-- .whisper[Inferior goods]: consumption decreases with more income (and vice versa)
+- .hi-purple[Inferior goods]: consumption decreases with more income (and vice versa)
 
 ]
 
@@ -500,7 +500,7 @@ class: inverse, center, middle
 
 - Several ways we can talk about how a measure **changes** over time, from time $t_1 \rightarrow t_2$
 
-- .whisper[Difference `\\((\Delta)\\)`:] the difference between the value at time $t_1$ and time $t_2$
+- .hi-purple[Difference `\\((\Delta)\\)`:] the difference between the value at time $t_1$ and time $t_2$
 $$\Delta t=t_2-t_1$$
 ---
 
@@ -508,10 +508,10 @@ $$\Delta t=t_2-t_1$$
 
 - Several ways we can talk about how a measure **changes** over time, from time $t_1 \rightarrow t_2$
 
-- .whisper[Difference `\\((\Delta)\\)`:] the difference between the value at time $t_1$ and time $t_2$
+- .hi-purple[Difference `\\((\Delta)\\)`:] the difference between the value at time $t_1$ and time $t_2$
 $$\Delta t=t_2-t_1$$
 
-- .onfire[Relative Difference]: the difference expressed in terms of the original value
+- .hi-purple[Relative Difference]: the difference expressed in terms of the original value
 $$\frac{\Delta t}{t_1} = \frac{t_2-t_1}{t_1}$$
  this becomes a proportion $(\pm$ between 0 and 1)
 
@@ -521,10 +521,10 @@ $$\frac{\Delta t}{t_1} = \frac{t_2-t_1}{t_1}$$
 
 - Several ways we can talk about how a measure **changes** over time, from time $t_1 \rightarrow t_2$
 
-- *Difference $(\Delta)$:* the difference between the value at time $t_1$ and time $t_2$
+- .hi-purple[Difference $(\Delta)$:] the difference between the value at time $t_1$ and time $t_2$
 $$\Delta t=t_2-t_1$$
 
-- *Relative Difference*: the difference expressed in terms of the original value
+- .hi-purple[Relative Difference]: the difference expressed in terms of the original value
 $$\frac{\Delta t}{t_1} = \frac{t_2-t_1}{t_1}$$
  this becomes a proportion $(\pm$ between 0 and 1)
 
@@ -550,16 +550,52 @@ A country's GDP is $100 in 2017, and $120 in 2018. Calculate the country's GDP g
 
 .left-column[
 
-$$\epsilon_{y,x} = \frac{\% \Delta y}{\% \Delta x}=\cfrac{\frac{\Delta y}{y}\times 100\%}{\frac{\Delta x}{x} \times 100\%}$$
+$$\epsilon_{y,x} = \frac{\% \Delta y}{\% \Delta x}=\cfrac{\frac{\Delta y}{y}}{\frac{\Delta x}{x}}$$
 
 ]
 
 .right-column[
 
-- An .shout[elasticity] between any two variables $y$ and $x$ describes the **responsiveness** of a variable $(y)$ to a change in another $(x)$.
+- An .hi[elasticity] between any two variables $y$ and $x$ describes the .hi-purple[responsiveness] of a variable $(y)$ to a change in another $(x)$.
     - Relative change of $y$ over the relative change of $x$ 
 
-- **Interpretation**: $\epsilon_{y,x}=$ the *percentage change* in $y$ from a *1%* change in $x$
+
+]
+
+---
+# Elasticity, in General 
+
+.left-column[
+
+$$\epsilon_{y,x} = \frac{\% \Delta y}{\% \Delta x}=\cfrac{\frac{\Delta y}{y}}{\frac{\Delta x}{x}}$$
+
+]
+
+.right-column[
+
+- An .hi[elasticity] between any two variables $y$ and $x$ describes the .hi-purple[responsiveness] of a variable $(y)$ to a change in another $(x)$.
+    - Relative change of $y$ over the relative change of $x$ 
+
+- .hi-purple[Interpretation: $\epsilon_{y,x}=$ the *percentage change* in $y$ from a *1%* change in $x$]
+
+]
+
+---
+
+# Elasticity, in General 
+
+.left-column[
+
+$$\epsilon_{y,x} = \frac{\% \Delta y}{\% \Delta x}=\cfrac{\frac{\Delta y}{y}}{\frac{\Delta x}{x}}$$
+
+]
+
+.right-column[
+
+- An .hi[elasticity] between any two variables $y$ and $x$ describes the .hi-purple[responsiveness] of a variable $(y)$ to a change in another $(x)$.
+    - Relative change of $y$ over the relative change of $x$ 
+
+- .hi-purple[Interpretation: $\epsilon_{y,x}=$ the *percentage change* in $y$ from a *1%* change in $x$]
 
 - Unitless: easy comparisons between variables
     - e.g. crime rates and police, GDP and gov't spending, inequality and corruption
@@ -572,7 +608,7 @@ $$\epsilon_{y,x} = \frac{\% \Delta y}{\% \Delta x}=\cfrac{\frac{\Delta y}{y}\tim
 
 # Income Elasticity of Demand I
 
-- The .shout[income elasticity of demand] measures how much quantity demanded $(q_D)$ changes in response to a change in income $(m)$
+- The .hi[income elasticity of demand] measures how much quantity demanded $(q_D)$ changes in response to a change in income $(m)$
 
 $$\epsilon_{q,m}= \frac{\% \Delta q_D}{\% \Delta m}$$
 
@@ -580,33 +616,33 @@ $$\epsilon_{q,m}= \frac{\% \Delta q_D}{\% \Delta m}$$
 
 # Income Elasticity of Demand I
 
-- The .shout[income elasticity of demand] measures how much quantity demanded $(q_D)$ changes in response to a change in income $(m)$
+- The .hi[income elasticity of demand] measures how much quantity demanded $(q_D)$ changes in response to a change in income $(m)$
 
 $$\epsilon_{q,m}= \frac{\% \Delta q_D}{\% \Delta m}$$
 
-- If $\epsilon_{q,m}$ is *negative*: an .onfire[inferior] good
+- If $\epsilon_{q,m}$ is *negative*: an .hi-purple[inferior] good
 
 ---
 
 # Income Elasticity of Demand I
 
-- The .shout[income elasticity of demand] measures how much quantity demanded $(q_D)$ changes in response to a change in income $(m)$
+- The .hi[income elasticity of demand] measures how much quantity demanded $(q_D)$ changes in response to a change in income $(m)$
 
 $$\epsilon_{q,m}= \frac{\% \Delta q_D}{\% \Delta m}$$
 
-- If $\epsilon_{q,m}$ is *negative*: an .onfire[inferior] good
-- If $\epsilon_{q,m}$ is *positive*: a .onfire[normal] good
+- If $\epsilon_{q,m}$ is *negative*: an .hi-purple[inferior] good
+- If $\epsilon_{q,m}$ is *positive*: a .hi-purple[normal] good
 
 ---
 
 # Income Elasticity of Demand I
 
-- The .shout[income elasticity of demand] measures how much quantity demanded $(q_D)$ changes in response to a change in income $(m)$
+- The .hi[income elasticity of demand] measures how much quantity demanded $(q_D)$ changes in response to a change in income $(m)$
 
 $$\epsilon_{q,m}= \frac{\% \Delta q_D}{\% \Delta m}$$
 
-- If $\epsilon_{q,m}$ is *negative*: an .onfire[inferior] good
-- If $\epsilon_{q,m}$ is *positive*: a .onfire[normal] good
+- If $\epsilon_{q,m}$ is *negative*: an .hi-purple[inferior] good
+- If $\epsilon_{q,m}$ is *positive*: a .hi-purple[normal] good
 - Two subtypes of normal goods:
     - **Necessity**: $0 \leq \epsilon_{q,m} \leq 1$
         - $\uparrow$ quantity demanded as $\uparrow \uparrow$ income (water, clothing)
@@ -615,12 +651,12 @@ $$\epsilon_{q,m}= \frac{\% \Delta q_D}{\% \Delta m}$$
 
 # Income Elasticity of Demand I
 
-- The .shout[income elasticity of demand] measures how much quantity demanded $(q_D)$ changes in response to a change in income $(m)$
+- The .hi[income elasticity of demand] measures how much quantity demanded $(q_D)$ changes in response to a change in income $(m)$
 
 $$\epsilon_{q,m}= \frac{\% \Delta q_D}{\% \Delta m}$$
 
-- If $\epsilon_{q,m}$ is *negative*: an .onfire[inferior] good
-- If $\epsilon_{q,m}$ is *positive*: a .onfire[normal] good
+- If $\epsilon_{q,m}$ is *negative*: an .hi-purple[inferior] good
+- If $\epsilon_{q,m}$ is *positive*: a .hi-purple[normal] good
 - Two subtypes of normal goods:
     - **Necessity**: $0 \leq \epsilon_{q,m} \leq 1$
         - $\uparrow$ quantity demanded as $\uparrow \uparrow$ income (water, clothing)
@@ -691,7 +727,7 @@ Goolsbee, et. al (2011: 169)
 
 .pull-right[
 
-- .shout[Income expansion path] describes how consumption of each good changes when income increases
+- .hi[Income expansion path] describes how consumption of each good changes when income increases
     - Traces a line between optimal consumption points as income increases (budget constraint shifts out)
 
 ]
@@ -710,7 +746,7 @@ Goolsbee, et. al (2011: 171)
 
 .pull-right[
 
-- .shout[Engel curve] of each good is more helpful to visualize: shows how consumption of *one* good changes when income increases
+- .hi[Engel curve] of each good is more helpful to visualize: shows how consumption of *one* good changes when income increases
 
 ]
 
@@ -725,7 +761,7 @@ class: inverse, center, middle
 
 .pull-left[
 
-- .shout[Cross-price effect]: change in optimal consumption of a good associated with a change in price of *another* good income, holding the good's *own* price (and income) constant
+- .hi[Cross-price effect]: change in optimal consumption of a good associated with a change in price of *another* good income, holding the good's *own* price (and income) constant
 
 $$\frac{\Delta q_x}{\Delta p_y}	>^?< 0$$
 ]
@@ -742,7 +778,7 @@ $$\frac{\Delta q_x}{\Delta p_y}	>^?< 0$$
 
 .pull-left[
 
-- The .shout[cross-price elasticity of demand] measures how much quantity demanded of one good $(q_x)$ changes in response to a change in price of *another* good $(p_y)$
+- The .hi[cross-price elasticity of demand] measures how much quantity demanded of one good $(q_x)$ changes in response to a change in price of *another* good $(p_y)$
 
 $$\epsilon_{q_x,p_y}= \frac{\% \Delta q_x}{\% \Delta p_y}$$
 
@@ -760,7 +796,7 @@ $$\epsilon_{q_x,p_y}= \frac{\% \Delta q_x}{\% \Delta p_y}$$
 # Cross-Price Elasticity of Demand I
 
 .pull-left[
-- The .shout[cross-price elasticity of demand] measures how much quantity demanded of one good $(q_x)$ changes in response to a change in price of *another* good $(p_y)$
+- The .hi[cross-price elasticity of demand] measures how much quantity demanded of one good $(q_x)$ changes in response to a change in price of *another* good $(p_y)$
 
 $$\epsilon_{q_x,p_y}= \frac{\% \Delta q_x}{\% \Delta p_y} = \cfrac{\frac{\Delta q_x}{q_x}}{\frac{\Delta p_y}{p_y}}$$
 ]
@@ -778,10 +814,10 @@ $$\epsilon_{q_x,p_y}= \frac{\% \Delta q_x}{\% \Delta p_y} = \cfrac{\frac{\Delta 
 
 $$\epsilon_{q_x,p_y}= \frac{\% \Delta q_x}{\% \Delta p_y}$$
 
-- If $\epsilon_{q_x,p_y}$ is *positive*: goods $x$ and $y$ are .shout[substitutes]
+- If $\epsilon_{q_x,p_y}$ is *positive*: goods $x$ and $y$ are .hi[substitutes]
 
 - An rise (fall) in price of $y$ causes more (less) consumption of $x$
-    - Consumption of $x$ moves in same direction as price of $y$
+    - Consumption of $x$ moves in **same direction** as price of $y$
 
 ]
 .pull-right[
@@ -798,12 +834,12 @@ $$\epsilon_{q_x,p_y}= \frac{\% \Delta q_x}{\% \Delta p_y}$$
 
 $$\epsilon_{q_x,p_y}= \frac{\% \Delta q_x}{\% \Delta p_y}$$
 
-- If $\epsilon_{q_x,p_y}$ is *negative*: goods $x$ and $y$ are .shout[complements]
+- If $\epsilon_{q_x,p_y}$ is *negative*: goods $x$ and $y$ are .hi[complements]
 
-- Goods $x$ and $y$ consumed together in a bundle, concern about overall price of bundle
+- Goods $x$ and $y$ consumed in a *bundle*, concern about overall price of *bundle*
 
-- An rise (fall) in price of $y$ causes less (more) consumption of $x$
-    - Consumption of $x$ moves in opposite direction as price of $y$
+- A rise (fall) in price of $y$ causes less (more) consumption of $x$
+  - Consumption of $x$ moves in **opposite direction** as price of $y$
 
 ]
 .pull-right[
