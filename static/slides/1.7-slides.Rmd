@@ -45,13 +45,12 @@ set.seed(256)
 
 - We know the problem is: 
 
-1. **Choose:** .blue[ < a consumption bundle >]
+1. **Choose:** .hi-blue[ < a consumption bundle >]
 
-2. **In order to maximize:** .green[< utility >]
+2. **In order to maximize:** .hi-green[< utility >]
 
-3. **Subject to:** .red[< income and market prices >]
+3. **Subject to:** .hi-red[< income and market prices >]
 
-- Assuming stable preferences, optimal consumption depends on market prices and income
 ]
 
 .pull-right[
@@ -643,8 +642,8 @@ $$\epsilon_{q,m}= \frac{\% \Delta q_D}{\% \Delta m}$$
 
 $$\epsilon_{q,m}= \frac{\% \Delta q_D}{\% \Delta m}$$
 
-- If $\epsilon_{q,m}$ is *negative*: an .hi-purple[inferior] good
-- If $\epsilon_{q,m}$ is *positive*: a .hi-purple[normal] good
+- If $\epsilon_{q,m}$ is **negative**: an .hi-purple[inferior] good
+- If $\epsilon_{q,m}$ is **positive**: a .hi-purple[normal] good
 - Two subtypes of normal goods:
     - **Necessity**: $0 \leq \epsilon_{q,m} \leq 1$
         - $\uparrow$ quantity demanded as $\uparrow \uparrow$ income (water, clothing)
