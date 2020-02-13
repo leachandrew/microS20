@@ -34,7 +34,7 @@ In doing so, we also introduce a major empirical tool that we will return to man
 
 # Practice Problems
 
-Today you will be working on [practice problems](/practice/1.7-practice.html). Answers will be posted later today (along with last classes' problems answers).
+Today you will be working on [practice problems](/practice/1.7-practice.html). Answers will be posted there after class.
 
 # Assignments: Problem Sets 1, 2, and Exam 1
 

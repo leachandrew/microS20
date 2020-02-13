@@ -46,7 +46,7 @@ g. Li likes spending time with his girlfriend and his mother, but never at the s
 
 # Problems
 
-5. Juan enjoys both music and fireworks. His income is $240 per week. Music streaming costs $12 per month, and fireworks cost $8 per bag.
+5. Juan enjoys both music and fireworks. His income is $240 per month. Music streaming costs $12 per month, and fireworks cost $8 per bag.
 
 a. Graph the budget constraint Juan faces, with music on the vertical axis and fireworks on the horizontal axis.
 b. If Juan spends all his income on music, how much music can he afford? Plot a point that illustrates this scenario.
@@ -54,7 +54,7 @@ c. If Juan spends all his income on fireworks, how many bags of  reworks can he 
 d. If Juan spends half his income on fireworks and half his income on music, how much of each can he afford? Plot a point that illustrates this scenario.
 e. Connect the dots to create Juan's budget constraint. What is the slope of the budget constraint?
 f. Suppose that a holiday bonus raises Juan's income temporarily to $360. Draw Juan's new budget constraint.
-g. Now suppose that during the holiday, with his holiday bonus, the price of fireworks increases to $12 and the price of CDs increases to 18. If he spends all of his income on fireworks, how many can Juan buy?  How about CDs? What happens to his budget constraint, and why?
+g. Now suppose that during the holiday, with his holiday bonus, the price of fireworks increases to $12 and the price of music increases to 18. If he spends all of his income on fireworks, how many can Juan buy?  How about music? What happens to his budget constraint, and why?
 
 \clearpage 
 

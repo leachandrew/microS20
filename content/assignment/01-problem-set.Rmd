@@ -68,7 +68,7 @@ Li likes spending time with his girlfriend and his mother, but never at the same
 
 ## Question 5
 
-Juan enjoys both music and fireworks. His income is $240 per week. Music streaming costs $12 per month, and fireworks cost $8 per bag.
+Juan enjoys both music and fireworks. His income is $240 per month. Music streaming costs $12 per month, and fireworks cost $8 per bag.
 
 ### Part A
 
@@ -96,7 +96,7 @@ Suppose that a holiday bonus raises Juan's income temporarily to $360. Draw Juan
 
 ### Part G
 
-Now suppose that during the holiday, with his holiday bonus, the price of fireworks increases to $12 and the price of CDs increases to 18. If he spends all of his income on fireworks, how many can Juan buy?  How about CDs? What happens to his budget constraint, and why?
+Now suppose that during the holiday, with his holiday bonus, the price of fireworks increases to $12 and the price of music increases to 18. If he spends all of his income on fireworks, how many can Juan buy?  How about music? What happens to his budget constraint, and why?
 
 ## Question 6
 
