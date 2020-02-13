@@ -137,9 +137,9 @@ class: inverse, center, middle
 
 .pull-left[
 
-- .hi[real income effect]: a change in the price of $x$ changes your .hi-purple[real income] or .hi-purple[purchasing power], the amount of goods you can buy
+- .hi[Real income effect]: your consumption mix changes because of the change in the price of $x$ changes your .hi-purple[real income] or .hi-purple[purchasing power] (the amount of goods you can buy)
 
-- Note your *actual* (nominal) income ($100) never changed!
+- Note your **_actual_ (nominal) income** ($100) **never changed!**
 ]
 
 .pull-right[
@@ -232,7 +232,7 @@ class: inverse, center, middle
 
 .pull-left[
 
-- .hi[substitution effect]: consumption changes because of a change in **relative prices**
+- .hi[Substitution effect]: consumption mix changes because of a change in **relative prices**
 
 - Buy more of the (now) relatively cheaper items
 
@@ -249,59 +249,6 @@ class: inverse, center, middle
 
 ---
 
-# Substitution Effect: Size
-
-
-- The *size* of the substitution effect depends on how substitutable two goods are 	
-.pull-left[
-```{r, echo=F, fig.retina=3, fig.height=5, fig.align="center"}
-IC_straighter_1<-function(x){3-log(x)-0.25}
-ggplot(data.frame(x=c(0,5)), aes(x=x))+
-  stat_function(fun=IC_straighter_1, geom="line", size=2, color = "#453781FF")+
-  geom_segment(aes(x=0, xend=4, y=4, yend=0), size=1, linetype="dashed", color="red")+
-  geom_segment(aes(x=2, xend=2, y=5, yend=2), size=1, linetype="dashed", color="green")+
-  geom_segment(aes(x=2, xend=5, y=2, yend=2), size=1, linetype="dashed", color="green")+
-  scale_x_continuous(breaks=seq(0,5,1),
-                     limits=c(0,5),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=seq(0,5,1),
-                     limits=c(0,5),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  labs(x = "Pens",
-       y = "Pencils")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-```
-
-- Straighter $\rightarrow$ more substitutable
-
-]
---
-
-.pull-right[
-```{r, echo=F, fig.retina=3, fig.height=5, fig.align="center"}
-IC_steep_1<-function(x){4/x}
-ggplot(data.frame(x=c(0,5)), aes(x=x))+
-  stat_function(fun=IC_steep_1, geom="line", size=2, color = "#453781FF")+
-  geom_segment(aes(x=0, xend=4, y=4, yend=0), size=1, linetype="dashed", color="red")+
-  geom_segment(aes(x=2, xend=2, y=5, yend=2), size=1, linetype="dashed", color="green")+
-  geom_segment(aes(x=2, xend=5, y=2, yend=2), size=1, linetype="dashed", color="green")+
-  scale_x_continuous(breaks=seq(0,5,1),
-                     limits=c(0,5),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=seq(0,5,1),
-                     limits=c(0,5),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  labs(x = "Chips",
-       y = "Guac")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-```
-
-- Curved $\rightarrow$ more complementary
-
-]
-
----
-
 class: inverse, center, middle
 # Putting the Effects Together
 
@@ -309,20 +256,22 @@ class: inverse, center, middle
 
 # Putting the Effects Together
 
-- .hi[Real income effect]: change in consumption due to change in real purchasing power
+- .hi-purple[Real income effect]: change in consumption due to change in real purchasing power
     - Can be positive (**normal goods**) or negative (**inferior goods**)
     - Lower price of $x$ means you can buy more $x$, $y$, or *both* (depending on your preferences between $x$ and $y$)
 
 --
 
-- .hi[Substitution effect]: change in consumption due to change in relative prices
+- .hi-purple[Substitution effect]: change in consumption due to change in relative prices
     - If $x$ gets cheaper relative to $y$, consume  $\downarrow y$ (and $\uparrow x$)
     - This is always the same direction! $(\downarrow$ relatively expensive goods, $uparrow$ relatively cheaper goods)
     - This is why demand curves slope downwards!
     
 --
 
-$$\text{Price Effect} = \text{Real income effect} + \text{Substitution Effect}$$
+.center[
+.hi[Price Effect] $=$ .hi-purple[Real income effect] $+$ .hi-purple[Substitution Effect]
+]
 
 ---
 
@@ -447,7 +396,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- .orange[**Substitution effect:**] what would have been chosen at the *new* price ratio to remain indifferent as *before*
+- .orange[**Substitution effect:**] what you would choose under the **new exchange rate** to **remain indifferent** as before the change
 
 ]
 
@@ -499,12 +448,12 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- .orange[**Substitution effect:**] what would have been chosen at the *new* price ratio to remain indifferent as *before*
+- .orange[**Substitution effect:**] what you would choose under the **new exchange rate** to **remain indifferent** as before the change
 
 - Graphically: shift *new* budget constraint inwards until tangent with *old* indifference curve
 
-- $A \rightarrow B$ on same I.C. $(\uparrow$ cheaper $x$ and $\downarrow$ $y)$
-    - Note it *must* be a different point on the original curve! 
+- $A \rightarrow B$ on same I.C. $(\uparrow$ $x$, $\downarrow$ $y)$
+    - Point B *must* be a *different* point on the original curve! 
 
 ]
 
@@ -561,12 +510,12 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- .orange[**Substitution effect:**] what would have been chosen at the *new* price ratio to remain indifferent as *before*
+- .orange[**Substitution effect:**] what you would choose under the **new exchange rate** to **remain indifferent** as before the change
 
 - Graphically: shift *new* budget constraint inwards until tangent with *old* indifference curve
 
-- $A \rightarrow B$ on same I.C. $(\uparrow$ cheaper $x$ and $\downarrow$ $y)$
-    - Note it *must* be a different point on the original curve! 
+- $A \rightarrow B$ on same I.C. $(\uparrow$ $x$, $\downarrow$ $y)$
+    - Point B *must* be a *different* point on the original curve! 
 
 ]
 
@@ -624,7 +573,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- .green[**(Real) income effect:**] change in quantities consumed due to the change in purchasing power *after* the change in price
+- .green[**(Real) income effect:**] change in consumption due to the **change in purchasing power** from the change in price
 
 ]
 
@@ -680,7 +629,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- .green[**(Real) income effect:**] change in quantities consumed due to the change in purchasing power *after* the change in price
+- .green[**(Real) income effect:**] change in consumption due to the **change in purchasing power** from the change in price
 
 - $B \rightarrow C$ to new budget constraint (can buy more of $x$ and/or $y$)
 ]
@@ -1097,7 +1046,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- What about for an *inferior* good (like Ramen)?
+- What about for an .hi[inferior] good (like Ramen)?
 
 ]
 
@@ -1161,7 +1110,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- What about for an *inferior* good (like Ramen)?
+- What about for an .hi[inferior] good (like Ramen)?
 
 - .orange[**Substitution effect:** `\\(A \rightarrow B\\)`] on same I.C. $(\uparrow$ cheaper $x$ and $\downarrow$ $y)$
 
@@ -1221,11 +1170,11 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- What about for an *inferior* good (like Ramen)?
+- What about for an .hi[inferior] good (like Ramen)?
 
 - .orange[**Substitution effect:** `\\(A \rightarrow B\\)`] on same I.C. $(\uparrow$ cheaper $x$ and $\downarrow$ $y)$
 
-- .green[**(Real) income effect:** `\\(B \rightarrow C\\)`] to new budget constraint (can buy more of $x$ and/or $y$)
+- .green[**(Real) income effect:** `\\(B \rightarrow C\\)`] to new budget constraint (can buy more of $x$ and/or $y$) **is negative**
 
 ]
 
@@ -1285,11 +1234,11 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- What about for an *inferior* good (like Ramen)?
+- What about for an .hi[inferior] good (like Ramen)?
 
 - .orange[**Substitution effect:** `\\(A \rightarrow B\\)`] on same I.C. $(\uparrow$ cheaper $x$ and $\downarrow$ $y)$
 
-- .green[**(Real) income effect:** `\\(B \rightarrow C\\)`] to new budget constraint (can buy more of $x$ and/or $y$)
+- .green[**(Real) income effect:** `\\(B \rightarrow C\\)`] to new budget constraint (can buy more of $x$ and/or $y$) **is negative**
 
 - .purple[**(Total) price effect:** `\\(A \rightarrow C\\)`]
 
@@ -1354,11 +1303,11 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- What about for an *inferior* good (like Ramen)?
+- What about for an .hi[inferior] good (like Ramen)?
 
 - .orange[**Substitution effect:** `\\(A \rightarrow B\\)`] on same I.C. $(\uparrow$ cheaper $x$ and $\downarrow$ $y)$
 
-- .green[**(Real) income effect:** `\\(B \rightarrow C\\)`] to new budget constraint (can buy more of $x$ and/or $y$)
+- .green[**(Real) income effect:** `\\(B \rightarrow C\\)`] to new budget constraint (can buy more of $x$ and/or $y$) **is negative**
 
 - .purple[**(Total) price effect:** `\\(A \rightarrow C\\)`]
 
@@ -1434,16 +1383,18 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 # Recap: Real Income and Substitution Effects
 
-$$\text{Substitution Effect} + \text{Real Income Effect} = \text{Price Effect}$$
+.center[
+.hi[Price Effect] $=$ .hi-green[Real income effect] $+$ .hi-orange[Substitution Effect]
+]
 
-- .orange[Substitution effect]: is always in the direction of the cheaper good
+- .hi-orange[Substitution effect]: is always in the direction of the cheaper good
 
-- .green[Real Income effect]: can be positive (normal) or negative *inferior)
+- .hi-green[Real Income effect]: can be positive (normal) or negative *inferior)
 
-- Law of Demand/Demand curves slope downwards (.purple[Price effect]) mostly because of the substitution effect
+- .hi[Law of Demand]/Demand curves slope downwards (.hi[Price effect]) mostly because of the substitution effect
     - Even (inferior) goods with negative real income effects overpowered by substitution effect
 
-- Exception in the theoretical .hi[Giffen good]: negative R.I.E. $>$ S.E.
+- Exception in the theoretical .hi-purple[Giffen good]: negative R.I.E. $>$ S.E.
     - An upward sloping demand curve!
 
 
@@ -1591,11 +1542,9 @@ $$p=10-q$$
 .green[**Example**]: 
 $$p=10-q$$
 ]
-- Graphable (price on vertical axis)!
-
 - Slope: $-1$
 
-- Vertical intercept called the .hi["Choke price"]: price where $q_D=0$ ($10), just high enough to discourage *any* purchases
+- Vertical intercept (hi["Choke price"]): price where $q_D=0$ ($10), just high enough to discourage *any* purchases
 
 ]
 
@@ -1613,13 +1562,6 @@ d
 
 .pull-left[
 
-- .hi[*Inverse* demand function] relates price to quantity
-    - Find by taking demand function and solving for $p$
-
-.content-box-green[
-.green[**Example**]: 
-$$p=10-q$$
-]
 - Read two ways:
 
 - Horizontally: at any given price, how many units person wants to buy
@@ -1973,80 +1915,6 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 ---
 
-# Deriving a Demand *Function* II
-
-.content-box-red[
-.red[**MATH FYI**]: for a Cobb-Douglas utility function (where the two exponents sum to 1):
-$$u(x,y)=x^ay^{(1-a)}$$
-
-the **demand function for $x$** is
-$$q_x=a\frac{m}{p_x}$$
-
-- Property 1: Consumer always spends proportion $a$ of their total income on $x$! 
-
-- Ptroperty 2: demand for $x$ is unaffected by prices of *other* goods (no $p_y$ anywhere)!
-
-- To get a demand function just in terms of price, input a given income. 
-
-]
-
----
-
-# Deriving a Demand *Function* III
-
-.pull-left[
-.content-box-green[
-.green[**Example**]:
-$u(x,y)=x^{0.5}y^{0.5}$, demand function is
-
-$$q_x=0.5\frac{m}{p_x}$$
-
-- Always spend 50% $(a)$ of income on $x$
-
-- With an income of $m=10$
-$$\text{Demand: }q_x=\frac{5}{p_x} \quad \text{Inv. demand: } p_x=\frac{5}{q_x}$$
-
-- With an income of $m=50$
-$$\text{Demand: }q_x=\frac{25}{p_x} \quad \text{Inv. demand: } p_x=\frac{25}{q_x}$$
-]
-]
-
-.pull-right[
-```{r, fig.retina=3, fig.height=5.5}
-library("mosaic")
-library("ggrepel")
-
-cd1=function(x){5/x}
-cd2=function(x){25/x}
-
-point_sub<-tribble(
-  ~letter, ~x, ~y,
-  "A", 8, 0
-)
-
-ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=cd1, geom="line", size=2, color = "blue")+
-  stat_function(fun=cd2, geom="line", size=2, color = "blue", linetype="dashed")+
-  geom_label(aes(x=2,y=cd1(2)), color = "blue", label="Demand: m=20", size = 6)+
-  geom_label(aes(x=8,y=cd2(8)), color = "blue", label="Demand: m=40", size = 6)+
-    scale_x_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)),
-                     labels = function(x){paste("$", x, sep="")})+
-  coord_cartesian(clip="off")+
-  labs(x = "Quantity of x",
-       y = "Price of x",
-      caption = expression(p_x==0.5*m/x))+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-```
-
-]
-
----
-
 # Shifts in Demand I
 
 .pull-left[
@@ -2077,13 +1945,13 @@ d
 
 .pull-left[
 
-- A change in one of the .hi-purple["determinants of demand"] (or "shifters") will shift the demand curve
-    - Change in income $m$
-    - Change in price of other goods $p_y$ (substitutes or complements)
-    - Change in preferences or expectations about good $x$ (show up in utility function)
-    - Change in number of buyers in market
+- A change in one of the .hi-purple["determinants of demand"] will **shift** demand curve!
+    - Change in **income** $m$
+    - Change in **price of other goods** $p_y$ (substitutes or complements)
+    - Change in **preferences** or **expectations** about good $x$
+    - Change in **number of buyers**
 
-- Shows up in (inverse) demand function by a **change in the intercept (choke price)**! 
+- Shows up in (inverse) demand function by a **change in intercept (choke price)**! 
 
 - See my [Visualizing Demand Shifters](https://ryansafner.shinyapps.io/Demand/)
 

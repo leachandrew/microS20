@@ -235,7 +235,7 @@ $$u(x,y)=x^ay^{(1-a)} \quad \quad \text{where 0 < a < 1}$$
 
 So $a$ and $1-a$ are proportions of $m$!]
 
-For a constant value of $p_x$, this is a linear function of $m$. So doubling, tripling, etc. $m$ will double, triple, etc. quantity demanded for $x$. So the income expansion path ([see next class](/class/08-class)) is a straight line through the origin with a slope $\frac{a}{p_x}$.
+For a constant value of $p_x$, this is a linear function of $m$. So doubling, tripling, etc. $m$ will double, triple, etc. quantity demanded for $x$. So the income expansion path ([see previous class](/class/1.7-class)) is a straight line through the origin with a slope $\frac{a}{p_x}$.
 
 ### EXAMPLE
 

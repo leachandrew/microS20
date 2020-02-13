@@ -47,7 +47,9 @@ lessons:
 
   - title: "1.8 Income and Substitution Effects"
     reading: "1.8-reading"
-    
+    class: "1.8-class"
+    slides: "1.8-slides"
+
   - title: "1.9 Price Elasticity"
     reading: "1.9-reading"
     
