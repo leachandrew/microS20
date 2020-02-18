@@ -59,6 +59,7 @@ engel<-tribble(
 engel %>%
   knitr::kable(., format="latex", booktabs=TRUE)
 ```
+Draw a smooth approximation of Alice's Engel curve for books, and indicate the range(s) of income over which books are *normal* and/or *inferior* goods.
 
 \clearpage 
 
