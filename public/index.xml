@@ -2,13 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microeconomic Analysis</title>
-    <link>https://microS20.classes.ryansafner.com/</link>
+    <link>https://microS20.classes.ryansafner.com/index.html</link>
     <description>Recent content on Microeconomic Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 May 2016 21:48:51 -0700</lastBuildDate>
     
 	<atom:link href="https://microS20.classes.ryansafner.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>pe="application/rss+xml" />
     
     
     <item>
@@ -302,7 +305,7 @@ You may work together (and I highly encourage that) but you must turn in your ow
       
       <guid>https://microS20.classes.ryansafner.com/assignment/02-problem-set/</guid>
       <description>Due by Thursday, February 20, 2020
-  Download as PDF  Please write your answers to the following questions on a piece of paper, or download and print a PDF copy (link above) to write on. You may also type your answers and print out a hard copy.
+  Download as PDF  Answer Key  Please write your answers to the following questions on a piece of paper, or download and print a PDF copy (link above) to write on. You may also type your answers and print out a hard copy.
 You may work together (and I highly encourage that) but you must turn in your own answers. Your TA, under my supervision, will grade homeworks 70% for completion, and for the remaining 30%, pick one question to grade for accuracy - so it is best that you try every problem, even if you are unsure how to complete it accurately.</description>
     </item>
     
