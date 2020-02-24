@@ -21,6 +21,7 @@ If you have any approved testing accomodations, or know you will be absent for t
 # "Practice" Exam
 
 - [<i class="fas fa-file-pdf"></i> `Download Old Exam 1`](/examprep/Exam1.pdf)
+- [<i class="fas fa-file-pdf"></i> `Old Exam 1 Answer Key`](/examprep/Exam1_Answer_Key.pdf)
 
 Above, you have a previous semester's actual exam. Use it to get a sense of what questions are asked, the format, and how many. Questions draw from topics in Unit 1, and note that **just because topics or questions were not in the practice exam does NOT mean they may not show up on your exam.**^[I hope that this is obvious. I write this to ensure there is no misunderstanding.] Aside from minor extensions, no mathematical problem on any exam should be something you have not seen in some form before. 
 
