@@ -2,16 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microeconomic Analysis</title>
-    <link>https://microS20.classes.ryansafner.com/index.html</link>
+    <link>https://microS20.classes.ryansafner.com/</link>
     <description>Recent content on Microeconomic Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 05 May 2016 21:48:51 -0700</lastBuildDate>
     
 	<atom:link href="https://microS20.classes.ryansafner.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-  </channel>
-</rss>pe="application/rss+xml" />
     
     
     <item>
@@ -274,6 +271,28 @@ A reminder, your second problem set is due next class; next class is our review 
     </item>
     
     <item>
+      <title>2.3 Cost Minimization - Class Notes</title>
+      <link>https://microS20.classes.ryansafner.com/class/2.3-class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://microS20.classes.ryansafner.com/class/2.3-class/</guid>
+      <description>Contents  Overview Slides Practice Problems Appendix A Change in Relative Factor Prices Improvements in Technology    Overview  Thursday, March 5, 2020  Today we put our tools together (production functions/isoquants and isocost lines) to solve the firm’s cost minimization problem. Again, we do not solve this constrained optimization problem with calculus, but by looking graphically, and using an algabraic rule that should make intuitive sense.</description>
+    </item>
+    
+    <item>
+      <title>2.3 Cost Minimization - Practice Problems</title>
+      <link>https://microS20.classes.ryansafner.com/practice/2.3-practice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://microS20.classes.ryansafner.com/practice/2.3-practice/</guid>
+      <description>Download as PDF  Answer Key  Your firm can use labor \(l\) and capital \(k\) to produce output according to the production function: \[q=4lk\]
+The marginal products are:
+\[\begin{align*} MP_l &amp;amp;=4k \\ MP_k &amp;amp;=4l \\ \end{align*}\]
+Suppose you need to produce 144 units, the price of labor is $10, and the price of capital is $40.
+1. What is the least-cost combination of labor and capital that produces 144 units of output?</description>
+    </item>
+    
+    <item>
       <title>2.3 Cost Minimization - Readings</title>
       <link>https://microS20.classes.ryansafner.com/reading/2.3-reading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -354,6 +373,17 @@ You may work together (and I highly encourage that) but you must turn in your ow
       <guid>https://microS20.classes.ryansafner.com/assignment/02-problem-set/</guid>
       <description>Due by Thursday, February 20, 2020
   Download as PDF  Answer Key  Please write your answers to the following questions on a piece of paper, or download and print a PDF copy (link above) to write on. You may also type your answers and print out a hard copy.
+You may work together (and I highly encourage that) but you must turn in your own answers. Your TA, under my supervision, will grade homeworks 70% for completion, and for the remaining 30%, pick one question to grade for accuracy - so it is best that you try every problem, even if you are unsure how to complete it accurately.</description>
+    </item>
+    
+    <item>
+      <title>Problem Set 3</title>
+      <link>https://microS20.classes.ryansafner.com/assignment/03-problem-set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://microS20.classes.ryansafner.com/assignment/03-problem-set/</guid>
+      <description>Due by Thursday, March 19, 2020
+  Download as PDF  Please write your answers to the following questions on a piece of paper, or download and print a PDF copy (link above) to write on. You may also type your answers and print out a hard copy.
 You may work together (and I highly encourage that) but you must turn in your own answers. Your TA, under my supervision, will grade homeworks 70% for completion, and for the remaining 30%, pick one question to grade for accuracy - so it is best that you try every problem, even if you are unsure how to complete it accurately.</description>
     </item>
     
