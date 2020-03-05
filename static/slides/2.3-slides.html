@@ -109,7 +109,10 @@ class: inverse, center, middle
 # The Cost Minimization Problem: Verbally
 
 .pull-left[
-- The **firms's cost minimization problem**: choose `\(l\)` and `\(k\)` to minimize total cost subject to producing the optimal amount of output
+- The .hi[firms's cost minimization problem]: 
+
+&gt; choose a combination of `\(l\)` and `\(k\)` to minimize total cost that produces the optimal amount of output
+
 ]
 
 .pull-right[
@@ -143,13 +146,7 @@ class: inverse, center, middle
 
 .pull-left[
 
-- .hi[Graphical solution]: Lowest isocost line *tangent* to desired isoquant (A)
-
-- B produces same output as A, but higher cost
-
-- C is same cost as A, but produces less than desired output
-
-- D produces is cheaper, but produces less than desired output
+- .hi[Graphical solution]: **Lowest** .hi-red[isocost line] **_tangent_ to desired** .hi-green[isoquant] (A)
 
 ]
 
@@ -160,12 +157,17 @@ class: inverse, center, middle
 
 ---
 
-# The Firm's Least-Cost Input Combination: Why A?
+# The Firm's Least-Cost Input Combination: Graphically
 
 .pull-left[
 
-`$$\begin{align*}
-\text{Isoquant curve slope} &amp;= \text{Isocost line slope} \\\end{align*}$$`
+- .hi[Graphical solution]: **Lowest** .hi-red[isocost line] **_tangent_ to desired** .hi-green[isoquant] (A)
+
+- B produces same output as A, but higher cost
+
+- C is same cost as A, but produces less than desired output
+
+- D produces is cheaper, but produces less than desired output
 
 ]
 
@@ -181,12 +183,28 @@ class: inverse, center, middle
 .pull-left[
 
 `$$\begin{align*}
-\text{Isoquant curve slope} &amp;= \text{Isocost line slope} \\
-| MRTS_{l,k} | &amp;= | \frac{w}{r} | \\
-| \frac{MP_l}{MP_k} | &amp;= | \frac{w}{r} | \\
-| -0.5 | &amp;= | -0.5 | \\\end{align*}$$`
+\color{green}{\text{Isoquant curve slope}} &amp;= \color{red}{\text{Isocost line slope}} \\ \end{align*}$$`
 
-- *Firm* would exchange at same rate as market
+]
+
+.pull-right[
+
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" /&gt;
+]
+
+---
+
+# The Firm's Least-Cost Input Combination: Why A?
+
+.pull-left[
+
+`$$\begin{align*}
+\color{green}{\text{Isoquant curve slope}} &amp;= \color{red}{\text{Isocost line slope}} \\
+\color{green}{| MRTS_{l,k} |} &amp;= \color{red}{| \frac{w}{r} |} \\
+\color{green}{| \frac{MP_l}{MP_k} |} &amp;= \color{red}{| \frac{w}{r} |} \\
+\color{green}{| -0.5 |} &amp;= \color{red}{| -0.5 |} \\\end{align*}$$`
+
+- .hi-green[Firm] would exchange at same rate as .hi-red[market]
 
 - **No other combination** of `\((l,k)\)` **exists** at current prices &amp; output that could lower cost to produce `\(q^*\)`!
 
@@ -194,7 +212,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" /&gt;
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" /&gt;
 ]
 
 ---
@@ -213,7 +231,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" /&gt;
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-5-1.png" width="504" /&gt;
 ]
 
 ---
@@ -238,7 +256,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-5-1.png" width="504" /&gt;
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-6-1.png" width="504" /&gt;
 ]
 
 ---
@@ -250,7 +268,7 @@ class: inverse, center, middle
 - .hi[Equimarginal Rule]: the cost of production is minimized where the **marginal product per dollar spent** is **equalized** across all `\(n\)` possible inputs
 
 - Firm will always choose an option that gives higher marginal product (e.g. if `\(MP_l &gt; MP_k)\)`
-    - But each option has a different cost, so we weight each option by its cost, hence `\(\frac{MP_l}{w}\)`
+    - But each option has a different cost, so we weight each option by its cost, hence `\(\frac{MP_n}{p_n}\)`
     
 ---
 
@@ -260,16 +278,11 @@ class: inverse, center, middle
 
 - Why is this the optimum? 
 
-.content-box-green[
-.green[**Example**]: suppose firm could get a higher marginal product per $1 spent on `\(l\)` than for `\(k\)` (i.e. "more bang for your buck"!)
-
-- Not minimizing costs!
-- Use more `\(l\)` and less `\(k\)`!
-    - This will raise `\(MP_k\)` and lower `\(MP_l\)`!
-
-- Continues until cost-adjusted marginal products are equalized
-
-]
+- .hi-green[Example:] suppose firm could get a higher marginal product per $1 spent on `\(l\)` than for `\(k\)` (i.e. "more bang for your buck"!)
+  - Not minimizing costs!
+  - Should use more `\(l\)` and less `\(k\)`!
+      - This will raise `\(MP_k\)` and lower `\(MP_l\)`!
+  - Continue until cost-adjusted marginal products are equalized
 
 ---
 
@@ -326,31 +339,20 @@ class: inverse, center, middle
 
 - The .hi[returns to scale] of production refers to the change in output when all inputs are increased *at the same rate*
 
-`$$q=f(k,l) \rightarrow q=f(ck,cl) \text{ for some }c$$`
-
----
-
-# *Constant* Returns to Scale
+--
 
 - .hi-purple[Constant returns to scale]: output increases at same proportionate rate as inputs increase
     - e.g. if you double all inputs, output doubles
-    `$$f(2k,2l)=2f(k,l)$$`
 
----
-
-# *Increasing* Returns to Scale
+--
 
 - .hi-purple[Increasing returns to scale]: output increases *more than* proportionately to the change in inputs
     - e.g. if you double all inputs, output *more than* doubles
-    `$$f(ck,cl)&lt;cf(k,l)$$`
 
----
-
-# *Decreasing* Returns to Scale
+--
 
 - .hi-purple[Decreasing returns to scale]: output increases *less than* proportionately to the change in inputs
     - e.g. if you double all inputs, output *less than* doubles
-    `$$f(ck,cl)&gt;cf(k,l)$$`
 
 ---
 
