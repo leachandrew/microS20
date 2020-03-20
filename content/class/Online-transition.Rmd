@@ -1,0 +1,67 @@
+---
+title: "Transition to Online Course For Spring 2020"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Overview
+
+Welcome to quarantine! None of us signed up for this. Some of you may be dealing hardships at home and at work, and may be juggling many problems right now. It may be awkward and difficult for you to learn at home, and for me to teach from home. We all are going to miss the human contact and sense of community from being together on campus.
+
+Thank you to those of you who filled out my survey and gave me some helpful information. Us faculty have been training and sharing tips for the best ways to retool our courses for a sudden shift to an online semester. 
+
+For the rest of the semester, we are going to prioritize supporting each other as human beings during this crazy period of isolation, and use simple, accessible solutions that make sense for the most people, and above all, to be flexible.
+
+In addition to email, I will make myself accessible across multiple media to ensure you get the help and support you need:
+
+- [<i class="fas fa-video"></i> Zoom Office Hours (MW 3:30-5)](https://zoom.us/j/458617463)
+- [<i class="fab fa-slack"></i> Class Slack Channel](http://hood-micro-analysis.slack.com)^[Join with [this link](https://join.slack.com/t/hood-micro-analysis/shared_invite/zt-cyd68m4k-u5_6kJqcfZQrghf8614S_w), which expires in 7 days.]
+
+I will host general "office hours" during my usual time, 3:30-5PM Mondays and Wednesdays, on **Zoom.** You can join in with video, audio, and/or chat, whichever you feel comfortable with. Of course, if you are not available during those times, we can schedule our own time if you prefer this method over email or Slack.
+
+I will also be reachable on **Slack**^[Join with [this link](https://join.slack.com/t/hood-micro-analysis/shared_invite/zt-cyd68m4k-u5_6kJqcfZQrghf8614S_w), which expires in 7 days.], a common instant-messaging and collaboration app that many workplaces use, and I have used in some advanced courses before. I have added a link at the top of our website to our course Slack channel. Feel free to use this to ask me, and each other, questions and comments about the course and material, and to maintain contact and our shared community.
+
+# Changes to Syllabus
+
+Fortunately, much of our class is already accessible online, and most assignments and lectures need only minimal changes. 
+
+1. Homeworks will generally be due by Sunday night at 11:59 P.M, unless otherwise noted, to provide a consistent date and time for everyone. Homeworks will be graded in the same fashion as before, and grades will be posted in Blackboard's Grade Center, as before. Please type your answers to facilitate easier grading. Scans and photos will be accepted, but are not preferred.
+
+2. We will still have Exam 2 and Exam 3, but they will be modified so you can take them at home. I will provide more information as we get closer to Exam 2.
+
+3. Your Op-Ed remains due by email (with a word count), by May 7, 2020.
+
+4. "Class meetings" will be **asynchronous**. Videos of my lectures will be hosted via Youtube (unlisted) and posted on our class pages on this website (along with the regular slides).
+
+I will be recording my lectures live via Zoom, during our usual class meeting times. The recordings will be posted later in the day on Youtube and on the class pages. **You are not required to attend live**. You *can*, and may want to, join in live on Zoom if you want to ask me questions in real time, or want to keep to a schedule, or are missing normal human contact and sense of normalcy.^[Please note, as the live lectures are recorded (and posted online), if you join in, **you are consenting to be recorded.** Maryland law requires all parties consent for a conversation or meeting to be recorded.] :)
+
+5. Office hours will be held on **Zoom**, at their usual days and times (Monday and Wednesday 3:30-5PM), as described above.
+
+Please let me know if you will have difficulty accessing materials or completing assignments at any point this semester. These are special circumstances for everyone. None of us signed up for an online course, and we all have to juggle additional hardships and responsibilities during this chaotic time. I am more concerned for your safety and sanity than your grades, and will be as flexible and generous as I can be.
+
+The syllabus, including assignments, course format, and grading, remain subject to change throughout this semester as we experiment. I will give ample warning and solicit feedback before other major changers.
+
+# Specific Changes for Current Assignments
+
+Thank you again to those of you who filled out the online survey. It seems most of you are in good shape in terms of accessing materials, and hopefully those of you that left some on campus will have the ability to retrieve them in the coming weeks.
+
+## Exam 1 Corrections 
+
+You will have **until the end of the semester (May 4)** to turn in your corrections, however, I advise you to **do them as soon as possible**. You don't want to have to juggle old material in with the new, a few weeks from now. Please turn in:
+
+1. Photos/scans of your Exam 1 questions you got wrong (you don't have to send me every page, just the ones with problems you are redoing!).
+2. A document (MS Word, PDF, etc) and/or photos/scans of handwritten portions, that contains your answers to problems you got points off on. Please be complete, and explain why the answer you are changing is correct (i.e. don't just write "I wrote 'True' but it's 'False'). Be sure to show your work (a common cause of losing points!).
+
+I will update your grades on Blackboard as I receive them.
+
+## Homework 3
+
+Homework 3 is now due, via email, on Sunday, March 29, by 11:59PM. The answer key will be posted Monday, March 30.
+

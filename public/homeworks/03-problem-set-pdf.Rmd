@@ -1,7 +1,7 @@
 ---
 title: "Problem Set 3"
 author: "ECON 306 Spring 2020"
-date: "Due by Thursday, March 19, 2020"
+date: "Due by Sunday March 29, 2020"
 output: pdf_document
 header-includes:
 - \usepackage{amsmath}
