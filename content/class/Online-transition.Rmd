@@ -19,11 +19,11 @@ None of us signed up for this. Some of you may be dealing hardships at home and 
 
 Thank you to those of you who filled out my survey and gave me some helpful information. Us faculty have been training and sharing tips for the best ways to retool our courses for a sudden shift to an online semester. 
 
-For the rest of the semester, we are going to prioritize supporting each other as human beings during this crazy period of isolation, and use simple, accessible solutions that make sense for the most people, and above all, to be flexible.
+For the rest of the semester, we are going to prioritize supporting each other as human beings during this crazy period of isolation, and use simple, accessible solutions that make sense for the most people, and above all, to be flexible. Right now, you have more important needs to worry about with your families, employment, and staying sane in isolation, than schoolwork. Prioritize them. I will be flexible with times and assignments, but will try to keep some structure to the course, and as such, some deadlines. I hope you use this course as an opportunity to escape the boredom and insanity of social isolation, and to help keep interest in understanding the world around us.
 
 In addition to email, I will make myself accessible across multiple media to ensure you get the help and support you need:
 
-- [<i class="fas fa-video"></i> Zoom Office Hours (MW 3:30-5)](https://zoom.us/j/458617463)
+- [<i class="fas fa-video"></i> Zoom Office Hours (MW 3:30-5:00 PM)](https://zoom.us/j/458617463)
 - [<i class="fab fa-slack"></i> Class Slack Channel](http://hood-micro-analysis.slack.com)^[Join with [this link](https://join.slack.com/t/hood-micro-analysis/shared_invite/zt-cyd68m4k-u5_6kJqcfZQrghf8614S_w), which expires in 7 days.]
 
 I will host general "office hours" during my usual time, 3:30-5PM Mondays and Wednesdays, on **Zoom.** You can join in with video, audio, and/or chat, whichever you feel comfortable with. Of course, if you are not available during those times, we can schedule our own time if you prefer this method over email or Slack.
@@ -32,9 +32,9 @@ I will also be reachable on **Slack**^[Join with [this link](https://join.slack.
 
 If you had never noticed, there is a [<i class="fas fa-calculator"></i> `Grade Calculator`](https://ryansafner.shinyapps.io/306_grade_calculator/) at the top of the [Assignments page](/assignments). Use this tool to calculate your final course grade and predict what grades you would need on remaining assignments to obtain a desired course grade.
 
-# Changes to Syllabus
+# Changes to Course Structure & Assignments
 
-Fortunately, much of our class is already accessible online, and most assignments and lectures need only minimal changes. 
+Fortunately, much of our class is already accessible online, and most assignments and lectures need only minimal changes. The following will be updated on the [Syllabus page (and PDF)](/syllabus): 
 
 1. **Homeworks** will generally be due by Sunday night at 11:59 P.M, unless otherwise noted, to provide a consistent date and time for everyone. Homeworks will be graded in the same fashion as before, and grades will be posted in Blackboard's Grade Center, as before. Please type your answers to facilitate easier grading. Scans and photos will be accepted, but are not preferred.
 
@@ -44,15 +44,19 @@ Fortunately, much of our class is already accessible online, and most assignment
 
 4. All **"class meetings"** will be **asynchronous**. Videos of my lectures will be hosted via Youtube (unlisted) and posted on the <i class="fas fa-info-circle"></i> **Class** pages on this website (along with the regular slides). You can watch them at your own pace, on your own time. I *will*, however, be recording my lectures *live* via *Zoom*, during our usual class meeting times:
 
-- [<i class="fas fa-video"></i> Zoom Live Class Meetings (TuTh 13:30-12:45)](https://zoom.us/j/825176575)
+- [<i class="fas fa-video"></i> Zoom Live Class Meetings (TuTh 11:30 AM-12:45 PM)](https://zoom.us/j/825176575)
 
 > The recordings will be posted later in the day on Youtube and on the class pages. **You are not required to attend live**. You *can*, and may want to, join in live on Zoom if you want to ask me questions in real time, or want to keep to a schedule, or are missing normal human contact and sense of normalcy.^[Please note, as the live lectures are recorded (and posted online), if you join in, **you are consenting to be recorded.** Maryland law requires all parties consent for a conversation or meeting to be recorded.] :)
 
 5. **Office hours** will be held on *Zoom*, at their usual days and times (Monday and Wednesday 3:30-5PM), as described above.
 
+6. We lost a week of classes due to Spring Break, so I will be adjusting and removing certain content on the schedule page to prioritize more important material.
+
 Please let me know if you will have difficulty accessing materials or completing assignments at any point this semester. These are special circumstances for everyone. None of us signed up for an online course, and we all have to juggle additional hardships and responsibilities during this chaotic time. I am more concerned for your safety and sanity than your grades, and will be as flexible and generous as I can be.
 
-**The syllabus, including assignments, course format, and grading, remain subject to change throughout this semester as we experiment.** I will give ample warning and solicit feedback before other major changes.
+**The syllabus, including assignments, course format, course content/schedule, and grading, remain subject to change throughout this semester as we experiment.** I will give ample warning and solicit feedback before other major changes.
+
+Lastly, please know that I am wide open to suggestions and feedback! Let me know what is working, and what isn't working for you. This matters more than ever because I am now reaching each of you *individually*, rather than as a *single class together* in person!
 
 # Specific Changes for Current Assignments
 
@@ -70,3 +74,7 @@ I will update your grades on Blackboard as I receive them.
 ## 2. Homework 3
 
 Homework 3 is now due, via email, on Sunday, March 29, by 11:59PM. The answer key will be posted Monday, March 30.
+
+## 3. Resuming class
+
+We resume the course on Tuesday, March 24 with *2.4 - Cost and Revenue Functions*. Look on the [<i class="fas fa-info-circle"></i> 2.4 class page](/class/2.4-class) before class begins for a link to the live Zoom stream, and later that day for the videos of the lecture, and other resources.
