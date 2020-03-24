@@ -88,8 +88,12 @@ lessons:
     class: "online-transition"
 
   - title: "2.4 Cost and Revenue Functions"
-
+    reading: "2.4-reading"
+    class: "2.4-class"
+    slides: "2.4-slides"
+    
   - title: "2.5 Short Run Profit Maximization"
+    reading: "2.5-reading"
 
   - title: "2.6 Long Run Industry Equilibrium"
 
