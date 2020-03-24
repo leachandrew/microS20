@@ -1,5 +1,5 @@
 ---
-title: "2.4 Cost and Revenue Functions - Class Notes"
+title: "2.4 Costs of Production - Class Notes"
 citeproc: false
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl

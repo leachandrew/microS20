@@ -1,5 +1,5 @@
 ---
-title: "2.4: Cost and Revenue Functions"
+title: "2.4: Costs of Production"
 subtitle: "ECON 306 · Microeconomic Analysis · Spring 2020"
 author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/microS20"><i class="fa fa-github fa-fw"></i> ryansafner/microS20</a><br> <a href="https://microS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> microS20.classes.ryansafner.com</a><br>'
 #date:
@@ -612,10 +612,8 @@ $$MC(q) = \frac{\Delta C(q)}{\Delta q} \approx \frac{C_2-C_1}{q_2-q_1}$$
 
 # Average and Marginal Costs: Example
 
-.content-box-green[
 .smaller[
 .green[**Example**]: A small farm grows strawberries on 5 acres of land that it rents for $200 a week. The farm can hire workers at a wage of $250/week for each worker. The table below shows how the output of strawberries (in truckloads) varies with the number of workers hired:]
-]
 
 .pull-left[
 .smaller[
@@ -691,11 +689,11 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 # Relationship Between Marginal and Average
 
 .pull-left[
+.smaller[
+- Relationship between a marginal and an average value:
 
-- There is a general mathematical relationship between a marginal and an average value:
-
-- Whenever marginal $>$ average, average is increasing
-
+- marginal $>$ average, average $\uparrow$
+]
 ]
 
 .pull-right[
@@ -729,13 +727,13 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 # Relationship Between Marginal and Average
 
 .pull-left[
+.smaller[
+- Relationship between a marginal and an average value:
 
-- There is a general mathematical relationship between a marginal and an average value:
+- marginal $>$ average, average $\uparrow$
 
-- Whenever marginal $>$ average, average is increasing
-
-- Whenever marginal $<$ average, average is decreasing
-
+- marginal $<$ average, average $\downarrow$
+]
 ]
 
 .pull-right[
@@ -765,11 +763,12 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 .pull-left[
 
-- There is a general mathematical relationship between a marginal and an average value:
+.smaller[
+- Relationship between a marginal and an average value:
 
-- Whenever marginal $>$ average, average is increasing
+- marginal $>$ average, average $\uparrow$
 
-- Whenever marginal $<$ average, average is decreasing
+- marginal $<$ average, average $\downarrow$
 
 - When marginal $=$ average, average is **maximized/minimized**
 - .hi-purple[When `\\(MC=AC\\)`, `\\(AC\\)` is at a *minimum*]
@@ -778,7 +777,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 - Economic importance (later):
     - Break-even price and shut-down price
 ]
-
+]
 .pull-right[
 ```{r, fig.retina=3}
 ggplot(data.frame(x=c(0,10)), aes(x=x))+
@@ -980,10 +979,10 @@ lrac+
 - Further properties about costs based on .hi[scale economies] of production:
 
 - .hi[Economies of scale]: costs fall with output
-  - Fixed costs are higher than variable costs
+  - $AFC > AVC(q)$
 
 - .hi[Diseconomies of scale]: costs rise with output
-  - Variable costs are higher than fixed costs
+  - $AFC < AVC(q)$
   
 - .hi[Constant economies of scale]: costs don't change with output
   - Firm at minimum average cost
@@ -1001,9 +1000,11 @@ lrac+
 ]
 
 .pull-right[
-- Note economies of scale $\neq$ returns to scale!
-    - RTS (last class): a **technological** relationship between inputs & output
-    - EOS (this class): an **economic** relationship between output and average costs
+- Note .hi[economies of scale] $\neq$ .hi-purple[returns to scale]!
+
+- .hi-purple[Returns to Scale] (last class): a **technological** relationship between inputs & output
+
+- .hi[Economies of Scale] (this class): an **economic** relationship between output and average costs
 ]
 
 ---
@@ -1066,7 +1067,7 @@ LRMC(q)&=32000-500q+3q^2\\ \end{align*}$$
 
 # Long Run Costs and Scale Economies: Example, Visualized
 
-```{r, fig.retina=3}
+```{r, fig.retina=3, fig.align="center"}
 library(mosaic)
 lrac_ex1<-function(x){32000-250*x+x^2}
 
@@ -1088,285 +1089,3 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
   theme_classic(base_family = "Fira Sans Condensed", base_size=20)
 ```
 
----
-
-class: inverse, center, middle
-
-# Revenues
-
----
-
-# Revenues for Firms in *Competitive* Industries I
-
-.pull-left[
-```{r, fig.retina=3, fig.height=5}
-demand<-function(x){10-x}
-supply<-function(x){x}
-demand_firm<-function(x){5}
-
-ggplot(data.frame(x=c(0,10)), aes(x=x))+
-    scale_x_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     labels=scales::dollar,                   
-                     expand=expand_scale(mult=c(0,0.1)))+
-  guides(fill=F)+
-  labs(title = "Representative Firm",
-       x = "Quantity",
-       y = "Price")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-```
-]
-
-.pull-right[
-```{r, fig.retina=3, fig.height=5}
-ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=demand, geom="line", size=2, color = "blue")+
-    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand", size = 5)+
-  stat_function(fun=supply, geom="line", size=2, color = "red")+
-    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply", size = 5)+
-  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
-    scale_x_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     labels=scales::dollar,                   
-                     expand=expand_scale(mult=c(0,0.1)))+
-  guides(fill=F)+
-  labs(title = "Industry",
-       x = "Quantity",
-       y = "Price")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-```
-]
-
----
-
-# Revenues for Firms in *Competitive* Industries I
-
-.pull-left[
-```{r, fig.retina=3, fig.height=5}
-demand<-function(x){10-x}
-supply<-function(x){x}
-demand_firm<-function(x){5}
-
-ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=demand_firm, geom="line", size=2, color = "blue")+
-  geom_label(aes(x=9,y=demand_firm(9)), color = "blue", label="Demand", size = 5)+
-    scale_x_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     labels=scales::dollar,                   
-                     expand=expand_scale(mult=c(0,0.1)))+
-  guides(fill=F)+
-  labs(title = "Representative Firm",
-       x = "Quantity",
-       y = "Price")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-```
-]
-
-.pull-right[
-```{r, fig.retina=3, fig.height=5}
-ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=demand, geom="line", size=2, color = "blue")+
-    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand", size = 5)+
-  stat_function(fun=supply, geom="line", size=2, color = "red")+
-    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply", size = 5)+
-  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
-    scale_x_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     labels=scales::dollar,                   
-                     expand=expand_scale(mult=c(0,0.1)))+
-  guides(fill=F)+
-  labs(title = "Industry",
-       x = "Quantity",
-       y = "Price")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-```
-]
-
---
-
-- .blue[Demand for a firm's product] is **perfectly elastic** at the market price
-
---
-
-- Where did the supply curve come from? You'll see 
-
----
-
-# Revenues for Firms in *Competitive* Industries II
-
-.pull-left[
-```{r, fig.retina=3}
-ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=demand_firm, geom="line", size=2, color = "blue")+
-  geom_label(aes(x=9,y=demand_firm(9)), color = "blue", label="Demand", size = 5)+
-  geom_rect(xmin=0,xmax=6,ymin=0,ymax=5,fill="blue", alpha=0.5)+
-    geom_label(aes(x=3,y=3), color = "blue", label="R(6)=$30", size = 5)+
-  geom_segment(x=6, xend=6, y=0, yend=5, size=1, linetype="dotted")+
-    scale_x_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     labels=scales::dollar,                   
-                     expand=expand_scale(mult=c(0,0.1)))+
-  guides(fill=F)+
-  labs(title = "Representative Firm",
-       x = "Quantity",
-       y = "Price")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-```
-]
-
-.pull-right[
-
-- .hi[Total Revenue] $R(q)=pq$
-]
-
----
-
-# Average and Marginal Revenues
-
-- .hi[Average Revenue]: revenue per unit of output
-$$AR(q)=\frac{R}{q}$$
-  - Is *always* equal to the price! Why?
-
---
-
-- .hi[Marginal Revenue]: change in revenues for each additional unit of output sold:
-$$MR(q) = \frac{\Delta R(q)}{\Delta q} \approx \frac{R_2-R_1}{q_2-q_1}$$
-  - Calculus: first derivative of the revenues function
-  - For a *competitive* firm, always equal to the price!
-
----
-
-# Average and Marginal Revenues: Example
-
-.content-box-green[
-.green[**Example**]: A firm sells bushels of wheat in a very competitive market. The current market price is $10/bushel.
-]
-
---
-
-.pull-left[
-
-For the 1<sup>st</sup> bushel sold:
-
-- What is the total revenue? 
-
-- What is the average revenue?
-
-]
-
---
-
-.pull-right[
-For the 2<sup>nd</sup> bushel sold:
-
-- What is the total revenue?
-
-- What is the average revenue?
-
-- What is the marginal revenue?
-]
-
----
-
-# Total Revenue, Example: Visualized
-
-.pull-left[
-
-| $q$ | $R(q)$ |
-|----:|-------:|
-| $0$ | $0$ |
-| $1$ | $10$ |
-| $2$ | $20$ |
-| $3$ | $30$ |
-| $4$ | $40$ |
-| $5$ | $50$ |
-| $6$ | $60$ |
-| $7$ | $70$ |
-| $8$ | $80$ |
-| $9$ | $90$ |
-| $10$ | $100$ |
-
-]
-
-.pull-right[
-
-```{r, fig.retina=3}
-revenues<-function(x){10*x}
-
-ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=revenues, geom="line", size=2, color = "blue")+
-    geom_label(aes(x=9,y=revenues(9)), color = "blue", label=expression(R(q)), size = 6)+
-    scale_x_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=seq(0,120,10),
-                     limits=c(0,120),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  #scale_colour_manual("Curves", values = line_colors, guide=F)+
-  labs(x = "Output, q",
-       y = "Revenues ($)",
-       caption = expression(R(q)==10*q))+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-```
-]
-
----
-
-# Average and Marginal Revenue, Example: Visualized
-
-.pull-left[
-
-| $q$ | $R(q)$ | $AR(q)$ | $MR(q)$ |
-|----:|-------:|--------:|--------:|
-| $0$ | $0$ | $-$ | $-$ |
-| $1$ | $10$ | $10$ | $10$ |
-| $2$ | $20$ | $10$ | $10$ |
-| $3$ | $30$ | $10$ | $10$ |
-| $4$ | $40$ | $10$ | $10$ |
-| $5$ | $50$ | $10$ | $10$ |
-| $6$ | $60$ | $10$ | $10$ |
-| $7$ | $70$ | $10$ | $10$ |
-| $8$ | $80$ | $10$ | $10$ |
-| $9$ | $90$ | $10$ | $10$ |
-| $10$ | $100$ | $10$ | $10$ |
-
-]
-
-.pull-right[
-
-```{r, fig.retina=3}
-mr<-function(x){10}
-
-ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=mr, geom="line", size=2, color = "blue")+
-    geom_label(aes(x=9,y=mr(9)), color = "blue", label="MR(q)=AR(q)=10", size = 6)+
-    scale_x_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=seq(0,20,2),
-                     limits=c(0,20),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  #scale_colour_manual("Curves", values = line_colors, guide=F)+
-  labs(x = "Output, q",
-       y = "Revenues per Unit ($/q)",
-       caption = expression(R(q)==10*q))+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-```
-]
