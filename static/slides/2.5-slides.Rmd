@@ -809,7 +809,7 @@ marginal_plot+
 
 - At q* = 5 (per unit):
   - .blue[AR(5) = $10/unit]
-  - .red[AC(5) = $7/unit]
+  - .orange[AC(5) = $7/unit]
 
 - At q* = 5 (totals):
   - .blue[R(5) = $50]
@@ -823,9 +823,9 @@ marginal_plot+
   stat_function(fun=ac, geom="line", size=2, color = "orange")+
     geom_label(aes(x=0.75,y=ac(0.75)), color = "orange", label="AC(q)", size = 4)+
   geom_rect(xmin=0,xmax=5, ymin=0, ymax=10, fill="blue",alpha=0.25)+
-  geom_rect(xmin=0,xmax=5, ymin=0, ymax=7.30, fill="red",alpha=0.25)+
+  geom_rect(xmin=0,xmax=5, ymin=0, ymax=7.00, fill="red",alpha=0.25)+
   geom_segment(x=5, xend=5, y=0, yend=10, size=1, linetype="dotted")+
-  geom_segment(x=0, xend=5, y=7.30, yend=7.30, size=1, linetype="dotted")
+  geom_segment(x=0, xend=5, y=7.00, yend=7.00, size=1, linetype="dotted")
 
 ```
 ]
@@ -840,7 +840,7 @@ marginal_plot+
 
 - At q* = 5 (per unit):
   - .blue[AR(5) = $10/unit]
-  - .red[AC(5) = $7/unit]
+  - .orange[AC(5) = $7/unit]
   - .green[A`\\(\pi\\)`(5) = $3/unit]
 
 - At q* = 5 (totals):
@@ -944,7 +944,7 @@ marginal_plot_2+
 
 - At q* = 1 (per unit):
   - .blue[AR(1) = $2/unit]
-  - .red[AC(1) = $10/unit]
+  - .orange[AC(1) = $10/unit]
 
 - At q* = 1 (totals):
   - .blue[R(1) = $2]
@@ -975,7 +975,7 @@ marginal_plot_2+
 
 - At q* = 1 (per unit):
   - .blue[AR(1) = $2/unit]
-  - .red[AC(1) = $10/unit]
+  - .orange[AC(1) = $10/unit]
   - .green[A`\\(\pi\\)`(1) = -$8/unit]
 
 - At q* = 1 (totals):
