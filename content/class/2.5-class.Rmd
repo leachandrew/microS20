@@ -1,0 +1,49 @@
+---
+title: "2.5: Short Run Profit Maximization - Class Notes"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+# Overview
+
+- *Tuesday, March 23, 2020*
+- *Quarantine Lecture 1*
+
+Today we finish up costs from last lecture, and discuss revenues before we put them together next class to solve the firm's *profit maximization problem*. We focus on the *short run*, where the firm incurs fixed costs and must stay in the market regardless. We derive the firm's (inverse) *supply curve*.
+
+# Class Livestream/Lecture Videos
+
+- [<i class="fas fa-video"></i> Zoom Live Class Meetings (starts Tuesday 11:30 AM)](https://zoom.us/j/825176575)
+
+If needed, see my [<i class="fab fa-youtube"></i> brief overview of Zoom](https://www.youtube.com/embed/gOgSF8QZDQM) for help. 
+
+Check back later today when videos will be posted.
+
+# Slides
+
+- [<i class="fas fa-external-link-square-alt"></i> Lecture Slides](/slides/2.5-slides.html)
+
+# Practice Problems
+
+Today we will be working on [practice problems](/practice/2.5-practice). Answers will be posted later.
+
+# Assignments: Exam 1 Corrections, Homework 3, Homework 4
+
+You will have **until the end of the semester (May 4)** to turn in your corrections, however, I advise you to **do them as soon as possible**. See more from the [online transition page](/class/online-transition) for details.
+
+[Homework 3](assignment/03-problem-set) isdue, via email, on Sunday, March 29, by 11:59PM. The answer key will be posted Monday, March 30.
+
+[Homework 4](assignment/04-problem-set) is posted, via email, on Sunday, April 5, by 11:59PM. The answer key will be posted Monday, April 6.

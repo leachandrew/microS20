@@ -94,12 +94,13 @@ lessons:
     
   - title: "2.5 Short Run Profit Maximization"
     reading: "2.5-reading"
+    class: "2.5-class"
+    slides: "2.5-slides"
+    practice: "2.5-practice"
 
   - title: "2.6 Long Run Industry Equilibrium"
 
-  - title: "2.7 Factor Markets"
-
-  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 4**'
+  - title: '<i class="fas fa-laptop-code"></i> **Problem Set 4** due Sunday Apr 5'
 
   - title: '<i class="fas fa-star"></i> **Exam 2**'
 
