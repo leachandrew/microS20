@@ -26,11 +26,21 @@ Today we finish up costs from last lecture, and discuss revenues before we put t
 
 # Class Livestream/Lecture Videos
 
-- [<i class="fas fa-video"></i> Zoom Live Class Meetings (starts Tuesday 11:30 AM)](https://zoom.us/j/825176575)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2JN21UW91zw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-If needed, see my [<i class="fab fa-youtube"></i> brief overview of Zoom](https://www.youtube.com/embed/gOgSF8QZDQM) for help. 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bfr9KoASbEk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Check back later today when videos will be posted.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UhxcMyHInDM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/euAoHsFocr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J8MBkBm-u48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8z3CpGyZSeo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O55tKo1gND0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R7dcK2ee0vc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Slides
 
@@ -38,7 +48,7 @@ Check back later today when videos will be posted.
 
 # Practice Problems
 
-Today we will be working on [practice problems](/practice/2.5-practice). Answers will be posted later.
+Today we will be working on [practice problems](/practice/2.5-practice). Answers are posted on that page.
 
 # Assignments: Exam 1 Corrections, Homework 3, Homework 4
 
