@@ -313,23 +313,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 **3. Shut down in _short run_ if $p<AVC(q)$**
 
-.center[
-Firm's short run (inverse) supply:
-]
-
-$$\begin{cases}
-p=MC(q) & \text{if } p \geq AVC\\
-q=0 & \text{If } p < AVC\\ \end{cases}$$
-
 **4. Exit in _long run_ if $p<AC(q)$**
-
-.center[
-Firm's long run (inverse) supply:
-]
-
-$$\begin{cases}
-p=MC(q) & \text{if } p \geq AC\\
-q=0 & \text{If } p < AC\\ \end{cases}$$
 
 ]
 

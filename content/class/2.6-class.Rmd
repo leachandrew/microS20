@@ -55,6 +55,7 @@ I was going to talk about **external economies**, which are cost externalities w
 
 The idea is firms entering/exiting a profitable/unprofitable industry over the long run certainly shift the industry supply curve and change the market equilibrium. But in a lot of industries as more firms enter and produce and compete with one another, that might raise costs for *all firms* (increasing cost industry/external diseconomies) or lower costs for *all firms* (decreasing cost industry/external economies). These effects may create either an upward sloping, flat, or downward sloping industry supply curve over the long run.
 
+- [<i class="fas fa-external-link-square-alt"></i> External Economies](/slides/external-economies.html)
 
 ## Cut for time: Factor Markets
 
