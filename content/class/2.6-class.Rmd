@@ -45,6 +45,10 @@ We will begin Unit 3, our interlude on Market Equilibrium, next class. As we hav
 
 - [<i class="fas fa-external-link-square-alt"></i> Lecture Slides](/slides/2.6-slides.html)
 
+# Practice
+
+We didn't have a formal practice, but I put up [<i class="fas fa-file-pdf"></i> `answers`](/practice/2.6-practice-answers.pdf) to the problem at the end of the slides that I skipped for time.
+
 # Assignments: HW 4 and Exam 2
 
 [Homework 3](/assignment/03-problem-set) answers will be posted on that page shortly.
