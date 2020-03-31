@@ -27,6 +27,10 @@ We also talk about the hard to understand, but extremely important, idea of econ
 
 We will begin Unit 3, our interlude on Market Equilibrium, next class. As we have finished Unit 2 today, Exam 2 will be released next week. I will discuss it more on Thursday.
 
+# Class Livestream/Lecture Videos
+
+- [<i class="fas fa-video"></i> Zoom Live Class Meetings (TuTh 11:30 AM-12:45 PM)](https://zoom.us/j/825176575)
+
 # Slides
 
 - [<i class="fas fa-external-link-square-alt"></i> Lecture Slides](/slides/2.6-slides.html)
