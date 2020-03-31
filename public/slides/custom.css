@@ -2,6 +2,21 @@
 
 /* ----ADDING------------------------------------------------ */
 
+.tri-left {
+  width: 30%;
+  float: left;
+}
+
+.tri-middle {
+  width: 30%;
+  float: left;
+}
+
+.tri-right {
+  width: 30%;
+  float: left;
+}
+
 /* Create a highlighted class called 'hi'  */
 .hi {
   font-weight: 600;

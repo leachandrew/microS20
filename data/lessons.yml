@@ -99,6 +99,9 @@ lessons:
     practice: "2.5-practice"
 
   - title: "2.6 Long Run Industry Equilibrium"
+    reading: "2.6-reading"
+    class: "2.6-class"
+    slides: "2.6-slides"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 4** due Sunday Apr 5'
     assignment: "04-problem-set"
