@@ -1,0 +1,621 @@
+---
+title: "3.2: Market Competition and Surpluses"
+subtitle: "ECON 306 · Microeconomic Analysis · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/microS20"><i class="fa fa-github fa-fw"></i> ryansafner/microS20</a><br> <a href="https://microS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> microS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: ocean #rainbow #monokai rainbow solarized-light #tomorrow-night -blue -eighties zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo=F,
+                      message=F,
+                      warning=F)
+library("tidyverse")
+library("mosaic")
+library("ggrepel")
+update_geom_defaults("label", list(family = "Fira Sans Condensed"))
+set.seed(256)
+```
+
+
+# Price Competition in Markets I
+
+.pull-left[
+
+- Markets allocate resources based on individuals' .hi[reservation prices]:
+  - **maximum willingness to pay** (as a buyer)
+  - **minimum willingness to accept** (as a seller)
+
+- .hi-purple[Goods flow to those who value them the highest and away from those who value them the lowest]
+]
+
+--
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/rfrdzsh797nq80d/shutupandtakemymoney.gif?raw=1)
+]
+]
+
+---
+
+# Price Competition in Markets II
+
+.pull-left[
+- It might look like it, but competition in markets is **NOT** between buyers vs. sellers!
+
+- In markets: .hi-purple[buyers compete with other buyers] and .hi-purple[sellers compete with other sellers]
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/mh8owncbsm2lqkv/tugofwar.png?raw=1)
+]
+]
+
+---
+
+# Price Competition in Markets III
+
+.pull-left[
+- Buyers want to pay the *lowest* price to buy a good
+
+- But they face competition from other buyers over the same scarce goods
+
+- Buyers attempt to *raise their bids above others' reservation prices* to obtain the goods
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/mh8owncbsm2lqkv/tugofwar.png?raw=1)
+]
+]
+
+---
+
+# Price Competition in Markets IV
+
+.pull-left[
+- Sellers want to get the *highest* price for a good they sell
+
+- But they face competition from other sellers over the same potential customers
+
+- Sellers attempt to *lower their asking prices below others' reservation prices* to sell their goods
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/mh8owncbsm2lqkv/tugofwar.png?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Economic Surplus
+
+---
+
+# Market-Clearing Prices
+
+.pull-left[
+
+- Supply and demand set the market-clearing price for all units exchanged (bought and sold)
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+changes
+```
+
+]
+
+---
+
+# Consumer Surplus I
+
+.pull-left[
+
+- Demand function measures how much you would *hypothetically* be willing to pay for various quantities
+  - "reservation price"
+
+- You often *actually* pay (the market-clearing price, $p^*)$ a lot less than your reservation price
+
+- The difference is .hi[consumer surplus]
+
+$$CS=WTP-p^*$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+
+cs_1<-tribble(
+  ~x, ~y,
+  0, 10,
+  0, 5,
+  5, 5
+)
+
+cs<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand = Max WTP", size = 5)+
+  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+    scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)),
+                     labels = function(x){paste("$", x, sep="")})+
+  labs(x = "Quantity (q)",
+       y = "Price (p)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+cs+geom_polygon(data=cs_1, aes(x=x,y=y), fill="blue", alpha=0.5)
+```
+
+]
+
+---
+
+# Consumer Surplus II
+
+.pull-left[
+
+$$\begin{align*}
+CS&=\frac{1}{2}bh\\
+CS&=\frac{1}{2}(5-0)(\$10-\$5)\\
+CS&=\$12.50\\
+\end{align*}$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+cs+geom_polygon(data=cs_1, aes(x=x,y=y), fill="blue", alpha=0.5)
+```
+
+]
+
+---
+
+# Consumer Surplus III
+
+.pull-left[
+
+- An increase in market price *reduces* consumer surplus
+
+$$\begin{align*}
+CS'&=\frac{1}{2}bh\\
+CS'&=\frac{1}{2}(3-0)(\$10-\$7)\\
+CS'&=\$4.50\\
+\end{align*}$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+cs_2<-tribble(
+  ~x, ~y,
+  0, 10,
+  0, 7,
+  3, 7
+)
+
+cs+geom_polygon(data=cs_2, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_segment(x=0, xend=3, y=7, yend=7, size=1, linetype="dotted")+
+  geom_segment(x=3, xend=3, y=0, yend=7, size=1, linetype="dotted")
+```
+
+]
+
+---
+
+# Consumer Surplus IV
+
+.pull-left[
+
+- An decrease in market price *increases* consumer surplus
+
+$$\begin{align*}
+CS'&=\frac{1}{2}bh\\
+CS'&=\frac{1}{2}(7-0)(\$10-\$3)\\
+CS'&=\$24.50\\
+\end{align*}$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+cs_3<-tribble(
+  ~x, ~y,
+  0, 10,
+  0, 3,
+  7, 3
+)
+
+cs+geom_polygon(data=cs_3, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_segment(x=0, xend=7, y=3, yend=3, size=1, linetype="dotted")+
+  geom_segment(x=7, xend=7, y=0, yend=3, size=1, linetype="dotted")
+```
+
+]
+
+---
+
+# Consumer Surplus V
+
+.pull-left[
+
+- A relatively *inelastic* demand curve generates *more* consumer surplus
+
+$$\begin{align*}
+CS&=\frac{1}{2}bh\\
+CS&=\frac{1}{2}(5-0)(\$10-\$5)\\
+CS&=\$12.50\\
+\end{align*}$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+cs+geom_polygon(data=cs_1, aes(x=x,y=y), fill="blue", alpha=0.5)
+```
+
+]
+
+---
+
+# Consumer Surplus V
+
+.pull-left[
+
+- A relatively *inelastic* demand curve generates *more* consumer surplus
+
+$$\begin{align*}
+CS&=\frac{1}{2}bh\\
+CS&=\frac{1}{2}(5-0)(\$10-\$5)\\
+CS&=\$12.50\\
+\end{align*}$$
+
+- A relatively *elastic* demand curve generates *less* consumer surplus
+
+$$\begin{align*}
+CS&=\frac{1}{2}bh\\
+CS&=\frac{1}{2}(5-0)(\$7-\$5)\\
+CS&=\$5.00\\
+\end{align*}$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+demand_el=function(x){7-0.4*x}
+cs_el<-tribble(
+  ~x, ~y,
+  0, 7,
+  0, 5,
+  5, 5
+)
+
+cs+geom_polygon(data=cs_el, aes(x=x,y=y), fill="blue", alpha=0.5)+
+    stat_function(fun=demand_el, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=9,y=demand_el(9)), color = "darkblue", label="Elastic Demand", size = 5)
+
+```
+
+]
+
+---
+
+# Producer Surplus I
+
+.pull-left[
+
+- Supply function measures how much you would *hypothetically* be willing to accept to sell various quantities
+  - "reservation price"
+
+- You often *actually* receive (the market-clearing price, $p^*)$ a lot more than your reservation price
+
+- The difference is .hi[producer surplus]
+
+$$PS=p^*-WTA$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+
+ps_1<-tribble(
+  ~x, ~y,
+  0, 0,
+  0, 5,
+  5, 5
+)
+
+ps<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply = Min WTA", size = 5)+
+  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+    scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)),
+                     labels = function(x){paste("$", x, sep="")})+
+  labs(x = "Quantity (q)",
+       y = "Price (p)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+ps+geom_polygon(data=ps_1, aes(x=x,y=y), fill="red", alpha=0.5)
+```
+
+]
+
+---
+
+# Producer Surplus II
+
+.pull-left[
+
+$$\begin{align*}
+PS&=\frac{1}{2}bh\\
+PS&=\frac{1}{2}(5-0)(\$5-\$0)\\
+PS&=\$12.50\\
+\end{align*}$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+ps+geom_polygon(data=ps_1, aes(x=x,y=y), fill="red", alpha=0.5)
+```
+
+]
+
+---
+
+# Producer Surplus III
+
+.pull-left[
+
+- An increase in market price *increses* producer surplus
+
+$$\begin{align*}
+PS'&=\frac{1}{2}bh\\
+PS'&=\frac{1}{2}(7-0)(\$7-\$0)\\
+PS'&=\$24.50\\
+\end{align*}$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+ps_2<-tribble(
+  ~x, ~y,
+  0, 0,
+  0, 7,
+  7, 7
+)
+
+ps+geom_polygon(data=ps_2, aes(x=x,y=y), fill="red", alpha=0.5)+
+  geom_segment(x=0, xend=7, y=7, yend=7, size=1, linetype="dotted")+
+  geom_segment(x=7, xend=7, y=0, yend=7, size=1, linetype="dotted")
+```
+
+]
+
+---
+
+# Producer Surplus IV
+
+.pull-left[
+
+- An decrease in market price *decreases* producer surplus
+
+$$\begin{align*}
+PS'&=\frac{1}{2}bh\\
+PS'&=\frac{1}{2}(3-0)(\$3-\$0)\\
+PS'&=\$4.50\\
+\end{align*}$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+ps_3<-tribble(
+  ~x, ~y,
+  0, 0,
+  0, 3,
+  3, 3
+)
+
+ps+geom_polygon(data=ps_3, aes(x=x,y=y), fill="red", alpha=0.5)+
+  geom_segment(x=0, xend=3, y=3, yend=3, size=1, linetype="dotted")+
+  geom_segment(x=3, xend=3, y=0, yend=3, size=1, linetype="dotted")
+```
+
+]
+
+---
+
+# Producer Surplus V
+
+.pull-left[
+
+- A relatively *inelastic* supply curve generates *more* producer surplus
+
+$$\begin{align*}
+PS&=\frac{1}{2}bh\\
+PS&=\frac{1}{2}(5-0)(\$5-\$0)\\
+PS&=\$12.50\\
+\end{align*}$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+ps+geom_polygon(data=ps_1, aes(x=x,y=y), fill="red", alpha=0.5)
+```
+
+]
+
+---
+
+# Producer Surplus V
+
+.pull-left[
+
+- A relatively *inelastic* supply curve generates *more* producer surplus
+
+$$\begin{align*}
+PS&=\frac{1}{2}bh\\
+PS&=\frac{1}{2}(5-0)(\$5-\$0)\\
+PS&=\$12.50\\
+\end{align*}$$
+
+- A relatively *elastic* supply curve generates *less* producer surplus
+
+$$\begin{align*}
+PS&=\frac{1}{2}bh\\
+PS&=\frac{1}{2}(5-0)(\$5-\$3)\\
+PS&=\$5.00\\
+\end{align*}$$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+supply_el=function(x){3+0.4*x}
+ps_el<-tribble(
+  ~x, ~y,
+  0, 5,
+  0, 3,
+  5, 5
+)
+
+ps+geom_polygon(data=ps_el, aes(x=x,y=y), fill="red", alpha=0.5)+
+    stat_function(fun=supply_el, geom="line", size=2, color = "darkred")+
+    geom_label(aes(x=9,y=supply_el(9)), color = "darkred", label="Elastic Supply", size = 5)
+
+```
+
+]
+
+---
+
+# Elasticities and Surpluses I
+
+.pull-left[
+
+- The **more elastic** curve at $p^*$ generates **less** surplus
+  - More options, easier to change choices, less benefit from *any one particular* exchange
+
+- The **less elastic** curve at $p^*$ generates **more** surplus
+  - Fewer options, harder to change choices, more benefit from *any one particular* exchange
+
+- This is important for policies such as price controls, taxes, etc.
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+cs+geom_polygon(data=cs_1, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_polygon(data=ps_el, aes(x=x,y=y), fill="red", alpha=0.5)+
+    stat_function(fun=supply_el, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_el(9)), color = "red", label="Supply = Min WTA", size = 5)
+
+```
+
+]
+
+---
+
+# Elasticities and Surpluses II
+
+.pull-left[
+
+- A good visual rule of thumb:
+
+- Compare distance between choke price and $p^*$ for each curve
+
+- Bigger distance $\implies$ *less* elastic in equilibrium (and vice versa)
+  - $\implies$ more surplus
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+cs+geom_polygon(data=cs_1, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_polygon(data=ps_el, aes(x=x,y=y), fill="red", alpha=0.5)+
+    stat_function(fun=supply_el, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_el(9)), color = "red", label="Supply = Min WTA", size = 5)+
+  annotate("segment", x = 0.5, xend = 0.5, y = 10, yend = 5, colour = "blue", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=0.75, y=8, label="Less elastic", color = "blue")+
+  annotate("segment", x = 0.5, xend = 0.5, y = 3, yend = 5, colour = "red", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=0.75, y=4, label="More elastic", color = "red")
+```
+]
+
+---
+
+# Example
+
+.content-box-green[
+.green[**Example**]: Using last class's supply and demand functions:
+
+$$\begin{align*}
+	q_D&=10-p\\
+	q_S&=2p-8\\	
+	\end{align*}$$
+]
+
+1. Calculate the price elasticity of demand and the price elasticity of supply in equilibrium.
+
+2. Calculate the consumer surplus and producer surplus. Shade each on the graph.
+
+3. Who gets more surplus, consumers or producers, and why?

@@ -164,6 +164,10 @@
   </url>
   
   <url>
+    <loc>https://microS20.classes.ryansafner.com/class/3.1-class/</loc>
+  </url>
+  
+  <url>
     <loc>https://microS20.classes.ryansafner.com/assignment/</loc>
     <priority>0</priority>
   </url>
@@ -183,6 +187,10 @@
   
   <url>
     <loc>https://microS20.classes.ryansafner.com/assignment/01-exam/</loc>
+  </url>
+  
+  <url>
+    <loc>https://microS20.classes.ryansafner.com/assignment/02-exam/</loc>
   </url>
   
   <url>
