@@ -148,25 +148,6 @@ class: inverse, center, middle
 
 ---
 
-# Demand Curve
-
-.pull-left[
-
-- .hi[Demand curve] graphically represents the demand schedule
-
-- Also measures a person's .hi-purple[maximum willingness to pay (WTP)] for a given quantity
-
-- Law of Demand (price effect) `\(\implies\)` Demand curves always slope downwards
-
-]
-
-.pull-right[
-
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-1-1.png" width="504" /&gt;
-]
-
----
-
 # Demand Function
 
 .pull-left[
@@ -183,6 +164,47 @@ class: inverse, center, middle
 
 .pull-right[
 
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-1-1.png" width="504" /&gt;
+]
+
+---
+
+# Inverse Demand Function
+
+.pull-left[
+
+- .hi[*Inverse* demand function] relates price to quantity
+    - Take demand function and solve for `\(p\)`
+
+.content-box-green[
+.green[**Example**]: 
+`$$p=10-q$$`
+]
+- Graphable (price on vertical axis)!
+
+]
+
+---
+
+# Inverse Demand Function
+
+.pull-left[
+
+- .hi[*Inverse* demand function] relates price to quantity
+    - Take demand function and solve for `\(p\)`
+
+.content-box-green[
+.green[**Example**]: 
+`$$p=10-q$$`
+]
+
+- Vertical intercept (.hi-purple["Choke price"]): price where `\\(q_D=0\\)` ($10), just high enough to discourage *any* purchases
+
+]
+
+
+.pull-right[
+
 &lt;img src="3.1-slides_files/figure-html/unnamed-chunk-2-1.png" width="504" /&gt;
 ]
 
@@ -192,57 +214,6 @@ class: inverse, center, middle
 
 .pull-left[
 
-- .hi[*Inverse* demand function] relates price to quantity
-    - Find by taking demand function and solving for `\(p\)`
-
-.content-box-green[
-.green[**Example**]: 
-`$$p=10-q$$`
-]
-- Graphable (price on vertical axis)!
-
-]
-
----
-
-# Inverse Demand Function
-
-.pull-left[
-
-- .hi[*Inverse* demand function] relates price to quantity
-    - Find by taking demand function and solving for `\(p\)`
-
-.content-box-green[
-.green[**Example**]: 
-`$$p=10-q$$`
-]
-- Graphable (price on vertical axis)!
-
-- Slope: `\(-1\)`
-
-- Vertical intercept called the .hi["Choke price"]: price where `\(q_D=0\)` ($10), just high enough to discourage *any* purchases
-
-]
-
-
-.pull-right[
-
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" /&gt;
-]
-
----
-
-# Inverse Demand Function
-
-.pull-left[
-
-- .hi[*Inverse* demand function] relates price to quantity
-    - Find by taking demand function and solving for `\(p\)`
-
-.content-box-green[
-.green[**Example**]: 
-`$$p=10-q$$`
-]
 - Read two ways:
 
 - Horizontally: at any given price, how many units person wants to buy
@@ -255,7 +226,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" /&gt;
 ]
 
 ---
@@ -270,15 +241,39 @@ class: inverse, center, middle
 
 .pull-left[
 
-- .hi[Supply function] relates quantity *supplied* to price
+- .hi[Supply function] relates quantity to price
 
 .content-box-green[
 .green[**Example**]: 
-`$$q=2p-8$$`
+`$$q=2p-4$$`
 ]
 - Not graphable (wrong axes)!
 
 ]
+
+.pull-right[
+
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" /&gt;
+]
+
+---
+
+# Inverse Supply Function
+
+.pull-left[
+
+- .hi[*Inverse* supply function] relates price to quantity
+    - Take supply function, solve for `\(p\)`
+
+.content-box-green[
+.green[**Example**]: 
+`$$p=2+0.5q$$`
+]
+- Graphable (price on vertical axis)!
+
+]
+
+--
 
 .pull-right[
 
@@ -291,35 +286,14 @@ class: inverse, center, middle
 
 .pull-left[
 
-- .hi[*Inverse* supply function] relates price to quantity
-    - Find by taking supply function and solving for `\(p\)`
-
 .content-box-green[
 .green[**Example**]: 
-`$$p=4+0.5q$$`
-]
-- Graphable (price on vertical axis)!
-
+`$$p=2+0.5q$$`
 ]
 
----
+- Slope: 0.5
 
-# Inverse Supply Function
-
-.pull-left[
-
-- .hi[*Inverse* supply function] relates price to quantity
-    - Find by taking supply function and solving for `\(p\)`
-
-.content-box-green[
-.green[**Example**]: 
-`$$p=4+0.5q$$`
-]
-- Graphable (price on vertical axis)!
-
-- Slope: `\(0.5\)`
-
-- Vertical intercept called the .hi["Choke price"]: price where `\(q_S=0\)` ($4), just low enough to discourage *any* sales
+- Vertical intercept called the .hi["Choke price"]: price where `\\(q_S=0\\)` ($2), just low enough to discourage *any* sales
 
 ]
 
@@ -335,13 +309,6 @@ class: inverse, center, middle
 
 .pull-left[
 
-- .hi[*Inverse* supply function] relates price to quantity
-    - Find by taking suuply function and solving for `\(p\)`
-
-.content-box-green[
-.green[**Example**]: 
-`$$p=4+0.5q$$`
-]
 - Read two ways:
 
 - Horizontally: at any given price, how many units firm wants to sell
@@ -379,58 +346,6 @@ class: inverse, center, middle
 
 ---
 
-# The Algebra of Calculating Equilibrium
-
-- Simple algebra to find equilibrium prices and quantities if we know supply and demand functions
-
-- Remember, supply and demand are each mathematical functions relating price to quantity:
-  - Demand: `\(q_D = f(p)\)`
-  - Supply: `\(q_S = f(p)\)`
-
-- We know at equilibrium: `\(q_D=q_P\)`
-
----
-
-# Calculating Equilibrium: Example I
-
-.pull-left[
-
-.content-box-green[
-.green[**Example**]: Take our example supply and demand functions:
-
-`$$\begin{align*}
-q_d&amp;=10-p\\
-q_s&amp;=2p-8\\
-\end{align*}$$`
-]
-
-- In equilibrium: quantity demanded equals quantity supplied
-
-]
-
-.pull-right[
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-9-1.png" width="504" /&gt;
-]
-
----
-
-# Calculating Equilibrium: Example II
-
-.content-box-green[
-.green[**Example**]: Let the supply and demand functions for a market be:
-
-`$$\begin{align*}
-	q_D&amp;=30-0.5p\\
-	q_S&amp;=2p-40\\	
-	\end{align*}$$`
-]
-
-1. Find equilibrium quantity and price `\((q^*, p^*)\)`.
-
-2. Sketch a rough graph.
-
----
-
 class: inverse, center, middle
 
 # Why Markets Tend to Equilibrate
@@ -457,7 +372,7 @@ class: inverse, center, middle
 ]
 
 .pull-right[
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-10-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-9-1.png" width="504" /&gt;
 ]
 
 ---
@@ -487,7 +402,7 @@ class: inverse, center, middle
 ]
 
 .pull-right[
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-11-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-10-1.png" width="504" /&gt;
 ]
 
 ---
@@ -518,7 +433,7 @@ class: inverse, center, middle
 ]
 
 .pull-right[
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-12-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-11-1.png" width="504" /&gt;
 ]
 
 ---
@@ -543,7 +458,7 @@ class: inverse, center, middle
 ]
 
 .pull-right[
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-13-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-12-1.png" width="504" /&gt;
 ]
 
 ---
@@ -573,7 +488,7 @@ class: inverse, center, middle
 ]
 
 .pull-right[
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-14-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-13-1.png" width="504" /&gt;
 ]
 
 ---
@@ -603,7 +518,7 @@ class: inverse, center, middle
 ]
 
 .pull-right[
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-15-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-14-1.png" width="504" /&gt;
 ]
 
 ---
@@ -688,7 +603,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-16-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-15-1.png" width="504" /&gt;
 
 ]
 
@@ -772,7 +687,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-17-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-16-1.png" width="504" /&gt;
 
 ]
 
@@ -785,6 +700,27 @@ class: inverse, center, middle
 - More individuals want to buy more of the good at *every* price
 
 - Entire demand curve shifts to the *right*
+]
+]
+
+.pull-right[
+
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-17-1.png" width="504" /&gt;
+
+]
+
+---
+
+# Increase in Demand
+
+
+.pull-left[
+.smallest[
+- More individuals want to buy more of the good at *every* price
+
+- Entire demand curve shifts to the *right*
+
+- At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
 ]
 ]
 
@@ -806,34 +742,13 @@ class: inverse, center, middle
 - Entire demand curve shifts to the *right*
 
 - At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
-]
-]
-
-.pull-right[
-
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-19-1.png" width="504" /&gt;
-
-]
-
----
-
-# Increase in Demand
-
-
-.pull-left[
-.smallest[
-- More individuals want to buy more of the good at *every* price
-
-- Entire demand curve shifts to the *right*
-
-- At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
 
 - Some buyers willing to pay more at this quantity
 ]
 ]
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-20-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-19-1.png" width="504" /&gt;
 
 ]
 
@@ -861,7 +776,7 @@ class: inverse, center, middle
 ]
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-21-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-20-1.png" width="504" /&gt;
 
 ]
 
@@ -876,7 +791,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-22-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-21-1.png" width="504" /&gt;
 
 ]
 
@@ -894,7 +809,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-23-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-22-1.png" width="504" /&gt;
 
 ]
 
@@ -914,7 +829,7 @@ class: inverse, center, middle
 ]
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-24-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-23-1.png" width="504" /&gt;
 
 ]
 
@@ -937,7 +852,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-25-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-24-1.png" width="504" /&gt;
 
 ]
 
@@ -966,7 +881,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-26-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-25-1.png" width="504" /&gt;
 
 ]
 
@@ -977,6 +892,24 @@ class: inverse, center, middle
 .pull-left[
 
 
+]
+
+.pull-right[
+
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-26-1.png" width="504" /&gt;
+
+]
+
+---
+
+# Increase in Supply
+
+.pull-left[
+.smallest[
+- More individuals want to sell more of the good at *every* price
+
+- Entire supply curve shifts to the *right*
+]
 ]
 
 .pull-right[
@@ -994,6 +927,8 @@ class: inverse, center, middle
 - More individuals want to sell more of the good at *every* price
 
 - Entire supply curve shifts to the *right*
+
+- At the original market price, a **surplus!** `\((q_D &lt; q_S)\)`
 ]
 ]
 
@@ -1014,33 +949,13 @@ class: inverse, center, middle
 - Entire supply curve shifts to the *right*
 
 - At the original market price, a **surplus!** `\((q_D &lt; q_S)\)`
-]
-]
-
-.pull-right[
-
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-29-1.png" width="504" /&gt;
-
-]
-
----
-
-# Increase in Supply
-
-.pull-left[
-.smallest[
-- More individuals want to sell more of the good at *every* price
-
-- Entire supply curve shifts to the *right*
-
-- At the original market price, a **surplus!** `\((q_D &lt; q_S)\)`
 
 - Some sellers willing to accept less at this quantity
 ]
 ]
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-30-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-29-1.png" width="504" /&gt;
 
 ]
 
@@ -1067,7 +982,7 @@ class: inverse, center, middle
 ]
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-31-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-30-1.png" width="504" /&gt;
 
 ]
 
@@ -1078,6 +993,24 @@ class: inverse, center, middle
 .pull-left[
 
 
+]
+
+.pull-right[
+
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-31-1.png" width="504" /&gt;
+
+]
+
+---
+
+# Decrease in Supply
+
+.pull-left[
+.smallest[
+- Fewer individuals want to sell less of the good at *every* price
+
+- Entire supply curve shifts to the *left*
+]
 ]
 
 .pull-right[
@@ -1095,9 +1028,10 @@ class: inverse, center, middle
 - Fewer individuals want to sell less of the good at *every* price
 
 - Entire supply curve shifts to the *left*
-]
-]
 
+- At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
+]
+]
 .pull-right[
 
 &lt;img src="3.1-slides_files/figure-html/unnamed-chunk-33-1.png" width="504" /&gt;
@@ -1115,6 +1049,8 @@ class: inverse, center, middle
 - Entire supply curve shifts to the *left*
 
 - At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
+
+- Some buyers willing to pay more at this quantity
 ]
 ]
 .pull-right[
@@ -1136,27 +1072,6 @@ class: inverse, center, middle
 - At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
 
 - Some buyers willing to pay more at this quantity
-]
-]
-.pull-right[
-
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-35-1.png" width="504" /&gt;
-
-]
-
----
-
-# Decrease in Supply
-
-.pull-left[
-.smallest[
-- Fewer individuals want to sell less of the good at *every* price
-
-- Entire supply curve shifts to the *left*
-
-- At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
-
-- Some buyers willing to pay more at this quantity
 
 - Buyers raise bids, inducing sellers to sell more
 
@@ -1167,7 +1082,7 @@ class: inverse, center, middle
 ]
 .pull-right[
 
-&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-36-1.png" width="504" /&gt;
+&lt;img src="3.1-slides_files/figure-html/unnamed-chunk-35-1.png" width="504" /&gt;
 
 ]
 
@@ -1176,9 +1091,9 @@ class: inverse, center, middle
 # Equilibrium Tendencies
 
 .pull-left[
-![:scale 60%](https://www.dropbox.com/s/60q8uepk12z3zv4/kiviqauction.png?raw=1)
+![:scale 40%](https://www.dropbox.com/s/60q8uepk12z3zv4/kiviqauction.png?raw=1)
 
-![:scale 50%](https://www.dropbox.com/s/hu6jcwr05idub6v/equilibriumball.png?raw=1)
+![:scale 20%](https://www.dropbox.com/s/hu6jcwr05idub6v/equilibriumball.png?raw=1)
 ]
 
 .pull-right[

@@ -162,43 +162,6 @@ class: inverse, center, middle
 
 ---
 
-# Demand Curve
-
-.pull-left[
-
-- .hi[Demand curve] graphically represents the demand schedule
-
-- Also measures a person's .hi-purple[maximum willingness to pay (WTP)] for a given quantity
-
-- Law of Demand (price effect) $\implies$ Demand curves always slope downwards
-
-]
-
-.pull-right[
-
-```{r, fig.retina=3}
-library("mosaic")
-demand=function(x){10-x}
-
-ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=demand, geom="line", size=2, color = "blue")+
-  geom_label(aes(x=8,y=demand(8)), color = "blue", label="Demand", size = 6)+
-    scale_x_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=seq(0,10,1),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)),
-                     labels = function(x){paste("$", x, sep="")})+
-  coord_cartesian(clip="off")+
-  labs(x = "Quantity of x",
-       y = "Price of x")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-```
-]
-
----
-
 # Demand Function
 
 .pull-left[
@@ -244,7 +207,7 @@ d
 .pull-left[
 
 - .hi[*Inverse* demand function] relates price to quantity
-    - Find by taking demand function and solving for $p$
+    - Take demand function and solve for $p$
 
 .content-box-green[
 .green[**Example**]: 
@@ -261,17 +224,14 @@ $$p=10-q$$
 .pull-left[
 
 - .hi[*Inverse* demand function] relates price to quantity
-    - Find by taking demand function and solving for $p$
+    - Take demand function and solve for $p$
 
 .content-box-green[
 .green[**Example**]: 
 $$p=10-q$$
 ]
-- Graphable (price on vertical axis)!
 
-- Slope: $-1$
-
-- Vertical intercept called the .hi["Choke price"]: price where $q_D=0$ ($10), just high enough to discourage *any* purchases
+- Vertical intercept (.hi-purple["Choke price"]): price where `\\(q_D=0\\)` ($10), just high enough to discourage *any* purchases
 
 ]
 
@@ -289,13 +249,6 @@ d
 
 .pull-left[
 
-- .hi[*Inverse* demand function] relates price to quantity
-    - Find by taking demand function and solving for $p$
-
-.content-box-green[
-.green[**Example**]: 
-$$p=10-q$$
-]
 - Read two ways:
 
 - Horizontally: at any given price, how many units person wants to buy
@@ -325,11 +278,11 @@ class: inverse, center, middle
 
 .pull-left[
 
-- .hi[Supply function] relates quantity *supplied* to price
+- .hi[Supply function] relates quantity to price
 
 .content-box-green[
 .green[**Example**]: 
-$$q=2p-8$$
+$$q=2p-4$$
 ]
 - Not graphable (wrong axes)!
 
@@ -338,11 +291,10 @@ $$q=2p-8$$
 .pull-right[
 
 ```{r, fig.retina=3}
-supply=function(x){0.5*x+4}
+supply_graph=function(x){0.5*x+2}
 
-s<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=supply, geom="line", size=2, color = "red")+
-  geom_label(aes(x=8,y=supply(8)), color = "red", label="Supply", size = 6)+
+empty<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  
     scale_x_continuous(breaks=seq(0,10,1),
                      limits=c(0,10),
                      expand=expand_scale(mult=c(0,0.1)))+
@@ -354,7 +306,11 @@ s<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
   labs(x = "Quantity of x",
        y = "Price of x")+
   theme_classic(base_family = "Fira Sans Condensed", base_size=20)
-s
+
+s<-empty+stat_function(fun=supply_graph, geom="line", size=2, color = "red")+
+  geom_label(aes(x=8,y=supply_graph(8)), color = "red", label="Supply", size = 6)
+  
+empty
 ```
 ]
 
@@ -365,14 +321,23 @@ s
 .pull-left[
 
 - .hi[*Inverse* supply function] relates price to quantity
-    - Find by taking supply function and solving for $p$
+    - Take supply function, solve for $p$
 
 .content-box-green[
 .green[**Example**]: 
-$$p=4+0.5q$$
+$$p=2+0.5q$$
 ]
 - Graphable (price on vertical axis)!
 
+]
+
+--
+
+.pull-right[
+
+```{r, fig.retina=3}
+s
+```
 ]
 
 ---
@@ -381,18 +346,14 @@ $$p=4+0.5q$$
 
 .pull-left[
 
-- .hi[*Inverse* supply function] relates price to quantity
-    - Find by taking supply function and solving for $p$
-
 .content-box-green[
 .green[**Example**]: 
-$$p=4+0.5q$$
+$$p=2+0.5q$$
 ]
-- Graphable (price on vertical axis)!
 
-- Slope: $0.5$
+- Slope: 0.5
 
-- Vertical intercept called the .hi["Choke price"]: price where $q_S=0$ ($4), just low enough to discourage *any* sales
+- Vertical intercept called the .hi["Choke price"]: price where `\\(q_S=0\\)` ($2), just low enough to discourage *any* sales
 
 ]
 
@@ -410,13 +371,6 @@ s
 
 .pull-left[
 
-- .hi[*Inverse* supply function] relates price to quantity
-    - Find by taking suuply function and solving for $p$
-
-.content-box-green[
-.green[**Example**]: 
-$$p=4+0.5q$$
-]
 - Read two ways:
 
 - Horizontally: at any given price, how many units firm wants to sell
@@ -452,6 +406,9 @@ class: inverse, center, middle
 
 .pull-right[
 ```{r, fig.retina=3, fig.height=5}
+demand=function(x){10-x}
+supply=function(x){0.5*x+4}
+
 graph<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
   stat_function(fun=demand, geom="line", size=2, color = "blue")+
     geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
@@ -473,62 +430,6 @@ graph+
   geom_segment(x=0, xend=4, y=6, yend=6, size=1, linetype="dotted")
 ```
 ]
-
----
-
-# The Algebra of Calculating Equilibrium
-
-- Simple algebra to find equilibrium prices and quantities if we know supply and demand functions
-
-- Remember, supply and demand are each mathematical functions relating price to quantity:
-  - Demand: $q_D = f(p)$
-  - Supply: $q_S = f(p)$
-
-- We know at equilibrium: $q_D=q_P$
-
----
-
-# Calculating Equilibrium: Example I
-
-.pull-left[
-
-.content-box-green[
-.green[**Example**]: Take our example supply and demand functions:
-
-$$\begin{align*}
-q_d&=10-p\\
-q_s&=2p-8\\
-\end{align*}$$
-]
-
-- In equilibrium: quantity demanded equals quantity supplied
-
-]
-
-.pull-right[
-```{r, fig.retina=3, fig.height=5}
-graph+
-  geom_segment(x=4, xend=4, y=0, yend=6, size=1, linetype="dotted")+
-  geom_segment(x=0, xend=4, y=6, yend=6, size=1, linetype="dotted")
-```
-]
-
----
-
-# Calculating Equilibrium: Example II
-
-.content-box-green[
-.green[**Example**]: Let the supply and demand functions for a market be:
-
-$$\begin{align*}
-	q_D&=30-0.5p\\
-	q_S&=2p-40\\	
-	\end{align*}$$
-]
-
-1. Find equilibrium quantity and price $(q^*, p^*)$.
-
-2. Sketch a rough graph.
 
 ---
 
@@ -1534,9 +1435,11 @@ changes+
 # Equilibrium Tendencies
 
 .pull-left[
+.center[
 ![:scale 60%](https://www.dropbox.com/s/60q8uepk12z3zv4/kiviqauction.png?raw=1)
 
-![:scale 50%](https://www.dropbox.com/s/hu6jcwr05idub6v/equilibriumball.png?raw=1)
+![:scale 40%](https://www.dropbox.com/s/hu6jcwr05idub6v/equilibriumball.png?raw=1)
+]
 ]
 
 .pull-right[

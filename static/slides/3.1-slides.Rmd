@@ -1435,9 +1435,11 @@ changes+
 # Equilibrium Tendencies
 
 .pull-left[
+.center[
 ![:scale 60%](https://www.dropbox.com/s/60q8uepk12z3zv4/kiviqauction.png?raw=1)
 
-![:scale 50%](https://www.dropbox.com/s/hu6jcwr05idub6v/equilibriumball.png?raw=1)
+![:scale 40%](https://www.dropbox.com/s/hu6jcwr05idub6v/equilibriumball.png?raw=1)
+]
 ]
 
 .pull-right[
