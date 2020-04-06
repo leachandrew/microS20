@@ -176,7 +176,7 @@ eq_up<-eq+
   stat_function(fun=supply_t, geom="line", size=2, color = "darkred")+
   geom_label(aes(x=70,y=supply_t(70)), color = "darkred", label="Supply + t", size = 5)+
   annotate("segment", x = 50, xend = 50, y = 3, yend = 4, color = "purple", size=2.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
-  geom_label(aes(x=50,y=3.5), color = "purple", label="t", size = 5)
+  geom_label(aes(x=50,y=3.5), color = "purple", label="t=$1.00", size = 5)
 
 eq_up
 
@@ -189,8 +189,8 @@ eq_up
   - $q_d=q_s=$ 50 billion gallons
   - p $=$ $3.00/gallon
 
-- Suppose the government levies a $1.00 tax on .hi-red[suppliers]
-  - Supply shifts **up** by $1.00
+- Suppose the government levies a .purple[$1.00 tax] on .hi-red[suppliers]
+  - .hi-red[Supply] shifts **up** by .purple[$1.00]
 ]
 
 ---
@@ -199,12 +199,241 @@ eq_up
 
 .pull-left[
 ```{r}
-supply_t=function(q){2+0.04*q}
-
-eq_up+
-  geom_segment(x=0, xend=37.5, y=3.5, yend=3.5, linetype="dotted", size=1)+
+eq_up_left<-eq_up+
   geom_segment(x=37.5, xend=37.5, y=0, yend=3.5, linetype="dotted", size=1)+
+  annotate("segment", x = 50, xend = 37.5, y = 1.5, yend = 1.5, color = "black", size=2.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+
+eq_up_left
+```
+]
+
+.pull-right[
+
+- Gasoline market in equilibrium
+  - $q_d=q_s=$ 50 billion gallons
+  - p $=$ $3.00/gallon
+
+- Suppose the government levies a .purple[$1.00 tax] on .hi-red[suppliers]
+  - .hi-red[Supply] shifts **up** by .purple[$1.00]
+
+- $Q_t$ decreases to 37.5 
+]
+
+---
+
+# Example: An Excise Tax on Gasoline
+
+.pull-left[
+```{r}
+eq_prices<-eq_up_left+
+  geom_segment(x=0, xend=37.5, y=3.5, yend=3.5, linetype="dotted", size=1)+
+  geom_segment(x=0, xend=37.5, y=2.5, yend=2.5, linetype="dotted", size=1)+
+
+  geom_label(aes(x=15,y=2.5), color = "red", label="Net Price to Sellers", size = 3)+
+  geom_label(aes(x=15,y=3.5), color = "blue", label="Gross Price to Buyers", size = 3)+
+  annotate("segment", x = 27.5, xend = 27.5, y = 2.5, yend = 3.5, color = "purple", size=2.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(aes(x=27.5,y=3.0), color = "purple", label="t=$1.00", size = 5)
+
+eq_prices
+```
+]
+
+.pull-right[
+.smaller[
+- **Two** relevant prices now:
+
+- .blue[$3.50: Gross price] buyers pay (with tax)
+
+- .red[$2.50: Net price] sellers receive (after tax)
+
+- Difference between the two is the .purple[$1.00 tax]!
+]
+]
+
+---
+
+# Example: Efficiency & Welfare Effects
+
+.pull-left[
+```{r}
+CS_pre<-tribble(
+  ~x, ~y,
+  0, 5,
+  0, 3,
+  50, 3
+)
+PS_pre<-tribble(
+  ~x, ~y,
+  0, 1,
+  0, 3,
+  50, 3
+)
+
+eq+
+  geom_polygon(data = CS_pre, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_polygon(data = PS_pre, aes(x=x,y=y), fill="red", alpha=0.5)
+
+```
+]
+
+.pull-right[
+- Now we examine the .hi-purple[efficiency] and .hi-purple[welfare effects] of the tax with some .hi-purple[comparative statics]
+
+- Start with the pre-tax market equilibrium
+  - .blue[Consumer surplus]
+  - .red[Producer surplus]
+]
+
+---
+
+# Example: Efficiency & Welfare Effects
+
+.pull-left[
+```{r}
+CS_tax<-tribble(
+  ~x, ~y,
+  0, 5,
+  0, 3.5,
+  37.5, 3.5
+)
+PS_tax<-tribble(
+  ~x, ~y,
+  0, 1,
+  0, 2.5,
+  37.5, 2.5
+)
+
+eq+
+  geom_polygon(data = CS_tax, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_polygon(data = PS_tax, aes(x=x,y=y), fill="red", alpha=0.5)+
+  stat_function(fun=supply_t, geom="line", size=2, color = "darkred")+
+  geom_label(aes(x=70,y=supply_t(70)), color = "darkred", label="Supply + t", size = 5)+
+  geom_segment(x=37.5, xend=37.5, y=0, yend=3.5, linetype="dotted", size=1)+
+  geom_segment(x=0, xend=37.5, y=3.5, yend=3.5, linetype="dotted", size=1)+
   geom_segment(x=0, xend=37.5, y=2.5, yend=2.5, linetype="dotted", size=1)
+
+```
+]
+
+.pull-right[
+.smallest[
+- Post-tax market equilibrium:
+
+- .blue[Consumer surplus] decreases
+  - Buyers pay higher price for fewer gallons
+
+- .red[Producer surplus] decreases
+  - Sellers receive lower price for fewer gallons
+]
+]
+---
+
+# Example: Efficiency & Welfare Effects
+
+.pull-left[
+```{r}
+eq+
+  geom_polygon(data = CS_tax, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_polygon(data = PS_tax, aes(x=x,y=y), fill="red", alpha=0.5)+
+  geom_rect(xmin=0, xmax=37.5, ymin=2.5, ymax=3.5, fill="green", alpha=0.5)+
+  stat_function(fun=supply_t, geom="line", size=2, color = "darkred")+
+  geom_label(aes(x=70,y=supply_t(70)), color = "darkred", label="Supply + t", size = 5)+
+  geom_segment(x=37.5, xend=37.5, y=0, yend=3.5, linetype="dotted", size=1)+
+  geom_segment(x=0, xend=37.5, y=3.5, yend=3.5, linetype="dotted", size=1)+
+  geom_segment(x=0, xend=37.5, y=2.5, yend=2.5, linetype="dotted", size=1)
+
+```
+]
+
+.pull-right[
+.smallest[
+- Post-tax market equilibrium:
+
+- .blue[Consumer surplus] decreases
+  - Buyers pay higher price for fewer gallons
+
+- .red[Producer surplus] decreases
+  - Sellers receive lower price for fewer gallons
+
+- .green[Tax revenue] to government
+  - $\color{green}{R_G=t \times q_t}$
+  - Transfers from .blue[consumers] and .red[producers] to .green[government]
+]
+]
+
+---
+
+# Example: Efficiency & Welfare Effects
+
+.pull-left[
+```{r}
+DWL<-tribble(
+  ~x, ~y,
+  37.5, 2.5,
+  37.5, 3.5,
+  50, 3
+)
+
+eq+
+  geom_polygon(data = CS_tax, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_polygon(data = PS_tax, aes(x=x,y=y), fill="red", alpha=0.5)+
+  geom_polygon(data = DWL, aes(x=x,y=y), fill="black", alpha=0.5)+
+  geom_rect(xmin=0, xmax=37.5, ymin=2.5, ymax=3.5, fill="green", alpha=0.5)+
+  stat_function(fun=supply_t, geom="line", size=2, color = "darkred")+
+  geom_label(aes(x=70,y=supply_t(70)), color = "darkred", label="Supply + t", size = 5)+
+  geom_segment(x=37.5, xend=37.5, y=0, yend=3.5, linetype="dotted", size=1)+
+  geom_segment(x=0, xend=37.5, y=3.5, yend=3.5, linetype="dotted", size=1)+
+  geom_segment(x=0, xend=37.5, y=2.5, yend=2.5, linetype="dotted", size=1)
+
+```
+]
+
+.pull-right[
+.smallest[
+- Post-tax market equilibrium:
+
+- **Deadweight Loss (DWL)**
+  - Surplus that existed pre-tax that is now wasted
+  - Gains from exchange between willing buyers and sellers that is now made impossible
+
+- This is the true social cost of a tax
+  - .green[Tax revenues] are just a transfer, changes the **distribution** of surplus, but it still exists (going to *someone*)
+  - DWL *destroys* pre-existing surplus
+]
+]
+
+---
+
+# Example: An Excise Tax on Gasoline
+
+.pull-left[
+```{r}
+eq
+```
+]
+
+.pull-right[
+
+- Gasoline market in equilibrium
+  - $q_d=q_s=$ 50 billion gallons
+  - p $=$ $3.00/gallon
+]
+
+---
+
+# Example: An Excise Tax on Gasoline
+
+.pull-left[
+```{r}
+demand_t=function(q){4-0.04*q}
+
+eq_down<-eq+
+  stat_function(fun=demand_t, geom="line", size=2, color = "darkblue")+
+  geom_label(aes(x=90,y=demand_t(90)), color = "darkblue", label="Demand - t", size = 5)+
+  annotate("segment", x = 50, xend = 50, y = 3, yend = 2, color = "purple", size=2.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_label(aes(x=50,y=2.5), color = "purple", label="t=$1.00", size = 5)
+
+eq_down
 
 ```
 ]
@@ -215,8 +444,150 @@ eq_up+
   - $q_d=q_s=$ 50 billion gallons
   - p $=$ $3.00/gallon
 
-- Suppose the government levies a $1.00 tax on .hi-red[suppliers]
-  - Supply shifts **up** by $1.00
-
-- $Q_t$ decreases
+- Suppose the government levies a .purple[$1.00 tax] on .hi-blue[consumers]
+  - .hi-blue[Demand] shifts **down** by .purple[$1.00]
 ]
+
+---
+
+# Example: An Excise Tax on Gasoline
+
+.pull-left[
+```{r}
+eq_down_left<-eq_down+
+  geom_segment(x=37.5, xend=37.5, y=0, yend=2.5, linetype="dotted", size=1)+
+  annotate("segment", x = 50, xend = 37.5, y = 1.5, yend = 1.5, color = "black", size=2.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+
+eq_down_left
+```
+]
+
+.pull-right[
+
+- Gasoline market in equilibrium
+  - $q_d=q_s=$ 50 billion gallons
+  - p $=$ $3.00/gallon
+
+- Suppose the government levies a .purple[$1.00 tax] on .hi-blue[consumers]
+  - .hi-blue[Demand] shifts **down** by .purple[$1.00]
+
+- $Q_t$ decreases to 37.5 
+]
+
+---
+
+# Example: An Excise Tax on Gasoline
+
+.pull-left[
+```{r}
+eq_prices_2<-eq_down_left+
+  geom_segment(x=37.5, xend=37.5, y=2.5, yend=3.5, linetype="dotted", size=1)+
+  
+  geom_segment(x=0, xend=37.5, y=3.5, yend=3.5, linetype="dotted", size=1)+
+  geom_segment(x=0, xend=37.5, y=2.5, yend=2.5, linetype="dotted", size=1)+
+
+  geom_label(aes(x=15,y=2.5), color = "red", label="Net Price to Sellers", size = 3)+
+  geom_label(aes(x=15,y=3.5), color = "blue", label="Gross Price to Buyers", size = 3)+
+  annotate("segment", x = 27.5, xend = 27.5, y = 2.5, yend = 3.5, color = "purple", size=2.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(aes(x=27.5,y=3.0), color = "purple", label="t=$1.00", size = 5)
+
+eq_prices_2
+```
+]
+
+.pull-right[
+.smaller[
+- **Two** relevant prices now:
+
+- .blue[$3.50: Gross price] buyers pay (with tax)
+
+- .red[$2.50: Net price] sellers receive (after tax)
+
+- Difference between the two is the .purple[$1.00 tax]!
+]
+]
+
+---
+
+# Example: Efficiency & Welfare Effects
+
+.pull-left[
+```{r}
+eq+
+  geom_polygon(data = CS_pre, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_polygon(data = PS_pre, aes(x=x,y=y), fill="red", alpha=0.5)
+
+```
+]
+
+.pull-right[
+- Start with the pre-tax market equilibrium
+  - .blue[Consumer surplus]
+  - .red[Producer surplus]
+]
+
+---
+
+# Example: Efficiency & Welfare Effects
+
+.pull-left[
+```{r}
+eq+
+  geom_polygon(data = CS_tax, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_polygon(data = PS_tax, aes(x=x,y=y), fill="red", alpha=0.5)+
+  geom_polygon(data = DWL, aes(x=x,y=y), fill="black", alpha=0.5)+
+  geom_rect(xmin=0, xmax=37.5, ymin=2.5, ymax=3.5, fill="green", alpha=0.5)+
+  stat_function(fun=demand_t, geom="line", size=2, color = "darkblue")+
+  geom_label(aes(x=90,y=demand_t(90)), color = "darkblue", label="Demand - t", size = 5)+
+  geom_segment(x=37.5, xend=37.5, y=0, yend=3.5, linetype="dotted", size=1)+
+  geom_segment(x=0, xend=37.5, y=3.5, yend=3.5, linetype="dotted", size=1)+
+  geom_segment(x=0, xend=37.5, y=2.5, yend=2.5, linetype="dotted", size=1)
+
+```
+]
+
+.pull-right[
+.smallest[
+- **Exact same** post-tax market equilibrium:
+
+- .hi-blue[Consumer surplus] decreases
+
+- .hi-red[Producer surplus] decreases
+
+- .hi-green[Tax revenue] to government
+
+- Surplus lost to **Deadweight loss**
+]
+]
+
+---
+
+# Example: Efficiency & Welfare Effects
+
+.pull-left[
+```{r}
+eq+
+  geom_polygon(data = CS_tax, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_polygon(data = PS_tax, aes(x=x,y=y), fill="red", alpha=0.5)+
+  geom_polygon(data = DWL, aes(x=x,y=y), fill="black", alpha=0.5)+
+  geom_rect(xmin=0, xmax=37.5, ymin=2.5, ymax=3.5, fill="green", alpha=0.5)+
+  stat_function(fun=supply_t, geom="line", size=2, color = "darkred")+
+  geom_label(aes(x=70,y=supply_t(70)), color = "darkred", label="Supply + t", size = 5)+
+  stat_function(fun=demand_t, geom="line", size=2, color = "darkblue")+
+  geom_label(aes(x=90,y=demand_t(90)), color = "darkblue", label="Demand - t", size = 5)+
+  geom_segment(x=37.5, xend=37.5, y=0, yend=3.5, linetype="dotted", size=1)+
+  geom_segment(x=0, xend=37.5, y=3.5, yend=3.5, linetype="dotted", size=1)+
+  geom_segment(x=0, xend=37.5, y=2.5, yend=2.5, linetype="dotted", size=1)
+
+```
+]
+
+.pull-right[
+
+- The .hi-purple[statutory burden is irrelevant!]
+
+- Placing the tax on .hi-red[Suppliers] or on .hi-blue[Demanders] resulted in the same .hi[economic incidence] of the tax!
+]
+
+---
+

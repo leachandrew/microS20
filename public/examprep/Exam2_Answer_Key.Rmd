@@ -1,0 +1,662 @@
+---
+title: ""
+author: ""
+date: ""
+output: 
+  pdf_document:
+    latex_engine: "xelatex"
+
+mainfont: Fira Sans
+fontsize: 12pt
+mathfont: "Fira Sans"
+
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(message=F,
+                      warning=F,
+                      echo=F)
+library(tidyverse)
+library(mosaic)
+```
+
+1. In the long run for a competitive industry with constant costs, an increase in demand will have no effect on market price.
+
+---
+
+**True.**
+
+**Ignore this question, because I cut the relevant material this semester.**
+
+---
+
+2. A firm with the following production function
+$$q=4l+2k$$
+has technology that exhibits *decreasing returns to scale*.
+
+---
+
+**False.**
+
+**Let's check, by pluging in 1 for $l$ and 1 for $k$, and seeing what happens to output as we double our inputs:**
+
+$$\begin{aligned}
+q=4(1)+2(1)=6\\
+q=4(2)+2(2)=12\\ 
+\end{aligned}$$
+
+**We doubled both inputs, from 1 to 2, and output has also doubled, from 6 to 12. This production technology exhibits _constant_ returns to scale.**
+
+\clearpage
+
+3. The graph below depicts the cost structure for a representative firm in a competitive industry: 
+
+
+```{r, echo=F, message=F, warning=F, fig.width=3.25, fig.asp=1.06, fig.align="center"}
+
+mc=function(x){3*x^2-8*x+10}
+ac=function(x){x^2-4*x+9.9+10/x}
+avc=function(x){x^2-4*x+10}
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=mc, geom="line", size=1.5, color = "red")+
+  geom_label(x=2.9,y=mc(2.9), color = "red", label=expression(MC(q)), size = 3)+
+  stat_function(fun=ac, geom="line", size=1.5, color = "orange")+
+  geom_label(x=3.5,y=ac(3.5), color = "orange", label=expression(AC(q)), size = 3)+
+  stat_function(fun=avc, geom="line", size=1.5, color = "purple")+
+  geom_label(x=3.5,y=avc(3.5), color = "purple", label=expression(AVC(q)), size = 3)+
+    scale_x_continuous(breaks=NULL,
+                     limits=c(0,4),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,12,1),
+                     limits=c(0,12),
+                     label=scales::dollar,
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_light(base_size=12)#base_family = "Fira Sans Condensed", base_size=20)
+```
+
+According to the graph, the firm will break even at a market price of \$10, and shut down in the short run below a market price of \$6.
+
+---
+
+**True.**
+
+**The break even price is at the minimum of the average cost curve, where it intersects marginal cost, at \$10.**
+
+**The shut down price is at the minimum of the average variable cost curve, where it intersects marginal cost, at \$6.**
+
+---
+
+4. It is possible for a firm to be earning an economic profit, but not an accounting profit.
+
+---
+
+**False.**
+
+**Accounting profit is revenues minus accounting costs. Economic profit is revenues minus accounting costs _and_ opportunity costs. Economic profit is always lower than accounting profit.**
+
+\clearpage
+
+5. A firm should shut down production in the short run when its variable costs exceed its total revenues at its profit-maximizing quantity.
+
+---
+
+**True.**
+
+**The rule is the firm should shut down in the short run when:**
+
+$$p<AVC(q)$$
+
+**If we multiply both sides by $q$, we get**:
+
+$$\underbrace{pq}_{revenues}<VC(q)$$
+
+
+**This come from the rule derived in the slides, that the profit from _not_ producing is greater than the profit from producing when:**
+
+$$\begin{aligned}
+\pi \text{ from producing} &< \pi \text{ from not producing}\\
+\pi(q) &< -f \\
+pq-VC(q)-f &<-f\\
+pq-VC(q) &< 0\\
+pq &< VC(q)\\
+\mathbf{p} &< \mathbf{AVC(q)}\\
+\end{aligned}$$
+
+---
+
+6. Suppose the price of copper, a mineral that requires significant mining equipment to acquire, suddenly rises. In the *short run*, Copper suppliers are likely to *supply a lot more copper* because their supply is *elastic.*
+
+---
+
+**False.**
+
+**Since costs are likely to increase quickly (from needing to buy more equipment to mine deeper into the Earth to produce more copper) with more output, supply is _not_ going to be very elastic. Copper producers will not be very sensitive to price increases, because even if they wanted to supply more output at higher prices, it is very difficult and expensive for them to do so.**
+
+**The second giveaway here is that this is the short run, when firms cannot easily respond or change their capital and equipment. It will be hard to supply much more. In the _long run_, firm supply is more elastic because it can change its scale, capital, etc.**
+
+---
+
+\clearpage
+
+## Short Answer (10 points each)
+
+If applicable, show all work and clearly label all graphs.
+
+7. Briefly explain how we derive the long run average cost curve for a firm. Draw an example graph to demonstrate your explanation.
+
+---
+
+**In the short run, they are stuck with whatever amount of capital they have. In the long run, firms can vary all of their inputs, particularly, capital. Thus, they can choose over a wide range of short-run combinations of labor and capital to minimize the total cost of producing a certain amount of output.**
+
+**We can graph all of the possible short-run combinations of labor and capital as short-run average cost curves, each one is a short run production technology with a certain fixed amount of capital. The long run average cost curve is the lower overlapping regions of the short run average cost curves, as over the long run, the firm will always choose the amount of capital that minimizes costs to achieve a desired output level.**
+
+
+```{r, fig.height=5}
+lrc1<-function(x){(0.25*x-12.5)^(2)+300}
+lrc2<-function(x){(0.25*x-37.5)^(2)+200}
+lrc3<-function(x){(0.25*x-62.5)^(2)+100}
+lrc4<-function(x){(0.25*x-87.5)^(2)+200}
+lrc5<-function(x){(0.25*x-112.5)^(2)+300}
+lrac1<-function(x){(0.25*x-12.5)^(2)+300}
+lrac2<-function(x){(0.25*x-37.5)^(2)+200}
+lrac3<-function(x){(0.25*x-62.5)^(2)+100}
+lrac4<-function(x){(0.25*x-87.5)^(2)+200}
+lrac5<-function(x){(0.25*x-112.5)^(2)+300}
+
+
+line_colors<-c("k=1" = "red", "k=2" = "orange", "k=3" = "yellow", "k=4" = "green", "k=5" = "blue")
+  #scale_colour_manual("Curves", values = line_colors, guide=F)+
+
+lrac<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=lrc1, geom="line", size=2, aes(color = "k=1"))+
+    #geom_label(aes(x=5,y=mc(5)), color = "red", label=expression(MC(q)), size = 6)+
+  stat_function(fun=lrc2, geom="line", size=2, aes(color = "k=2"))+
+  stat_function(fun=lrc3, geom="line", size=2, aes(color = "k=3"))+
+  stat_function(fun=lrc4, geom="line", size=2, aes(color = "k=4"))+
+  stat_function(fun=lrc5, geom="line", size=2, aes(color = "k=5"))+
+  
+    scale_x_continuous(breaks=seq(0,500,50),
+                     limits=c(0,500),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,500,50),
+                     limits=c(0,500),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_colour_manual("AC(q) by # of k", values = line_colors)+
+  labs(x = "Output, q",
+       y = "Costs ($)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
+  theme(legend.position = "bottom")+
+  stat_function(fun=lrac1, xlim=c(0,90), geom="line", size=3, color="purple")+
+  stat_function(fun=lrac2, xlim=c(90,190), geom="line", size=3, color="purple")+
+  stat_function(fun=lrac3, xlim=c(190,310), geom="line", size=3, color="purple")+
+  stat_function(fun=lrac4, xlim=c(310,410), geom="line", size=3, color="purple")+
+  stat_function(fun=lrac5, xlim=c(410,500), geom="line", size=3, color="purple")+
+  geom_label(x=250,y=100,label="LRAC", size =4, color="purple")
+```
+
+
+---
+
+8. Explain the difference between *economies of scale* and *returns to scale.*
+
+---
+
+**Returns to scale are a technological relationship between inputs and outputs. Increasing/decreasing/constant returns measures the relationship between scaling _all inputs at the same rate_ (i.e. double both labor and capital) and how _output_ scales in response.**
+
+**Economies of scale are an economic relationship between output and costs. Increasing/decreasing/constant returns measures the relationship between scaling _output_ and how _average cost_ scales in response.**
+
+---
+
+9. Explain why fixed costs only exist in the short run.
+
+---
+
+**In the short run, firms cannot change how much capital they have. Firms will have to pay for acquiring and maintaining their capital regardless of whether they produce anything.**
+
+**In the long run, firms can change capital. Thus, these costs that are fixed in the short run can be avoidable in the long run: if the firm is losing money and does not want to produce, it can exit the market in the long run by selling or abandoning its capital and going out of business.**
+
+\clearpage
+
+10. Explain the difference between a fixed cost and a sunk cost.
+
+---
+
+**See the answer from the last question. In addition, a fixed cost is avoidable in the long run, because firms can often sell their capital when they leave the market.**
+
+**However, there are some types of fixed costs that are sunk, i.e., they cannot be recovered by reselling the asset. A factory can be resold when a firm goes out of business (so it is _fixed_, but not _sunk_ cost), but expenditures on marketing or research & development were incurred fixed costs that are also sunk - there is no way to "resell" an asset to recover some of the cost back upon exit.**
+
+---
+
+11. Write a production function and draw two example isoquants that describes the following technology: an automotive assembly plant can assemble 1 car for every combination of 4 wheels and 1 engine.
+
+---
+
+**The production function is as follows:**
+$$q=\min \{e,\frac{1}{4}w\}$$
+
+**Where $q$ is number of cars (output), $e$ is number of endinges, and $w$ is number of wheels.**
+
+**The number of cars a firm can produce is the _minimum_ (lower number) between the number of engines it has, and $\frac{1}{4}$ of the number of wheels they have.**
+
+**For example:**
+
+- with 1 engine and 4 wheels, the firm can produce 1 car
+- with 1 engine and 5 wheels, the firm can produce 1 car
+- with 2 engines and 4 wheels, the firm can produce 1 car
+- with 6 engines and 12 wheels, the firm can produce 3 cars
+
+
+```{r, fig.height=3}
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  geom_segment(aes(x=4, xend=4, y=1, yend=10), color="blue", size=1)+
+  geom_segment(aes(x=4, xend=10, y=1, yend=1), color="blue", size=1)+
+  geom_label(aes(x=8, y=1), color="blue", label=expression(q==1))+
+  geom_segment(aes(x=8, xend=8, y=2, yend=10), color="green", size=1)+
+  geom_segment(aes(x=8, xend=10, y=2, yend=2), color="green", size=1)+
+  geom_label(aes(x=9, y=2), color="green", label=expression(q==2))+
+  scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_colour_manual("Curves", values = line_colors, guide=F)+
+  labs(x = "Wheels",
+       y = "Engines")+
+  theme_classic(base_size=20) #base_family = "Fira Sans Condensed",
+```
+
+---
+
+\clearpage
+
+## Problems
+
+Show all work. You may *not* earn full credit if you only write the answer, even if correct.
+
+
+12. You have a firm with the following production function:
+$$q=kl$$
+
+a. In the short run, the firm has 5 units of capital. Write out the short-run production function.
+
+---
+
+**Plug $k=5$ into the production function:**
+
+$$q=5l$$
+
+
+---
+
+b. Write down the total product, marginal product, and average product of labor for 0, 1, 2, 3, 4, and 5 workers.
+
+---
+
+**Make a table:**
+
+| $l$ | $q=5l$ | $MP_l=q_2-q_1$ | $AP_l=q/l$ |
+|----:|-------:|---------------:|-----------:|
+| $0$ | $0$ | $-$ | $-$ |
+| $1$ | $5$ | $5$ | $5$ |
+| $2$ | $10$ | $5$ | $5$ |
+| $3$ | $15$ | $5$ | $5$ |
+| $4$ | $20$ | $5$ | $5$ |
+| $5$ | $25$ | $5$ | $5$ |
+
+---
+
+c. In the long run, the marginal products of labor and capital, respectively, are:
+
+$$\begin{aligned}
+	MP_l&=k\\
+	MP_k&=l\\
+	\end{aligned}$$
+Suppose your firm needs to produce 1,000 units of output, the price of labor is \$20, and the price of capital is \$50. Find the optimal (i.e. cost-minimizing) combination of labor and capital that produces 1,000 units.
+
+---
+
+**First, recognize that at the optimum, the slope of the isoquant curve (left) is equal to the slope of the isocost line:**
+
+$$\begin{aligned}
+\frac{MP_l}{MP_k}&=\frac{w}{r}\\
+\frac{k}{l}&=\frac{10}{40}\\
+\frac{k}{l}&=0.4\\
+k&=0.4l\\
+\end{aligned}$$
+
+**Now we take this and plug it into the production function, which has to produce 1,000 units.**
+
+$$\begin{aligned}
+q&=kl\\
+1000&=(0.4l)l\\
+1000&=0.4l^2\\
+2500&=l^2\\
+50&=l\\
+\end{aligned}$$
+
+**If $l^*=50$, then $k^*=0.4(50)=20$. Thus, the cost-minimizing combination of labor and capital that produces 1,000 units of output is 50 units of labor and 20 units of capital.**
+
+```{r, echo=F, message=F, warning=F, fig.width=3.25, fig.asp=1.06, fig.align="center"}
+library(mosaic)
+isocost=function(x){40-0.4*x}
+isoquant=function(x){1000/x}
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=isocost, geom="line", size=2, color = "red")+
+    geom_label(aes(x=90,y=isocost(90)), color = "red", label="Cost=$2,000", size = 2)+
+  stat_function(fun=isoquant, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=90,y=isoquant(90)), color = "blue", label="Output=1,000", size = 2)+
+  geom_segment(x=0,xend=50,y=20,yend=20, size = 1, linetype="dotted")+
+  geom_segment(x=50,xend=50,y=20,yend=0, size = 1, linetype="dotted")+
+    scale_x_continuous(breaks=seq(0,100,20),
+                     limits=c(0,100),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,100,10),
+                     limits=c(0,100),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Labor",
+       y = "Capital")+
+  theme_light(base_size=12)#base_family = "Fira Sans Condensed", base_size=20)
+```
+
+d. What is the total cost of producing with the optimal combination?
+
+---
+
+$$\begin{aligned}
+wl+rk&=C\\
+20(50)+50(20)&=C\\
+1000+1000&=C\\
+2000&=C\\
+\end{aligned}$$
+
+**The total cost of using 20 workers and 50 units of capital at current input prices is $2,000.**
+
+---
+
+e. Graph the isoquant, isocost line, and optimum on the graph above.
+
+---
+
+**It will help to find the isocost line equation to graph (by solving for k):**
+
+$$\begin{aligned}
+wl+rk&=C\\
+20l+50k&=2000\\
+50k&=2000-20l\\
+k&=40-0.4l\\
+\end{aligned}$$
+
+**Alternatively, just calculate and graph the endpoints:**
+
+- If the firm only used capital, for $2,000 it could use $\frac{2000}{50}=40$
+- If the firm only used labor, for $2,000 it could use $\frac{2000}{20}=100$
+
+---
+
+f. In the long run, does this production function exhibit constant, increasing, or decreasing returns to scale?
+
+---
+
+**Suppose for example, we have 1 L and 1 K:**
+$$q=(1)(1)=1$$
+
+**Now we double inputs to 2 L and 2 K:**
+
+$$q=(2)(2)=4$$
+
+**Output has quadrupled, from 1 to 4 units, when we have doubled inputs from 1 to 2 K & L, so we have increasing returns to scale.**
+
+**Even simpler, since this is a Cobb-Douglas function, adding the exponents**
+$$q=l^1k^1$$
+**leads to 1+1=2, which is greater than 1, so it is again, increasing returns to scale.**
+
+---
+
+\clearpage
+
+13. Suppose you are a restaurant operating in the very competitive D.C. brunch market. You have a cost structure as follows, where $q$ is hundreds of meals served per day. 
+
+$$\begin{aligned}
+C(q)&=2q^2 +4q+18\\
+MC(q)&=4q+4\\	
+\end{aligned}$$
+
+a. Write the equations for (i) fixed costs, (ii) variable costs, (iii) average fixed costs, (iv), average variable costs, and (v) average (total) costs. 
+
+---
+
+**Fixed costs are where costs don't change with output, so any term(s) where there is no variable $q$ in them: 18 We could also see that if $q=0$:**
+
+
+$$\begin{aligned}
+ 	C(q)&=2q^2+4q+18\\
+ 	C(0)&=2(0)^2+4(0)+18\\
+ 	C(0)&=18\\	
+ 	\end{aligned}$$
+
+$f=18$
+
+**Variable costs change with output, so any term(s) with a variable $q$ in them:**
+
+$$\begin{aligned}
+	VC(q)&=2q^2+4q\\	
+	\end{aligned}$$
+
+**Average fixed costs:**
+
+$$\begin{aligned}
+	AFC(q)&=\frac{FC}{q}\\
+	&=\frac{18}{q}\\
+	\end{aligned}$$
+
+**Average variable costs:**
+
+$$\begin{aligned}
+	AVC(q)&=\frac{VC(q)}{q}\\
+	&=\frac{2q^2+4q}{q}\\
+	&=2q+4\\	
+	\end{aligned}$$
+
+**Average (total) costs:**
+
+$$\begin{aligned}
+	AC(q)&=\frac{C(q)}{q}\\
+	&=\frac{2q^2+4q+18}{q}\\
+	&=2q+4+\frac{18}{q}\\
+	\end{aligned}$$
+
+**Alternatively, we know that:**
+
+$$\begin{aligned}
+	AC(q)&=AVC(q)+AFC(q)\\
+	&=(2q+4)+(\frac{18}{q})\\
+	&=2q+4+\frac{18}{q}\\
+	\end{aligned}$$
+
+---
+
+b. The market price is currently \$12. Calculate the profit-maximizing quantity of output.
+
+---
+
+**In a perfectly competitive market, optimal quantity is where $p=MR(q)=MC(q)$.**
+
+$$\begin{aligned}
+	p&=MC(q)\\
+	12&=4q+4\\
+	8&=4q\\
+	2&=q^*\\
+	\end{aligned}$$
+
+---
+
+c. At the profit-maximizing quantity, calculate the average cost.
+
+---
+
+**We know the average cost function from (a), just plug in the quantity we just found, 2.**
+
+$$\begin{aligned}
+	AC(q) &=2q+4+\frac{18}{q}\\
+	AC(2) &=2(2)+4+\frac{18}{(2)}\\
+	AC(2) &=4+4+9\\
+	AC(2) &=17\\
+	\end{aligned}$$
+
+---
+
+d. At the profit-maximizing price and quantity, calculate the total profit. Should this firm stay or exit the market in the long run?
+
+---
+
+$$\begin{aligned}
+	\pi &= (p-AC(q))q\\
+	\pi &= (12-17)2\\
+	\pi &= (-5)2\\
+	\pi &= -10\\
+	\end{aligned}$$
+
+**Since the firm is earning losses, it will want to _exit_ in the _long run_.**
+
+---
+
+e. Should this firm produce or shut down in the short run?
+
+---
+
+**Find the shut-down price, the minimum of AVC, where $AVC=MC$**
+
+$$\begin{aligned}
+	AVC(q) &= MC(q)\\	
+	2q+4 &= 4q+4\\
+	q&=0	\\
+	\end{aligned}$$
+
+**Plug in $0$ into either $MC(q)$ or $AVC(q)$ to get a price of $4. This is the shut down price. Since the current market price (12) is higher than the shut down price, the firm should *not* shut down in the short run, even though it is earning losses!**
+
+---
+
+f. What price would the firm need to charge in order to break even?
+
+---
+
+**Find the break-even price, the minimum of AC, where $AC=MC$**
+
+$$\begin{aligned}
+	AC(q) &= MC(q)\\	
+	2q+4+\frac{18}{q} &= 4q+4\\
+	2q+\frac{18}{q} &=4q	\\
+	\frac{18}{q} &= 2q\\
+	18 & = 2q^2\\
+	9 &= q^2\\
+	3 &= q\\
+	\end{aligned}$$
+
+**Thi* is the quantity where average cost is minimized. Find what this cost is by plugging in 3 into either $MC$ or $AC$:**
+
+$$\begin{aligned}
+	MC(q)&=4q+4\\	
+	MC(3)&=4(3)+4\\
+	MC(3)&=16\\
+	\end{aligned}$$
+
+**At a price of $16, the firm breaks even $(\pi=0)$.**
+
+---
+
+g. In the long run, what must the equilibrium  market price be for this industry, and why?
+
+---
+
+**For a competitive market to be in long run equilibrium, all firms must earn an economic profit of $0. The price must be equal to average cost (the break even price) for this to happen, which again is at $16.**
+
+\clearpage
+
+Visualize this problem below: 
+
+```{r, echo=F, message=F, warning=F, fig.height=4, fig.align="center"}
+mc_joe=function(x){4*x+4}
+ac_joe=function(x){2*x+4+18/x}
+avc_joe=function(x){2*x+4}
+price=function(x){12}
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  geom_rect(xmin=0,xmax=2,ymin=12,ymax=17, fill="black", alpha=0.3)+
+  stat_function(fun=price, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=8,y=price(8)), color = "blue", label=expression(MR(q)), size = 3)+
+  stat_function(fun=mc_joe, geom="line", size=2, color = "red")+
+    geom_label(aes(x=3.5,y=mc_joe(3.5)), color = "red", label=expression(MC(q)), size = 3)+
+  stat_function(fun=avc_joe, geom="line", size=2, color = "brown")+
+    geom_label(aes(x=7,y=avc_joe(7)), color = "brown", label=expression(AVC(q)), size = 3)+
+  stat_function(fun=ac_joe, geom="line", size=2, color = "orange")+
+    geom_label(aes(x=6,y=ac_joe(6)), color = "orange", label=expression(AC(q)), size = 3)+
+  geom_hline(yintercept=16, size=1, linetype="dashed")+
+  geom_label(x=9,y=16, label="Break Even Price= $16.00", size =3, color="orange")+
+  geom_segment(x=2,xend=2,y=0,yend=17, size=1, linetype="dotted")+
+  geom_segment(x=0,xend=2,y=17,yend=17, size=1, linetype="dotted")+
+  geom_hline(yintercept=4, size=1, linetype="dashed")+
+  geom_label(x=9,y=4, label="Shut Down Price= $4.00", size =3, color="brown")+
+    scale_x_continuous(breaks=seq(0,10,1),
+                       limits=c(0,10),
+                       expand=c(0,0))+
+  scale_y_continuous(breaks=seq(0,20,2),
+                     limits=c(0,20),
+                     expand=c(0,0))+
+  
+  #geom_segment(x=0,xend=0,y=0,yend=23, color="red", size=5)+
+  #geom_segment(x=0,xend=5,y=23,yend=23, color="red", size=3.5)+
+  #stat_function(fun=mc, xlim=c(5,10), geom="line", size=3.5, color = "red")+
+   # geom_label(aes(x=2,y=23), color = "red", label="SUPPLY", size = 5)+
+  #scale_colour_manual("Curves", values = line_colors, guide=F)+
+  labs(x = "Output, q",
+       y = "$")+
+  theme_light(base_size=14)
+
+
+```
+
+\clearpage
+
+
+## Long Answer (10 points each)
+
+Please answer clearly and concisely (2-5 sentences is sufficient). If applicable, show all work and clearly label all graphs.
+
+14. Explain why in a market economy, a firm’s profits go to entrepreneurs and shareholders (e.g. and not to workers, etc). 
+
+---
+
+**The incomes of all factors of production (wages to workers, rents to landowners, interest to capitalists/lendors, etc.) are _costs_ to the firm. In order to produce, the firm must pay all of these costs to the owners of the factors. If there are any extra revenues leftover after all the costs have been paid to the factors, that is profit, which is claimed by the owners of the firm (entrepreneurs or shareholders). Owners are the only participants in production that are not guaranteed an income, they must bear the risk of the whole venture, and only earn an income if there is any profit.**
+
+---
+
+15. Describe, as completely as you can, what the firm’s short-run supply curve looks like and what the firm’s long-run supply curve looks like. Draw a graph. What are the main differences?
+
+---
+
+**The firm's short run supply curve is its marginal cost curve above its shut-down price (minimum of AVC). This is because the firm earns more profits from producing unless its revenues are less than its variable costs $(p<AVC)$.**
+
+**The firm's long run supply curve is its marginal cost curve above its break-even price (minimum of AC). This is because when price is less than average cost, profits are negative, and any firm earning negative profits will want to exit over the long run.**
+
+---
+
+16. Give an example of an economic rent, and how in a competitive industry, economic profits will still fall to zero in the long run.
+
+---
+
+**I will explain this in a bit more detail than is necessary to answer, because economic rents are again one of the more difficult, yet important, concepts in economics.**
+
+**If a factor of production contributes to a firm's efficiency by lowering its costs of production, and is scarce, that firm gains an advantage relative to other firms (lower costs, which would increase profits, in the short run).**
+
+**However, other firms will compete with one another for access to that scarce factor of production, and in that competition, will bid up the price to hire that scarce factor. This process will ultimately raise the costs to that firm that has bought/hired the factor of production, squeezing whatever economic profits the firm might have gotten with it, back to zero.**
+
+**The owner of the scarce factor of production, however, will see a much higher return than was needed to bring it into the market (its opportunity cost), and thus, gets the economic rents.**
+
+**As an example, consider a landowner that has a massive deposit of oil underneath her land. An oil producer would want to lease drilling rights or buy the land outright from the landowner, in the hopes that this will make the oil producer more efficient (lower its costs) relative to its competitors. However, if its competitors get wind of the knowledge that this land has oil, they also will be interested in buying the rights to the land. Their competition over the land will raise the price of the land (or leasing it), generating economic rents for the landowner, but ultimately raising the costs to the acquiring firm, since it has to spend much more money to acquire it.**
+
+**Other examples of scarce economic rent-generating factors are workers with unique talents, inventors with an exclusive patent, people with political connections, etc.**
