@@ -1,0 +1,30 @@
+---
+title: "3.2: Market Competition and Surpluses - Class Notes"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+# Overview
+
+# Class Livestream/Lecture Videos
+
+# Slides
+
+- [<i class="fas fa-external-link-square-alt"></i> Lecture Slides](/slides/3.2-slides.html)
+
+# Assignments: Exam 2
+
+[Exam 2](/assignment/02-exam) **is available** to take on **Blackboard** until Sunday April 12 at 10:00PM. Once you open the exam, you have 2 hours to complete it on Blackboard. Please read the instructions on the linked page carefully, and **try the practice exam on Blackboard by Sunday** to ensure you will be able to take it properly.

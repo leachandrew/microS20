@@ -22,28 +22,38 @@ class: center, middle, inverse, title-slide
 
 
 
-class: inverse, center, middle
+class: center, middle, inverse
 
-# Why Markets Tend to Equilibrate
+# The Algebra of Calculating Equilibrium
 
 ---
 
-# Excess Demand I
+# The Algebra of Calculating Equilibrium
+
+- Simple algebra to find equilibrium prices and quantities if we know supply and demand functions
+
+- Remember, supply and demand are each mathematical functions relating price to quantity:
+  - Demand: `\(q_D = f(p)\)`
+  - Supply: `\(q_S = f(p)\)`
+
+- We know at equilibrium: `\(q_D=q_P\)`
+
+---
+
+# Calculating Equilibrium: Example I
 
 .pull-left[
 
 .content-box-green[
-.smallest[
-.green[**Example**]: Consider *any* price below $6, such as $5: 
+.green[**Example**]: Take our example supply and demand functions:
 
-- `\(\color{blue}{Q_d=5} \quad \color{red}{Q_s=2}\)`
-
-- `\(\color{blue}{Q_d}&gt;\color{red}{Q_s}\)`: .hi[excess demand]
-
-- A .hi[shortage] of 3 units
-]
+`$$\begin{align*}
+q_d&amp;=10-p\\
+q_s&amp;=2p-8\\
+\end{align*}$$`
 ]
 
+- In equilibrium: quantity demanded equals quantity supplied
 
 ]
 
@@ -53,714 +63,26 @@ class: inverse, center, middle
 
 ---
 
-# Excess Demand II
-
-.pull-left[
+# Calculating Equilibrium: Example II
 
 .content-box-green[
-.smallest[
-.green[**Example**]: Consider *any* price below $6, such as $5: 
+.green[**Example**]: Let the supply and demand functions for a market be:
 
-- `\(\color{blue}{Q_d=5} \quad \color{red}{Q_s=2}\)`
-
-- `\(\color{blue}{Q_d}&gt;\color{red}{Q_s}\)`: .hi[excess demand]
-
-- A .hi[shortage] of 3 units
-]
+`$$\begin{align*}
+	q_D&amp;=30-0.5p\\
+	q_S&amp;=2p-40\\	
+	\end{align*}$$`
 ]
 
-.smallest[
-- Sellers will not supply more than 2 units
+1. Find equilibrium quantity and price `\((q^*, p^*)\)`.
 
-- For 2 units, some buyers are willing to pay more than $5
-
-]
-]
-
-.pull-right[
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-2-1.png" width="504" /&gt;
-]
-
----
-
-# Excess Demand III
-
-.pull-left[
-
-.content-box-green[
-.smallest[
-.green[**Example**]: Consider *any* price below $6, such as $5: 
-
-- `\(\color{blue}{Q_d=5} \quad \color{red}{Q_s=2}\)`
-
-- `\(\color{blue}{Q_d}&gt;\color{red}{Q_s}\)`: .hi[excess demand]
-
-- A .hi[shortage] of 3 units
-]
-]
-
-.smallest[
-- Buyers will **raise their bids** against one another, raising the price
-
-- At higher prices, sellers willing to sell more!
-
-- Until .hi-purple[equilibrium], no pressure for change, `\(\color{blue}{Q_d}=\color{red}{Q_s}\)`
-]
-]
-
-.pull-right[
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" /&gt;
-]
-
----
-
-# Excess Supply I
-
-.pull-left[
-
-.content-box-green[
-.smallest[
-.green[**Example**]: Consider *any* price above $6, such as $7: 
-
-- `\(\color{blue}{Q_d=2} \quad \color{red}{Q_s=8}\)`
-
-- `\(\color{blue}{Q_d}&lt;\color{red}{Q_s}\)`: .hi[excess supply]
-
-- A .hi[surplus] of 6 units
-]
-]
-
-
-]
-
-.pull-right[
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" /&gt;
-]
-
----
-
-# Excess Supply II
-
-.pull-left[
-
-.content-box-green[
-.smallest[
-.green[**Example**]: Consider *any* price above $6, such as $7: 
-
-- `\(\color{blue}{Q_d=2} \quad \color{red}{Q_s=8}\)`
-
-- `\(\color{blue}{Q_d}&lt;\color{red}{Q_s}\)`: .hi[excess supply]
-
-- A .hi[surplus] of 6 units
-]
-
-]
-.smallest[
-- Buyers will not buy more than 2 units
-
-- For 2 units, some sellers willing to accept less than $8
-
-]
-]
-
-.pull-right[
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-5-1.png" width="504" /&gt;
-]
-
----
-
-# Excess Supply III
-
-.pull-left[
-
-.content-box-green[
-.smallest[
-.green[**Example**]: Consider *any* price above $6, such as $7: 
-
-- `\(\color{blue}{Q_d=2} \quad \color{red}{Q_s=8}\)`
-
-- `\(\color{blue}{Q_d}&lt;\color{red}{Q_s}\)`: .hi[excess supply]
-
-- A .hi[surplus] of 6 units
-]
-]
-.smallest[
-- Sellers will **lower their asking prices** against one another, lowering the price
-
-- At lower prices, buyers willing to buy more!
-
-- Until .hi-purple[equilibrium], no pressure for change, `\(\color{blue}{Q_d}=\color{red}{Q_s}\)`
-]
-]
-
-.pull-right[
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-6-1.png" width="504" /&gt;
-]
-
----
-
-# Why Markets Tend to Equilibrate
-
-.center[
-![:scale 60%](https://www.dropbox.com/s/60q8uepk12z3zv4/kiviqauction.png?raw=1)
-]
+2. Sketch a rough graph.
 
 ---
 
 class: inverse, center, middle
 
-# Comparative Statics
-
----
-
-# Ceterus Paribus I
-
-.pull-left[
-.smallest[
-- Supply function and demand function relate *quantity* (supplied or demanded) to *price* **only**
-  - Describes how buyers/sellers respond to changes in market price
-
-- Certainly there are many *other* factors that influence how much a buyer or seller will purchase at a particular price!
-  - income, preferences, prices of other goods, expectations, etc.
-
-- A supply or demand function (or graph) requires .hi["ceterus paribus"] (all else equal)
-]
-]
-.pull-right[
-.center[
-![:scale 75%](https://www.dropbox.com/s/pnyb4kyxum5no25/ceterusparibus.png?raw=1)
-]
-
-]
-
----
-
-# Recall (for example), Demand I
-
-.pull-left[
-.smallest[
-- A consumer's .hi[demand] (for good x) depends on current prices &amp; income:
-
-`$$q_x^D = q_x^D(m, p_x, p_y)$$`
-
-- How does **demand for x** change?
-
-1. .hi-purple[Income effects] `\(\left(\frac{\Delta q_x^D}{\Delta m}\right)\)`: how `\(q_x^D\)` changes with changes in income
-2. .hi-purple[Cross-price effects] `\(\left(\frac{\Delta q_x^D}{\Delta p_y}\right)\)`: how `\(q_x^D\)` changes with changes in prices of *other* goods (e.g. `\(y)\)`
-3. .hi-purple[(Own) Price effects] `\(\left(\frac{\Delta q_x^D}{\Delta p_x}\right)\)`: how `\(q_x^D\)` changes with changes in price (of `\(x)\)`
-]
-]
-
-.pull-right[
-.center[
-![](https://www.dropbox.com/s/nw0v6bsho0ab4zq/choices.jpg?raw=1)
-]
-]
-
-.source[See [Class 1.7](/class/1.7-class) for a reminder.]
----
-
-# Recall (for example), Demand II
-
-.pull-left[
-.smallest[
-- A change in one of the .hi-purple["determinants of demand"] will **shift** demand curve!
-    - Change in **income** `\(m\)`
-    - Change in **price of other goods** `\(p_y\)` (substitutes or complements)
-    - Change in **preferences** or **expectations** about good `\(x\)`
-    - Change in **number of buyers**
-
-- Shows up in (inverse) demand function by a **change in intercept (choke price)**! 
-
-- Again, see my [Visualizing Demand Shifters](https://ryansafner.shinyapps.io/Demand/)
-]
-.source[See [Class 1.9](/class/09-class) for a reminder.]
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-7-1.png" width="504" /&gt;
-
-]
-
-
-
----
-
-# Ceterus Paribus II
-
-.pull-left[
-
-- Consider our demand function:
-`$$q_D=10-p$$`
-
-- If the **market price `\((p)\)` changes** (perhaps because supply changes), that results in a **change in _quantity demanded_ `\((q_D)\)`**
-  - We move *along* the existing demand curve
-
-- *Ceterus paribus* has not been violated
-
-]
-
-.pull-right[
-.center[
-![:scale 75%](https://www.dropbox.com/s/pnyb4kyxum5no25/ceterusparibus.png?raw=1)
-]
-
-]
-
----
-
-# Ceterus Paribus III
-
-.pull-left[
-
-- Consider our demand function:
-`$$q_D=10-p$$`
-
-- If the **something other than price changes** (income, preferences, price of a complement, etc), that results in a **change in _demand_**
-  - We need to draw a new demand curve (or demand function)
-
-`$$q_D=12-p$$`
-
-- *Ceterus paribus* has been violated
-
-]
-
-.pull-right[
-.center[
-![:scale 75%](https://www.dropbox.com/s/pnyb4kyxum5no25/ceterusparibus.png?raw=1)
-]
-
-]
-
----
-
-# Ceterus Paribus IV
-
-.pull-left[
-
-- .hi-purple[There is a big difference between a change in "quantity demanded" and a change in "demand"!]
-
-]
-
---
-
-.pull-right[
-.center[
-![:scale 75%](https://www.dropbox.com/s/urfaj6q5xgx4nhp/quantitydemandedvsdemand.jpg?raw=1)
-]
-
-]
-
----
-
-# Increase in Demand
-
-.pull-left[
-
-
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-8-1.png" width="504" /&gt;
-
-]
-
----
-
-# Increase in Demand
-
-.pull-left[
-.smallest[
-- More individuals want to buy more of the good at *every* price
-
-- Entire demand curve shifts to the *right*
-]
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-9-1.png" width="504" /&gt;
-
-]
-
----
-
-# Increase in Demand
-
-
-.pull-left[
-.smallest[
-- More individuals want to buy more of the good at *every* price
-
-- Entire demand curve shifts to the *right*
-
-- At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
-]
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-10-1.png" width="504" /&gt;
-
-]
-
----
-
-# Increase in Demand
-
-
-.pull-left[
-.smallest[
-- More individuals want to buy more of the good at *every* price
-
-- Entire demand curve shifts to the *right*
-
-- At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
-
-- Some buyers willing to pay more at this quantity
-]
-]
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-11-1.png" width="504" /&gt;
-
-]
-
----
-
-# Increase in Demand
-
-
-.pull-left[
-.smallest[
-- More individuals want to buy more of the good at *every* price
-
-- Entire demand curve shifts to the *right*
-
-- At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
-
-- Some buyers willing to pay more at this quantity
-
-- Buyers raise bids, inducing sellers to sell more
-
-- Reach new equilibrium with:
-  - **higher market-clearing price**
-  - **larger market-clearing quantity exchanged**
-]
-]
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-12-1.png" width="504" /&gt;
-
-]
-
----
-
-# Decrease in Demand
-
-.pull-left[
-
-
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-13-1.png" width="504" /&gt;
-
-]
-
----
-
-# Decrease in Demand
-
-.pull-left[
-.smallest[
-- Fewer individuals want to buy less of the good at *every* price
-
-- Entire demand curve shifts to the *left*
-]
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-14-1.png" width="504" /&gt;
-
-]
-
----
-
-# Decrease in Demand
-
-
-.pull-left[
-.smallest[
-- Fewer individuals want to buy less of the good at *every* price
-
-- Entire demand curve shifts to the *left*
-
-- At the original market price, a **surplus!** `\((q_D &lt; q_S)\)`
-]
-]
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-15-1.png" width="504" /&gt;
-
-]
-
----
-
-# Decrease in Demand
-
-
-.pull-left[
-.smallest[
-- Fewer individuals want to buy less of the good at *every* price
-
-- Entire demand curve shifts to the *left*
-
-- At the original market price, a **surplus!** `\((q_D &lt; q_S)\)`
-
-- Some sellers willing to accept less at this quantity
-]
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-16-1.png" width="504" /&gt;
-
-]
-
----
-
-# Decrease in Demand
-
-
-.pull-left[
-.smallest[
-- Fewer individuals want to buy less of the good at *every* price
-
-- Entire demand curve shifts to the *left*
-
-- At the original market price, a **surplus!** `\((q_D &lt; q_S)\)`
-
-- Some sellers willing to accept less at this quantity
-
-- Sellers lower asks, inducing buyers to buy more
-
-- Reach new equilibrium with:
-  - **lower market-clearing price**
-  - **smaller market-clearing quantity exchanged**
-]
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-17-1.png" width="504" /&gt;
-
-]
-
----
-
-# Increase in Supply
-
-.pull-left[
-
-
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-18-1.png" width="504" /&gt;
-
-]
-
----
-
-# Increase in Supply
-
-.pull-left[
-.smallest[
-- More individuals want to sell more of the good at *every* price
-
-- Entire supply curve shifts to the *right*
-]
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-19-1.png" width="504" /&gt;
-
-]
-
----
-
-# Increase in Supply
-
-.pull-left[
-.smallest[
-- More individuals want to sell more of the good at *every* price
-
-- Entire supply curve shifts to the *right*
-
-- At the original market price, a **surplus!** `\((q_D &lt; q_S)\)`
-]
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-20-1.png" width="504" /&gt;
-
-]
-
----
-
-# Increase in Supply
-
-.pull-left[
-.smallest[
-- More individuals want to sell more of the good at *every* price
-
-- Entire supply curve shifts to the *right*
-
-- At the original market price, a **surplus!** `\((q_D &lt; q_S)\)`
-
-- Some sellers willing to accept less at this quantity
-]
-]
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-21-1.png" width="504" /&gt;
-
-]
-
----
-
-# Increase in Supply
-
-.pull-left[
-.smallest[
-- More individuals want to sell more of the good at *every* price
-
-- Entire supply curve shifts to the *right*
-
-- At the original market price, a **surplus!** `\((q_D &lt; q_S)\)`
-
-- Some sellers willing to accept less at this quantity
-
-- Sellers lower asks, inducing buyers to buy more
-
-- Reach new equilibrium with:
-  - **lower market-clearing price**
-  - **larger market-clearing quantity exchanged**
-]
-]
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-22-1.png" width="504" /&gt;
-
-]
-
----
-
-# Decrease in Supply
-
-.pull-left[
-
-
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-23-1.png" width="504" /&gt;
-
-]
-
----
-
-# Decrease in Supply
-
-.pull-left[
-.smallest[
-- Fewer individuals want to sell less of the good at *every* price
-
-- Entire supply curve shifts to the *left*
-]
-]
-
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-24-1.png" width="504" /&gt;
-
-]
-
----
-
-# Decrease in Supply
-
-.pull-left[
-.smallest[
-- Fewer individuals want to sell less of the good at *every* price
-
-- Entire supply curve shifts to the *left*
-
-- At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
-]
-]
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-25-1.png" width="504" /&gt;
-
-]
-
----
-
-# Decrease in Supply
-
-.pull-left[
-.smallest[
-- Fewer individuals want to sell less of the good at *every* price
-
-- Entire supply curve shifts to the *left*
-
-- At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
-
-- Some buyers willing to pay more at this quantity
-]
-]
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-26-1.png" width="504" /&gt;
-
-]
-
----
-
-# Decrease in Supply
-
-.pull-left[
-.smallest[
-- Fewer individuals want to sell less of the good at *every* price
-
-- Entire supply curve shifts to the *left*
-
-- At the original market price, a **shortage!** `\((q_D &gt; q_S)\)`
-
-- Some buyers willing to pay more at this quantity
-
-- Buyers raise bids, inducing sellers to sell more
-
-- Reach new equilibrium with:
-  - **higher market-clearing price**
-  - **smaller market-clearing quantity exchanged**
-]
-]
-.pull-right[
-
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-27-1.png" width="504" /&gt;
-
-]
+# Price Competition in Markets
 
 ---
 
@@ -843,6 +165,215 @@ class: inverse, center, middle
 
 ---
 
+# An Example
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/pmjsad1ktpdep3y/horsemarket.jpg?raw=1)
+
+]
+.source[This example is based on Eugen von Bohm-Bawerk’s famous example in *Capital and Interest* (1884)]
+]
+
+.pull-right[
+
+- Imagine a small public horse market
+
+- 3 people, .red[A], .red[B], and .red[C] each own 1 horse
+
+- 3 people, .blue[D], .blue[E], and .blue[F] each are potentially interested in buying a horse
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+]
+
+--
+
+.pull-right[
+
+- Suppose .blue[Buyer F] announces she will pay $400 for a horse
+
+- Only .red[Seller A] is willing to sell at $400
+
+- Buyers .blue[D], .blue[E], and .blue[F] are willing to buy at $400
+  - .blue[D] and .blue[E] are willing to pay *more* than .blue[F] to obtain the 1 horse
+  - They raise their bids *above* $400 to attract sellers
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+]
+
+.pull-right[
+
+- Suppose .red[Seller C] announces he will sell his horse for $600
+
+- Only .blue[Buyer D] is willing to buy at $600
+
+- Sellers .red[A], .red[B], and .red[C] are willing to sell at $600
+  - .red[A] and .red[B] are willing to accept *less* than .red[C] to sell their horses
+  - They lower their asks *below* $600 to attract buyers
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+
+**Market Price: $500**
+]
+
+.pull-right[
+
+- If the market price reaches $500 (through bids and asks changing)
+
+- Sellers .red[A] and .red[B] sell their horses for $500 each
+- Buyers .blue[E] and .blue[F] buy them at $500 each
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+
+**Market Price: $500**
+
+]
+
+.pull-right[
+
+- At $500, .red[B] and .blue[E] are the .hi-purple["marginal"] buyer and seller, the "last" ones that *just* got off the fence to exchange in the market
+  - .red[B] has WTA *just* low enough to sell
+  - .blue[E] has WTP *just* high enough to buy
+
+- The marginal pair actually are the ones that "set" the market price!
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+
+**Market Price: $500**
+
+]
+
+.pull-right[
+
+- Notice the most possible exchanges take place at a market price of $500
+  - 2 horses get exchanged
+
+- Any price *above* or *below* $500, only 1 horse would get exchanged
+  - Also, at least one other buyer or seller would raise/lower their bid/ask
+  
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+
+**Market Price: $500**
+
+]
+
+.pull-right[
+
+- At $500, .red[C] and .blue[F] are the .hi-purple["excluded"] buyers and sellers
+  - .red[C] has WTA *too high* to sell
+  - .blue[F] has WTP *too low* to buy
+
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+
+**Market Price: $500**
+
+]
+
+.pull-right[
+
+- At $500, .red[A] and .blue[D] are the .hi-purple["inframarginal"] buyers and sellers
+  - .red[A] has WTA *lower* than market price, earns extra $100 surplus from exchange
+  - .blue[D] has WTP *higher* than market price, earns extra $100 surplus from exchange
+  
+- These buyers and sellers benefit *the most* from exchange
+
+]
+
+---
+
 class: inverse, center, middle
 
 # Economic Surplus
@@ -859,7 +390,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-28-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-2-1.png" width="504" /&gt;
 
 ]
 
@@ -882,7 +413,7 @@ class: inverse, center, middle
 
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-29-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" /&gt;
 
 ]
 
@@ -902,7 +433,7 @@ CS&amp;=\$12.50\\
 
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-30-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" /&gt;
 
 ]
 
@@ -924,7 +455,7 @@ CS'&amp;=\$4.50\\
 
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-31-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-5-1.png" width="504" /&gt;
 
 ]
 
@@ -946,7 +477,7 @@ CS'&amp;=\$24.50\\
 
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-32-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-6-1.png" width="504" /&gt;
 
 ]
 
@@ -955,20 +486,19 @@ CS'&amp;=\$24.50\\
 # Consumer Surplus V
 
 .pull-left[
-
-- A relatively *inelastic* demand curve generates *more* consumer surplus
+.smallest[
+- A relatively .hi-purple[inelastic] demand curve generates *more* consumer surplus
 
 `$$\begin{align*}
-CS&amp;=\frac{1}{2}bh\\
 CS&amp;=\frac{1}{2}(5-0)(\$10-\$5)\\
 CS&amp;=\$12.50\\
 \end{align*}$$`
 
 ]
-
+]
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-33-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-7-1.png" width="504" /&gt;
 
 ]
 
@@ -977,28 +507,26 @@ CS&amp;=\$12.50\\
 # Consumer Surplus V
 
 .pull-left[
-
-- A relatively *inelastic* demand curve generates *more* consumer surplus
+.smallest[
+- A relatively .hi-purple[inelastic] demand curve generates *more* consumer surplus
 
 `$$\begin{align*}
-CS&amp;=\frac{1}{2}bh\\
 CS&amp;=\frac{1}{2}(5-0)(\$10-\$5)\\
 CS&amp;=\$12.50\\
 \end{align*}$$`
 
-- A relatively *elastic* demand curve generates *less* consumer surplus
+- A relatively .hi-purple[elastic] demand curve generates *less* consumer surplus
 
 `$$\begin{align*}
-CS&amp;=\frac{1}{2}bh\\
 CS&amp;=\frac{1}{2}(5-0)(\$7-\$5)\\
 CS&amp;=\$5.00\\
 \end{align*}$$`
-
+]
 ]
 
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-34-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-8-1.png" width="504" /&gt;
 
 ]
 
@@ -1021,7 +549,7 @@ CS&amp;=\$5.00\\
 
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-35-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-9-1.png" width="504" /&gt;
 
 ]
 
@@ -1041,7 +569,7 @@ PS&amp;=\$12.50\\
 
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-36-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-10-1.png" width="504" /&gt;
 
 ]
 
@@ -1051,7 +579,7 @@ PS&amp;=\$12.50\\
 
 .pull-left[
 
-- An increase in market price *increses* producer surplus
+- An increase in market price *increases* producer surplus
 
 `$$\begin{align*}
 PS'&amp;=\frac{1}{2}bh\\
@@ -1063,7 +591,7 @@ PS'&amp;=\$24.50\\
 
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-37-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-11-1.png" width="504" /&gt;
 
 ]
 
@@ -1085,7 +613,7 @@ PS'&amp;=\$4.50\\
 
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-38-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-12-1.png" width="504" /&gt;
 
 ]
 
@@ -1094,20 +622,19 @@ PS'&amp;=\$4.50\\
 # Producer Surplus V
 
 .pull-left[
-
-- A relatively *inelastic* supply curve generates *more* producer surplus
+.smallest[
+- A relatively .hi-purple[inelastic] supply curve generates *more* producer surplus
 
 `$$\begin{align*}
-PS&amp;=\frac{1}{2}bh\\
 PS&amp;=\frac{1}{2}(5-0)(\$5-\$0)\\
 PS&amp;=\$12.50\\
 \end{align*}$$`
 
 ]
-
+]
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-39-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-13-1.png" width="504" /&gt;
 
 ]
 
@@ -1117,27 +644,26 @@ PS&amp;=\$12.50\\
 
 .pull-left[
 
-- A relatively *inelastic* supply curve generates *more* producer surplus
+.smallest[
+- A relatively .hi-purple[inelastic] supply curve generates *more* producer surplus
 
 `$$\begin{align*}
-PS&amp;=\frac{1}{2}bh\\
 PS&amp;=\frac{1}{2}(5-0)(\$5-\$0)\\
 PS&amp;=\$12.50\\
 \end{align*}$$`
 
-- A relatively *elastic* supply curve generates *less* producer surplus
+- A relatively .hi-purple[elastic] supply curve generates *less* producer surplus
 
 `$$\begin{align*}
-PS&amp;=\frac{1}{2}bh\\
 PS&amp;=\frac{1}{2}(5-0)(\$5-\$3)\\
 PS&amp;=\$5.00\\
 \end{align*}$$`
 
 ]
-
+]
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-40-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-14-1.png" width="504" /&gt;
 
 ]
 
@@ -1146,19 +672,19 @@ PS&amp;=\$5.00\\
 # Elasticities and Surpluses I
 
 .pull-left[
-
-- The **more elastic** curve at `\(p^*\)` generates **less** surplus
+.smallest[
+- The .hi-purple[more elastic] curve at `\(p^*\)` generates **less** surplus
   - More options, easier to change choices, less benefit from *any one particular* exchange
 
-- The **less elastic** curve at `\(p^*\)` generates **more** surplus
+- The .hi-purple[less elastic] curve at `\(p^*\)` generates **more** surplus
   - Fewer options, harder to change choices, more benefit from *any one particular* exchange
 
 - This is important for policies such as price controls, taxes, etc.
 ]
-
+]
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-41-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-15-1.png" width="504" /&gt;
 
 ]
 
@@ -1178,7 +704,7 @@ PS&amp;=\$5.00\\
 
 .pull-right[
 
-&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-42-1.png" width="504" /&gt;
+&lt;img src="3.2-slides_files/figure-html/unnamed-chunk-16-1.png" width="504" /&gt;
 ]
 
 ---

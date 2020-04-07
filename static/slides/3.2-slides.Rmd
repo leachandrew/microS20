@@ -36,6 +36,92 @@ update_geom_defaults("label", list(family = "Fira Sans Condensed"))
 set.seed(256)
 ```
 
+class: center, middle, inverse
+
+# The Algebra of Calculating Equilibrium
+
+---
+
+# The Algebra of Calculating Equilibrium
+
+- Simple algebra to find equilibrium prices and quantities if we know supply and demand functions
+
+- Remember, supply and demand are each mathematical functions relating price to quantity:
+  - Demand: $q_D = f(p)$
+  - Supply: $q_S = f(p)$
+
+- We know at equilibrium: $q_D=q_P$
+
+---
+
+# Calculating Equilibrium: Example I
+
+.pull-left[
+
+.content-box-green[
+.green[**Example**]: Take our example supply and demand functions:
+
+$$\begin{align*}
+q_d&=10-p\\
+q_s&=2p-8\\
+\end{align*}$$
+]
+
+- In equilibrium: quantity demanded equals quantity supplied
+
+]
+
+.pull-right[
+```{r, fig.retina=3, fig.height=5}
+demand=function(x){10-x}
+supply=function(x){0.5*x+4}
+
+graph<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
+  stat_function(fun=supply, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
+    scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)),
+                     labels = function(x){paste("$", x, sep="")})+
+  labs(x = "Quantity (q)",
+       y = "Price (p)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+graph+
+  geom_segment(x=4, xend=4, y=0, yend=6, size=1, linetype="dotted")+
+  geom_segment(x=0, xend=4, y=6, yend=6, size=1, linetype="dotted")
+```
+]
+
+---
+
+# Calculating Equilibrium: Example II
+
+.content-box-green[
+.green[**Example**]: Let the supply and demand functions for a market be:
+
+$$\begin{align*}
+	q_D&=30-0.5p\\
+	q_S&=2p-40\\	
+	\end{align*}$$
+]
+
+1. Find equilibrium quantity and price $(q^*, p^*)$.
+
+2. Sketch a rough graph.
+
+---
+
+class: inverse, center, middle
+
+# Price Competition in Markets
+
+---
 
 # Price Competition in Markets I
 
@@ -116,6 +202,215 @@ set.seed(256)
 
 ---
 
+# An Example
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/pmjsad1ktpdep3y/horsemarket.jpg?raw=1)
+
+]
+.source[This example is based on Eugen von Bohm-Bawerk’s famous example in *Capital and Interest* (1884)]
+]
+
+.pull-right[
+
+- Imagine a small public horse market
+
+- 3 people, .red[A], .red[B], and .red[C] each own 1 horse
+
+- 3 people, .blue[D], .blue[E], and .blue[F] each are potentially interested in buying a horse
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+]
+
+--
+
+.pull-right[
+
+- Suppose .blue[Buyer F] announces she will pay $400 for a horse
+
+- Only .red[Seller A] is willing to sell at $400
+
+- Buyers .blue[D], .blue[E], and .blue[F] are willing to buy at $400
+  - .blue[D] and .blue[E] are willing to pay *more* than .blue[F] to obtain the 1 horse
+  - They raise their bids *above* $400 to attract sellers
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+]
+
+.pull-right[
+
+- Suppose .red[Seller C] announces he will sell his horse for $600
+
+- Only .blue[Buyer D] is willing to buy at $600
+
+- Sellers .red[A], .red[B], and .red[C] are willing to sell at $600
+  - .red[A] and .red[B] are willing to accept *less* than .red[C] to sell their horses
+  - They lower their asks *below* $600 to attract buyers
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+
+**Market Price: $500**
+]
+
+.pull-right[
+
+- If the market price reaches $500 (through bids and asks changing)
+
+- Sellers .red[A] and .red[B] sell their horses for $500 each
+- Buyers .blue[E] and .blue[F] buy them at $500 each
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+
+**Market Price: $500**
+
+]
+
+.pull-right[
+
+- At $500, .red[B] and .blue[E] are the .hi-purple["marginal"] buyer and seller, the "last" ones that *just* got off the fence to exchange in the market
+  - .red[B] has WTA *just* low enough to sell
+  - .blue[E] has WTP *just* high enough to buy
+
+- The marginal pair actually are the ones that "set" the market price!
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+
+**Market Price: $500**
+
+]
+
+.pull-right[
+
+- Notice the most possible exchanges take place at a market price of $500
+  - 2 horses get exchanged
+
+- Any price *above* or *below* $500, only 1 horse would get exchanged
+  - Also, at least one other buyer or seller would raise/lower their bid/ask
+  
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+
+**Market Price: $500**
+
+]
+
+.pull-right[
+
+- At $500, .red[C] and .blue[F] are the .hi-purple["excluded"] buyers and sellers
+  - .red[C] has WTA *too high* to sell
+  - .blue[F] has WTP *too low* to buy
+
+]
+
+---
+
+# An Example
+
+.pull-left[
+| Person | Reservation Price |
+|--------|-------------------|
+| .red[Seller A] | Minimum WTA: $400 |
+| .red[Seller B] | Minimum WTA: $500 |
+| .red[Seller C] | Minimum WTA: $600 |
+| .blue[Buyer D] | Maximum WTP: $600 |
+| .blue[Buyer E] | Maximum WTP: $500 |
+| .blue[Buyer F] | Maximum WTP: $400 |
+
+**Market Price: $500**
+
+]
+
+.pull-right[
+
+- At $500, .red[A] and .blue[D] are the .hi-purple["inframarginal"] buyers and sellers
+  - .red[A] has WTA *lower* than market price, earns extra $100 surplus from exchange
+  - .blue[D] has WTP *higher* than market price, earns extra $100 surplus from exchange
+  
+- These buyers and sellers benefit *the most* from exchange
+
+]
+
+---
+
 class: inverse, center, middle
 
 # Economic Surplus
@@ -133,6 +428,27 @@ class: inverse, center, middle
 .pull-right[
 
 ```{r, fig.retina=3}
+demand_1=function(x){10-x}
+supply_1=function(x){x}
+
+changes<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand 1", size = 5)+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply 1", size = 5)+
+  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+    scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)),
+                     labels = function(x){paste("$", x, sep="")})+
+  labs(x = "Quantity (q)",
+       y = "Price (p)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
 changes
 ```
 
@@ -280,17 +596,16 @@ cs+geom_polygon(data=cs_3, aes(x=x,y=y), fill="blue", alpha=0.5)+
 # Consumer Surplus V
 
 .pull-left[
-
-- A relatively *inelastic* demand curve generates *more* consumer surplus
+.smallest[
+- A relatively .hi-purple[inelastic] demand curve generates *more* consumer surplus
 
 $$\begin{align*}
-CS&=\frac{1}{2}bh\\
 CS&=\frac{1}{2}(5-0)(\$10-\$5)\\
 CS&=\$12.50\\
 \end{align*}$$
 
 ]
-
+]
 .pull-right[
 
 ```{r, fig.retina=3}
@@ -304,23 +619,21 @@ cs+geom_polygon(data=cs_1, aes(x=x,y=y), fill="blue", alpha=0.5)
 # Consumer Surplus V
 
 .pull-left[
-
-- A relatively *inelastic* demand curve generates *more* consumer surplus
+.smallest[
+- A relatively .hi-purple[inelastic] demand curve generates *more* consumer surplus
 
 $$\begin{align*}
-CS&=\frac{1}{2}bh\\
 CS&=\frac{1}{2}(5-0)(\$10-\$5)\\
 CS&=\$12.50\\
 \end{align*}$$
 
-- A relatively *elastic* demand curve generates *less* consumer surplus
+- A relatively .hi-purple[elastic] demand curve generates *less* consumer surplus
 
 $$\begin{align*}
-CS&=\frac{1}{2}bh\\
 CS&=\frac{1}{2}(5-0)(\$7-\$5)\\
 CS&=\$5.00\\
 \end{align*}$$
-
+]
 ]
 
 .pull-right[
@@ -419,7 +732,7 @@ ps+geom_polygon(data=ps_1, aes(x=x,y=y), fill="red", alpha=0.5)
 
 .pull-left[
 
-- An increase in market price *increses* producer surplus
+- An increase in market price *increases* producer surplus
 
 $$\begin{align*}
 PS'&=\frac{1}{2}bh\\
@@ -484,17 +797,16 @@ ps+geom_polygon(data=ps_3, aes(x=x,y=y), fill="red", alpha=0.5)+
 # Producer Surplus V
 
 .pull-left[
-
-- A relatively *inelastic* supply curve generates *more* producer surplus
+.smallest[
+- A relatively .hi-purple[inelastic] supply curve generates *more* producer surplus
 
 $$\begin{align*}
-PS&=\frac{1}{2}bh\\
 PS&=\frac{1}{2}(5-0)(\$5-\$0)\\
 PS&=\$12.50\\
 \end{align*}$$
 
 ]
-
+]
 .pull-right[
 
 ```{r, fig.retina=3}
@@ -509,24 +821,23 @@ ps+geom_polygon(data=ps_1, aes(x=x,y=y), fill="red", alpha=0.5)
 
 .pull-left[
 
-- A relatively *inelastic* supply curve generates *more* producer surplus
+.smallest[
+- A relatively .hi-purple[inelastic] supply curve generates *more* producer surplus
 
 $$\begin{align*}
-PS&=\frac{1}{2}bh\\
 PS&=\frac{1}{2}(5-0)(\$5-\$0)\\
 PS&=\$12.50\\
 \end{align*}$$
 
-- A relatively *elastic* supply curve generates *less* producer surplus
+- A relatively .hi-purple[elastic] supply curve generates *less* producer surplus
 
 $$\begin{align*}
-PS&=\frac{1}{2}bh\\
 PS&=\frac{1}{2}(5-0)(\$5-\$3)\\
 PS&=\$5.00\\
 \end{align*}$$
 
 ]
-
+]
 .pull-right[
 
 ```{r, fig.retina=3}
@@ -551,16 +862,16 @@ ps+geom_polygon(data=ps_el, aes(x=x,y=y), fill="red", alpha=0.5)+
 # Elasticities and Surpluses I
 
 .pull-left[
-
-- The **more elastic** curve at $p^*$ generates **less** surplus
+.smallest[
+- The .hi-purple[more elastic] curve at $p^*$ generates **less** surplus
   - More options, easier to change choices, less benefit from *any one particular* exchange
 
-- The **less elastic** curve at $p^*$ generates **more** surplus
+- The .hi-purple[less elastic] curve at $p^*$ generates **more** surplus
   - Fewer options, harder to change choices, more benefit from *any one particular* exchange
 
 - This is important for policies such as price controls, taxes, etc.
 ]
-
+]
 .pull-right[
 
 ```{r, fig.retina=3}
@@ -619,13 +930,3 @@ $$\begin{align*}
 2. Calculate the consumer surplus and producer surplus. Shade each on the graph.
 
 3. Who gets more surplus, consumers or producers, and why?
-
----
-
-class: center, middle, inverse
-
-# Surpluses and Economic Policy
-
----
-
-# Surpluses and Economic Policy
