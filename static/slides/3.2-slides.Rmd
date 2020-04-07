@@ -297,7 +297,7 @@ class: inverse, center, middle
 - If the market price reaches $500 (through bids and asks changing)
 
 - Sellers .red[A] and .red[B] sell their horses for $500 each
-- Buyers .blue[E] and .blue[F] buy them at $500 each
+- Buyers .blue[D] and .blue[E] buy them at $500 each
 ]
 
 ---

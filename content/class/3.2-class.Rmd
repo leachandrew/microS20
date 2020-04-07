@@ -21,9 +21,23 @@ knitr::opts_chunk$set(echo = FALSE,
 
 # Class Livestream/Lecture Videos
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u5XKD6iKums" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fcl5fCZXng0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hal3ccwN25k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/khPPSEZJGYE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7adBlEZa6TE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # Slides
 
 - [<i class="fas fa-external-link-square-alt"></i> Lecture Slides](/slides/3.2-slides.html)
+
+# Practice
+
+Today we will be working on a [practice problem](/practice/3.2-practice). Answers are posted on that page.
 
 # Assignments: Exam 2
 
