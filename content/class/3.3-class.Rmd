@@ -50,6 +50,8 @@ The first is a visual example of a market supply and demand in equilibrium. You 
 
 The second is a visual example of how taxes alter market surpluses. Based on the elasticity of the curve in equilibrium, a tax will both shift some of that surplus to the government (as tax revenue), and some of it is thrown away as **deadweight loss**. The curve with a *lower elasticity* bears more of the tax burden and loses more surplus. Think of elasticity as the ability to evade the tax - a more elastic curve has more options and will change their buying/selling behavior *a lot* to a price change (from a tax), and thus will bear less of the tax burden!
 
-# Assignments: Exam 2
+# Assignments: Exam 2 and Homework 5
 
 [Exam 2](/assignment/02-exam) **is available** to take on **Blackboard** until Sunday April 12 at 10:00PM. Once you open the exam, you have 2 hours to complete it on Blackboard. Please read the instructions on the linked page carefully, and **try the practice exam on Blackboard by Sunday** to ensure you will be able to take it properly.
+
+[Homework 5](/assignment/05-problem-set) on classes 3.1-3.3 is **due by email** (**as a PDF**) at **11:59PM Sunday April 19**.
