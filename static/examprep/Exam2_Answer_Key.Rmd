@@ -323,7 +323,7 @@ Suppose your firm needs to produce 1,000 units of output, the price of labor is 
 
 $$\begin{aligned}
 \frac{MP_l}{MP_k}&=\frac{w}{r}\\
-\frac{k}{l}&=\frac{10}{40}\\
+\frac{k}{l}&=\frac{20}{50}\\
 \frac{k}{l}&=0.4\\
 k&=0.4l\\
 \end{aligned}$$
