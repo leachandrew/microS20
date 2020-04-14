@@ -19,6 +19,9 @@ knitr::opts_chunk$set(echo = FALSE,
 
 # Overview
 
+- *Tuesday, March 31, 2020*
+- *Quarantine Lecture 3*
+
 We wrap up Unit 2 on Producers today, by bringing our *optimization* model of how firms maximize profits into the long run, when firms can enter or exit depending on profitability. We also now need to talk about the fact that our firm is not the *only* profit-maximizing firm in the market, so we derive an **equilibrium** model of the industry in the long run.
 
 Famously, we see that in *competitive* industries, economic profits get driven to zero in the long run, as firms enter or exit any time there are profits or losses.

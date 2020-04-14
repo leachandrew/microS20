@@ -19,6 +19,9 @@ knitr::opts_chunk$set(echo = FALSE,
 
 # Overview
 
+- *Thursday, April 2, 2020*
+- *Quarantine Lecture 4*
+
 
 # Class Livestream/Lecture Videos
 

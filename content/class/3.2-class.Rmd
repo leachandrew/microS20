@@ -19,6 +19,9 @@ knitr::opts_chunk$set(echo = FALSE,
 
 # Overview
 
+- *Tuesday, April 7, 2020*
+- *Quarantine Lecture 5*
+
 # Class Livestream/Lecture Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u5XKD6iKums" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

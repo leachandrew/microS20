@@ -19,8 +19,8 @@ knitr::opts_chunk$set(echo = FALSE,
 
 # Overview
 
-- *Tuesday, March 23, 2020*
-- *Quarantine Lecture 1*
+- *Thursday, March 25, 2020*
+- *Quarantine Lecture 2*
 
 Today we finish up costs from last lecture, and discuss revenues before we put them together next class to solve the firm's *profit maximization problem*. We focus on the *short run*, where the firm incurs fixed costs and must stay in the market regardless. We derive the firm's (inverse) *supply curve*.
 
