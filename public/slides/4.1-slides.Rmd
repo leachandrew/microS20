@@ -61,15 +61,16 @@ Adam Smith
 # Market Power
 
 .pull-left[
+.smaller[
 - All sellers *would like to* raise prices and extract more revenue from consumers
 
-- .hi-purple[Competition] from *other* sellers drives prices down to match $MC(q)$ (and pushes costs and economics rents upwards)
+- .hi-purple[Competition] from *other* sellers drives prices down to match $MC(q)$ (and pushes up costs & economic rents)
 
 - If a firm in a competitive market raised $p>MC(q)$, would lose *all* of its customers
 
 - .hi[Market power]: ability to raise $p>MC(q)$ and *not* lose *all* customers
 ]
-
+]
 .pull-right[
 .center[
 ![](https://www.dropbox.com/s/3h37ge5bmvety7y/marketpower.jpg?raw=1)
@@ -267,7 +268,7 @@ $$\frac{\Delta R(q)}{\Delta q}=MR(q)=p+\frac{\Delta p}{\Delta q}q$$
 --
 
 .small[
-- Compare: demand for a **competitive** firm is perfectly elastic: $\frac{\Delta p}{\Delta}q=0$, so we saw $MR(q)=p$!
+- Compare: demand for a **competitive** firm is perfectly elastic: $\frac{\Delta p}{\Delta q}=0$, so we saw $MR(q)=p$!
 ]
 
 ---
@@ -458,7 +459,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 - .hi-purple[Lerner Index] measures market power as % of firm's price that is .hi-purple[markup] above $MC(q)$
 
 $$L=\frac{p-MC(q)}{p} = -\frac{1}{\epsilon}$$
-  - i.e. $L \times 100%$ of firm's price is markup
+  - i.e. $L \times 100\%$ of firm's price is markup
 
 - $L=0 \implies$ perfect competition
   - (since $P=MC)$

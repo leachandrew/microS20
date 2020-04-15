@@ -24,6 +24,18 @@ knitr::opts_chunk$set(echo = FALSE,
 
 Today we begin our look at monopoly.
 
+# Class Livestream/Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/abe4oN0wwOA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Dmev9R9QpPc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h957vGArKes" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WhGayuX6TYY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1IfOQakUxdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # Slides
 
 - [<i class="fas fa-external-link-square-alt"></i> Lecture Slides](/slides/4.1-slides.html)
@@ -36,7 +48,7 @@ Today we will be working on [practice problems](/practice/4.1-practice). Answers
 
 I am still grading your Exam 2, I hope to finish for next class. Sorry it's been a crazy semester!
 
-# Problem Set 5 Due Mon/Tues Dec 2/3
+# Problem Set 5 Due 11:59PM Sunday April 19
 
 [Homework 5](/assignment/05-problem-set) on classes 3.1-3.3 is **due by email** (**as a PDF**) at **11:59PM Sunday April 19**.
 

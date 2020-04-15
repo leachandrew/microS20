@@ -268,7 +268,7 @@ $$\frac{\Delta R(q)}{\Delta q}=MR(q)=p+\frac{\Delta p}{\Delta q}q$$
 --
 
 .small[
-- Compare: demand for a **competitive** firm is perfectly elastic: $\frac{\Delta p}{\Delta}q=0$, so we saw $MR(q)=p$!
+- Compare: demand for a **competitive** firm is perfectly elastic: $\frac{\Delta p}{\Delta q}=0$, so we saw $MR(q)=p$!
 ]
 
 ---
@@ -459,7 +459,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 - .hi-purple[Lerner Index] measures market power as % of firm's price that is .hi-purple[markup] above $MC(q)$
 
 $$L=\frac{p-MC(q)}{p} = -\frac{1}{\epsilon}$$
-  - i.e. $L \times 100%$ of firm's price is markup
+  - i.e. $L \times 100\%$ of firm's price is markup
 
 - $L=0 \implies$ perfect competition
   - (since $P=MC)$
