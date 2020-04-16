@@ -117,11 +117,12 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 ```
 ]
 
+.smallest[
 - In a .hi[competitive market] in .hi[long run equilibrium]:
   - .hi-purple[Economic profit] is driven to $0
   - .hi-purple[Allocatively efficient]: $p=MC(q)$, maximized .blue[CS] $+$ .red[PS]
   - .hi-purple[Productively efficient]: $p=AC(q)_{min}$ (otherwise firms would enter/exit)
-
+]
 ---
 
 # The Bad of Monopoly: DWL I
@@ -445,15 +446,17 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 ]
 
 .pull-right[
-
+.smaller[
 - Political authorities intervene in markets in various ways that benefit some groups at the expense of everyone else
   - subsidies to groups (often producers)
   - regulation of industries
   - tariffs, quotas, and special exemptions from these
   - tax breaks and loopholes
   - conferring monopoly and other privileges
-]
 
+- See Mitchell (2013) in [today's readings](/reading/4.2-reading) for examples
+]
+]
 ---
 
 # Government Intervention Creates Rents I
@@ -465,14 +468,14 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 ]
 
 .pull-right[
-
+.smallest[
 - These interventions create .hi[economic rents] for their beneficiaries by restricting competition
 
 - This is a transfer of wealth from consumers/taxpayers to politically-favored groups
 
 - The promise of earning a rent breeds **competition over the rents** (.hi[rent-seeking])
   - investments of resources to lobby political officials
-
+]
 ]
 ---
 
