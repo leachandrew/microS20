@@ -140,8 +140,11 @@ lessons:
     reading: "4.1-reading"
     practice: "4.1-practice"
 
-  - title: "4.2 Consequences and Sources of Monopoly"
-
+  - title: "4.2 Consequences and Sources of Market Power"
+    class: "4.2-class"
+    slides: "4.2-slides"
+    reading: "4.2-reading"
+    
   - title: "4.3 Pricing with Market Power"
 
   - title: "4.4 Monopolistic Competition and Oligopoly"
