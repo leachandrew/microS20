@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = FALSE,
 - *Tuesday, April 14, 2020*
 - *Quarantine Lecture 7*
 
-Today we begin our look at monopoly.
+Today we begin our look at market power, when firms can charge $p>MC$ and can search for the profit-maximizing quantity *and* price. We begin with our first extreme case of a single firm, a **monopoly.** We look at how market power changes how a firm chooses its optimal production.
 
 # Class Livestream/Videos
 
