@@ -146,7 +146,8 @@ lessons:
     reading: "4.2-reading"
     
   - title: "4.3 Pricing with Market Power"
-
+    slides: "4.3-slides"
+    
   - title: "4.4 Monopolistic Competition and Oligopoly"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 6**'
