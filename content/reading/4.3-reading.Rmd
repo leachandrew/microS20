@@ -1,0 +1,12 @@
+---
+title: "4.3 Pricing With Market Power - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+# Recommended
+
+- <i class="fas fas fa-book"></i> Ch. 10.1-10.5 in @textbook
+
+
