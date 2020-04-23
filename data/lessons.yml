@@ -151,6 +151,9 @@ lessons:
     reading: "4.3-reading"
     
   - title: "4.4 Monopolistic Competition and Oligopoly"
+    slides: "4.4-slides"
+    
+  - title: "4.5 Sequential Games & Contestable Markets"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 6**'
 
