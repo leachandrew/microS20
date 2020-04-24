@@ -1,5 +1,5 @@
 ---
-title: "4.1 Monopoly - Readings"
+title: "4.4 Monopolistic Competition & Monopoly - Readings"
 citeproc: false
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
@@ -7,7 +7,9 @@ csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
 
 # Recommended
 
-- <i class="fas fas fa-book"></i> Ch. 9-2-9.5 in @textbook
+- <i class="fas fas fa-book"></i> Ch. 11 in @textbook
+
+- [<i class="fas fa-podcast"></i> *NPR Planet Money*: "The Raisin Outlaw"](https://www.npr.org/sections/money/2015/06/24/417187957/episode-478-the-raisin-outlaw)
 
 Relevant classes from my [Spring 2020 Industrial Organization course](https://ios20.classes.ryansafner.com/):
 

@@ -1,0 +1,57 @@
+---
+title: "4.4: Monopolistic Competition and Oligopoly - Class Notes"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+# Overview
+
+- *Thursday, April 23, 2020*
+- *Quarantine Lecture 10*
+
+# Class Livestream/Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1IE9_5M2_2g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ps0If-WOo1A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e5RVnYZkzdM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/keYkQ89jlSI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a4_JvqfR6-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Slides
+
+- [<i class="fas fa-external-link-square-alt"></i> Lecture Slides](/slides/4.4-slides.html)
+
+# Note on Assignments
+
+Classes end Friday May 1. Please turn in all outstanding assignments (Exam 1 corrections, Exam 2 corrections, HW's you may not have turned in) by then. The sooner you turn in your assignments, the sooner I can update your grades to be the most accurate on Blackboard. I hope to have all homeworks graded and posted (with your homework average) on Blackboard this weekend. 
+
+Homework 6 will be posted soon, and will not be graded. It is only to help you practice for the Final Exam.
+
+Again, you can again estimate your final course grade (as defined by the [Syllabus](/syllabus)) with the [<i class="fas fa-calculator"></i> `Grade Calculator`](https://ryansafner.shinyapps.io/306_grade_calculator/) at the top of the [Assignments page](/assignments). 
+
+Additionally, May 1 is the last day to declare that you wish to take any course on a Satisfactory/Unsatisfactory basis. Ask me if you have questions about this, or what the optimal strategy is for this. 
+
+# Appendix: More on Antitrust
+
+Relevant classes from my [Spring 2020 Industrial Organization course](https://ios20.classes.ryansafner.com/):
+
+- [<i class="fas fa-external-link-square-alt"></i> 4.2 Antitrust I: The Law](https://ios20.classes.ryansafner.com/class/4.2-class.html)
+- [<i class="fas fa-external-link-square-alt"></i> 4.3 Antitrust II: The Paradox](https://ios20.classes.ryansafner.com/class/4.3-class.html)
+- [<i class="fas fa-external-link-square-alt"></i> 4.4 Antitrust III: Big Tech & Hipster Antitrust](https://ios20.classes.ryansafner.com/class/4.4-class.html)
