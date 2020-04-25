@@ -75,7 +75,7 @@ Show all work for calculations. You may lose points, even if correct, for missin
 
 Consider the following *Entry game* in normal form. Suppose there are two firms, each of whom can choose to Enter a market, or Stay Out. If both firms enter, they split the market, each earning $50. If both stay out, each firm earns $0. If one enters and the other stays out, the entrant can act as a monopolist and earns $100, with the other firm earning $0.
 
-![](http://micros20.classes.ryansafner.com/homeworks/entrygame.png)
+![](https://micros20.classes.ryansafner.com/homeworks/entrygame.png)
 
 What is the Nash Equilibrium of this game?
 
@@ -192,8 +192,8 @@ Calculate the elasticity of demand at the profit-maximizing price.
 
 Boeing (a U.S. company), and Airbus (a European company) are fierce competitors that together, about evenly dominate the market for aircraft. Airbus decides whether it is going to launch a *new plane*, or keep its *old planes*. Boeing must then respond and determine if it is also going to launch a *new plane* or keep its *old planes*. 
 
-> Developing a new plane is very expensive. If both companies produce *new planes*, they will have spent a lot on producing the new plane, but neither will gain any market share. If only one company releases a new plane, they will capture more of the market, making the extra cost of development worthwhile. This game is depicted in extensive form below:
+Developing a new plane is very expensive. If both companies produce *new planes*, they will have spent a lot on producing the new plane, but neither will gain any market share. If only one company releases a new plane, they will capture more of the market, making the extra cost of development worthwhile. This game is depicted in extensive form below:
 
-![](iohwgame.png)
+![](https://micros20.classes.ryansafner.com/homeworks/iohwgame.png)
 
-> Solve for the "rollback equilibrium" using backwards induction.
+Solve for the "rollback equilibrium" using backwards induction.
