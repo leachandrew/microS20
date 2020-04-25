@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>4.5: Sequential Games &amp; Contestable Markets</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner  Assistant Professor of Economics    safner@hood.edu    ryansafner/microS20    microS20.classes.ryansafner.com" />
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+    <link rel="stylesheet" href="custom-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 4.5: Sequential Games &amp; Contestable Markets
+## ECON 306 · Microeconomic Analysis · Spring 2020
+### Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/microS20"><i class="fa fa-github fa-fw"></i> ryansafner/microS20</a><br> <a href="https://microS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> microS20.classes.ryansafner.com</a><br>
+
+---
+
+
+
+
+# Game Theory: Generalizations
+
+---
+
+# Game Theory: Generalizations
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/tymdsxbqaq2scxq/chessknights.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- As explore other aspects of firm behavior, we need more tools from game theory beyond a one-shot prisoners' dilemma
+
+- We've seen examples of .hi-purple[continuous strategies] in Cournot, Bertrand, &amp; Stackelberg competition
+  - Firms can choose a wide range of prices, outputs
+  - One-shot prisoners' dilemma we had two .hi-purple[discrete] choices
+
+]
+
+---
+
+# Game Theory: Generalizations
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/tymdsxbqaq2scxq/chessknights.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Seen .hi-purple[simultaneous] (prisoners' dilemma) vs. .hi-purple[sequential] game (Stackelberg)
+
+- Assumed .hi-purple[common knowledge] about the game structure. Everyone knows all players, all their potential strategies, and all of their payoffs
+
+- .hi[Perfect information] (players can observe moves of others, as in sequential game) vs. .hi[Imperfect information] players cannot observe moves of others (Prisoners' Dilemma)
+]
+
+---
+
+# Solution Concepts
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
+]
+]
+
+.pull-right[
+
+- We use .hi-purple["solution concepts"] to allow us to predict an .hi-purple[equilibrium] of a game
+
+- .hi[Nash Equilibrium] is the primarly solution concept
+  - Note it has many variants depending on if games are sequential vs. simultaneous, perfect vs. imperfect information, etc.
+
+]
+
+---
+
+# Solution Concepts: Nash Equilibrium
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Recall, .hi[Nash Equilibrium]: no players want to change their strategy given what everyone else is playing
+  - All players are playing a best response to each other
+
+]
+
+---
+
+# Solution Concepts: Nash Equilibrium
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Important about N.E.:
+  - N.E. `\(\neq\)` the "best" pr optimal outcome
+    - Recall the Prisoners' Dilemma!
+  - Game may have **multiple** N.E.
+  - Game may have **no** N.E. (in "pure" strategies)
+
+]
+
+---
+
+# Sequential Games: Extensive Form
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/564ocw8l263kngm/entry_game_extensive.png?raw=1)
+]
+
+]
+
+.pull-right[
+
+- We consider an .hi[Entry Game], a .hi-purple[sequential] game played between a potential .hi-red[Entrant] and an .hi-blue[Incumbent]
+
+- A sequence of play: .hi-red[Entrant] moves first, .hi-blue[Incumbent] moves second
+
+- Note: the magnitude of the payoffs don't really matter, only their **relative sizes**
+  - Hence, my simple numbers
+]
+
+---
+
+# Pure Strategies
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/564ocw8l263kngm/entry_game_extensive.png?raw=1)
+]
+]
+
+.pull-right[
+
+- This game is depicted in .hi-purple["Extensive form"] or a .hi-purple[game tree]
+
+- Each player faces at least one .hi-purple["decision node"] (solid, colored by player)
+  - .hi-red[Entrant] chooses between .red[Enter] or .red[Stay Out] at node .red[E.1]
+  - .hi-blue[Incumbent] chooses between .blue[Accommodate] or .blue[Fight] at .blue[I.1]
+  - Game ends at any .hi-purple["terminal node"] (hollow node), and each player earns payoffs (.red[Entrant], .blue[Incumbent])
+
+]
+
+---
+
+# Pure Strategies
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/564ocw8l263kngm/entry_game_extensive.png?raw=1)
+]
+]
+
+.pull-right[
+
+- We need to talk more about .hi[strategies]
+
+- .hi[Pure strategy]: a player's *complete* plan of action for every possible contingency
+  - i.e. what a player will choose at *every* possible decision node
+  - think like an algorithm:
+  
+&gt; if we reach node 1, I will play X; if we reach node 2, I will play Y; if ... 
+
+- .hi-purple["Mixed strategy"]: play a strategy with some probability
+]
+
+---
+
+# Solving a Sequential Game
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/564ocw8l263kngm/entry_game_extensive.png?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi-red[Entrant] has 2 pure strategies:
+  1. .red[Stay Out] at .red[E.1]
+  2. .red[Enter] at .red[E.1]
+
+- .hi-blue[Incumbent] has 2 pure strategies:
+  1. .blue[Accommodate] at .blue[I.1]
+  2. .blue[Fight] at .blue[I.1]
+
+- Note .hi-blue[Incumbent]'s strategy only comes into play if .hi-red[Entrant] plays .hi-red[Enter] and the game reaches node .hi-blue[I.1] 
+
+]
+
+---
+
+# Solving a Sequential Game
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/564ocw8l263kngm/entry_game_extensive.png?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi[Backwards induction]: to determine the outcome of the game, start with the **last-mover** (i.e. decision nodes just before terminal nodes)
+
+- What is that mover's best choice to maximize their payoff?
+
+- i.e. we start at .blue[I.1] where .hi-blue[Incumbent] can:
+  - .blue[Accommodate] to earn .blue[1]
+  - .blue[Fight] to earn .blue[0]
+
+]
+
+---
+
+# Solving a Sequential Game
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/hpoouciwsg02d70/entry_game_extensive_last.png?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi-blue[Incumbent] will .hi-blue[Accommodate] if game reaches .hi-blue[I.1]
+
+- Given this, what will .hi-red[Entrant] do at .hi-red[E.1]?
+  - .red[Stay Out] to earn .red[1]
+  - .red[Enter], knowing .hi-blue[Incumbent] will .blue[Accommodate], and so will earn .red[2]
+]
+
+---
+
+# Solving a Sequential Game
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/w4dgdgmh9ptp80c/entry_game_extensive_rollback.png?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi-red[Entrant] will .red[Enter]
+
+- Continue until we've reached the initial node (beginning)
+
+- We have the outcome:
+
+.center[
+(.hi-red[Enter], .hi-blue[Accommodate])
+]
+- Some textbooks call this a .hi-purple["rollback equilibrium"]
+]
+
+---
+
+class: inverse, center, middle
+
+# Contestable Markets
+
+---
+
+# Is Monopoly a Nash Equilibrium?
+
+.pull-left[
+
+- Now that we understand Nash equilibrium...
+
+- Are outcomes of other market structures Nash equilibria?
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/ut01gm60urzbmtl/goingoutofbusiness.jpg?raw=1)
+
+![:scale 75%](https://www.dropbox.com/s/20ghw4p6te0776x/entry.jpg?raw=1)
+]
+]
+
+---
+
+# Is Monopoly a Nash Equilibrium?
+
+.pull-left[
+
+- Now that we understand Nash equilibrium...
+
+- Are outcomes of other market structures Nash equilibria?
+
+- **Perfect competition**: no firm wants to raise or lower price given the market price `\(\checkmark\)`
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/ut01gm60urzbmtl/goingoutofbusiness.jpg?raw=1)
+
+![:scale 75%](https://www.dropbox.com/s/20ghw4p6te0776x/entry.jpg?raw=1)
+]
+]
+
+---
+
+# Is Monopoly a Nash Equilibrium?
+
+.pull-left[
+
+- **Monopolist** maximizes `\(\pi\)` by setting `\(q^*\)`: `\(MR=MC\)` and `\(p^*=Demand(q^*)\)`
+
+- This is *an* equilibrium, but is it the *only* equilibrium?
+
+- We've assumed just a *single* player in the model
+
+- .hi-purple[What about *potential* competition?]
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/ut01gm60urzbmtl/goingoutofbusiness.jpg?raw=1)
+
+![:scale 75%](https://www.dropbox.com/s/20ghw4p6te0776x/entry.jpg?raw=1)
+]
+]
+
+---
+
+# Contestable Markets I
+
+.pull-left[
+
+- Model the market as an .hi-purple[entry game], with two players:
+
+1. .hi-red[**Incumbent**] which sets its price `\(\color{red}{p_I}\)`
+
+2. .hi-blue[**Entrant**] decides to **stay out** or **enter** the market, setting its price `\(\color{blue}{p_E}\)`
+
+- Bertrand price competition between the two firms with similar products `\(\implies\)` consumers buy only from the firm with the lower price
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/ut01gm60urzbmtl/goingoutofbusiness.jpg?raw=1)
+
+![:scale 75%](https://www.dropbox.com/s/20ghw4p6te0776x/entry.jpg?raw=1)
+]
+]
+
+---
+
+# Contestable Markets II
+
+.pull-left[
+
+- Suppose firms have costs of 
+`$$\begin{align*}
+C(q)&amp;=cq\\
+MC(q)&amp;=c\\ \end{align*}$$`
+
+- If .hi-red[Incumbent] sets `\(\color{red}{p_I}&gt;c\)`, then .hi-blue[Entrant] would enter and set `\(\color{blue}{p_E}=\color{red}{p_I}-\epsilon\)` (for arbitrary `\(\epsilon&gt;0)\)`
+
+
+]
+
+.pull-right[
+
+]
+
+---
+
+# Contestable Markets II
+
+.pull-left[
+
+- Suppose firms have costs of 
+`$$\begin{align*}
+C(q)&amp;=cq\\
+MC(q)&amp;=c\\ \end{align*}$$`
+  
+- If .hi-red[Incumbent] sets `\(\color{red}{p_I}&gt;c\)`, then .hi-blue[Entrant] would enter and set `\(\color{blue}{p_E}=\color{red}{p_I}-\epsilon\)` (for arbitrary `\(\epsilon&gt;0)\)`
+  - .hi-red[Incumbent] would forsee this, and try to price lower than `\(\color{blue}{p_E}\)`
+  - undercutting continues until...
+
+
+]
+
+.pull-right[
+
+]
+
+---
+
+# Contestable Markets II
+
+.pull-left[
+
+- .hi[Nash Equilibrium]: incumbent sets `\(\color{red}{p_I}=c\)`, **no entry**
+
+- .hi-purple[A single firm, but the **competitive outcome**!]
+  - `\(p^*=MC\)`, `\(\pi=0\)`
+  - competitive `\(q^*\)`
+  - max Consumer Surplus, no DWL
+]
+
+--
+
+.pull-right[
+
+&lt;img src="4.5-slides_files/figure-html/unnamed-chunk-1-1.png" width="504" /&gt;
+]
+
+---
+
+# Contestable Markets II
+
+.pull-left[
+
+- What if the .hi-blue[entrant] has *higher costs* than the .hi-red[incumbent]: `\(\color{blue}{c_E}&gt;\color{red}{c_I}\)`?
+
+]
+
+.pull-right[
+]
+
+---
+
+# Contestable Markets II
+
+.pull-left[
+
+- What if the .hi-blue[entrant] has *higher costs* than the .hi-red[incumbent]: `\(\color{blue}{c_E}&gt;\color{red}{c_I}\)`?
+
+- .hi[Nash equilibrium]: .hi-red[incumbent] sets `\(\color{red}{p_I}=\color{blue}{p_E}-\epsilon\)`
+  - arbitrary `\(\epsilon &gt; 0\)`
+
+- .hi-blue[Entrant] stays out
+  
+- One firm, but not a *worst case* monopoly
+]
+
+--
+
+.pull-right[
+
+&lt;img src="4.5-slides_files/figure-html/unnamed-chunk-2-1.png" width="504" /&gt;
+]
+
+---
+
+# Contestable Markets III
+
+.pull-left[
+
+- What if there are **fixed costs**, `\(f\)`?
+
+`$$\begin{align*}
+C(q)&amp;=cq+f \\
+MC(q)&amp;=c \\
+AC(q)&amp;=c+\frac{f}{q} \\
+\end{align*}$$`
+
+- With high enough `\(f\)`, .hi[Economies of scale] may prevent marginal cost pricing from a being profitable Nash Equilibrium
+
+`$$\pi_{p=MC}=-\frac{f}{q}&lt;0$$`
+
+]
+
+.pull-right[
+
+&lt;img src="4.5-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" /&gt;
+]
+
+---
+
+# Contestable Markets IV
+
+.pull-left[
+
+- .hi[Nash equilibrium]: .hi-red[Incumbent] prices at `\(\color{red}{p_I}=AC\)` earns `\(\pi=0\)`
+
+- .hi-blue[Entrant] stays out
+
+- Again, single firm, but not a monopoly
+  - no profits
+  - not allocatively efficient, `\(p&gt;MC\)`, some DWL
+
+]
+
+.pull-right[
+
+&lt;img src="4.5-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" /&gt;
+]
+
+---
+
+# What About *Sunk* Costs? I
+
+.pull-left[
+- Fixed costs `\(\implies\)` do not vary with output
+
+- If firm exits, could sell these assets (e.g. machines, real estate) to recover costs
+  - Thus, .hi-purple["hit-and-run" competition] remains potentially profitable
+  - Maintains .hi-purple[credible threat] against incumbent acting as a monopolist
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/89uh92uh19y6z89/sunkcost.jpg?raw=1)
+]
+]
+
+---
+
+# What About *Sunk* Costs? I
+
+.pull-left[
+
+- But what if assets are *not* sellable and costs *not* recoverable - i.e. .hi[sunk costs]?
+
+- e.g. research and development, spending to build brand equity, advertising, worker-training for industry-specific skills, etc 
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/89uh92uh19y6z89/sunkcost.jpg?raw=1)
+]
+]
+
+---
+
+# What About *Sunk* Costs? II
+
+.pull-left[
+- These are bygones to the .hi-red[Incumbent], who has already committed to producing
+
+- But are *new* costs and risk to .hi-blue[Entrant], lowering expected profits
+
+- In effect, sunk costs raise `\(\color{blue}{c_E}&gt;\color{red}{c_I}\)`, and return us back to our second example
+
+- .hi[Nash equilibrium]: .hi-red[Incumbent] deters entry with `\(\color{red}{p_I}=\color{blue}{p_E}-\epsilon\)`
+  - Inefficient, `\(p&gt;AC\)`, but again not monopoly
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/89uh92uh19y6z89/sunkcost.jpg?raw=1)
+]
+]
+
+---
+
+# Contestable Markets: Recap
+
+.pull-left[
+- .hi-purple[Markets are **contestable** if]:
+  1. There are no barriers to entry or exit
+  2. Firms have similar technologies (i.e. similar cost structure)
+  3. There are no sunk costs
+  
+- Economies of scale need not be inconsistent with competitive markets (as is assumed) if they are contestable
+
+- Generalizes "prefect competition" model in more realistic way, also game-theoretic
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/otgtujqdnspc3me/marketcompetition.jpg?raw=1)
+]
+]
+
+---
+
+# Contestable Markets: Summary
+
+.left-column[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/1jv6qkmg15bmvq5/baumol1.jpg?raw=1)
+
+William Baumol
+
+(1922--2017)
+
+]
+]
+
+.right-column[
+
+&gt; "This means that...an incumbent, even if he can threaten retaliation after entry, dare not offer profit-making opportunities to potential entrants because an entering firm can hit and run, gathering in the available profits and departing when the going gets rough." 
+
+]
+
+.source[Baumol, William, J, 1982, "Contestable Markets: An Uprising in the Theory of Industry Structure," *American Economic Review,* 72(1): 1-15]
+
+---
+# Implications for Competition
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/otgtujqdnspc3me/marketcompetition.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Regulation &amp; antitrust (once) focus(ed) on *number* of firms
+    - "Count the number of firms, if it's 1, it's a monopoly!"
+
+- .hi-purple[Perfect competition as "gold standard", only market arrangement that is socially efficient]:
+  - .hi-purple[Allocatively efficient]: `\(p=MC\)`, `\(DWL=0\)`
+  - .hi-purple[Productively efficient]: `\(p=AC_{min}\)`
+]
+
+---
+
+# Implications for Competition
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/otgtujqdnspc3me/marketcompetition.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- But number of firms is **endogenous** and **can evolve over time**!
+  - Function of how firms mutually interact strategically
+
+- A more **dynamic** situation: firms respond over time
+
+]
+
+---
+
+# Implications for Competition
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/otgtujqdnspc3me/marketcompetition.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Perfect competition not the only socially efficient market-structure
+  - Small number of firms (including 1) may be efficient .hi[if they are contestable]
+
+- .hi-purple[Regulation and antitrust should consider whether a market is *contestable*, not just the *number* of firms]
+  - Free entry
+  - No sunk costs
+]
+
+---
+# Implications for Competition
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/otgtujqdnspc3me/marketcompetition.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Firms engaging in egregious monopolistic behavior `\((\downarrow q\)`, `\(\uparrow p\)`, `\(p&gt;MC\)`, `\(\pi&gt;0\)`) largely persist because of .hi-purple[barriers to entry]
+  - Attempts to market **uncontestable**
+
+- Business activities or political dealings with the goal to raise `\(\color{blue}{c_E}&gt;\color{red}{c_I}\)`
+  - Again: lower your own costs, or raise your rivals'!
+
+]
+
+---
+
+# Monopoly Or Contestable Market?
+
+.center[
+![](https://www.dropbox.com/s/tl7qk98zyhi0od7/microsoftantitrust.png?raw=1)
+]
+
+---
+
+# Contestable Markets
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/2i4r8go8mi8yr3m/browsers.png?raw=1)
+]
+]
+
+.pull-right[
+
+&gt; "Of far greater concern to Microsoft is the competition from new and emerging technologies, some of which are currently visible and others of which certainly are not. This array of known, emerging, and wholly unknown competitors places enormous pressure on Microsoft to price competitively and innovate aggressively." (Schmalensee 1999)
+
+]
+
+---
+
+# Contestable Markets
+
+.center[
+![](https://www.dropbox.com/s/qwnx5pnuvugz6qj/amazoncloudcontest3.png?raw=1)
+]
+
+---
+
+# So What's the Point of the Models?
+
+.pull-left[
+- In perfect competition (model):
+  - price-taking firms set price equal to marginal cost
+  - long run economic profits are zero
+  - allocative efficiency: consumer and producer surplus maximized
+
+- This is a *tendency* .hi[only because of **free entry and exit**]
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/2xhn4z2xle73n6v/donotenter.png?raw=1)
+]
+]
+
+---
+
+# So What's the Point of the Models?
+
+.pull-left[
+
+- **Don't judge real markets by their similarity to the perfect competition model**
+
+- Judge them more on their level of contestability, ease of potential entry
+
+.smallest[
+&gt; "...In that Empire, the Art of Cartography attained such Perfection that the map of a single Province occupied the entirety of a City, and the map of the Empire, the entirety of a Province.  In time, those Unconscionable Maps no longer satisfied, and the Cartographers Guilds struck a Map of the Empire whose size was that of the Empire, and which coincided point for point with  it. The following Generations, who were not so fond of the Study of Cartography as their Forebears had been, saw that that vast Map was Useless..."
+
+]
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/17cb7ceqipgi8fs/citymodel.jpg?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Thanks for a Great Semester!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "ocean",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div> "
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

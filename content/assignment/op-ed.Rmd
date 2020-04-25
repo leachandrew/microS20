@@ -10,7 +10,7 @@ library(pander)
 source(file.path(here::here(), "lib", "graphics.R"))
 ```
 
-*Due by the last day of class*
+*Due by 11:59 PM Friday May 1, by email (with a word count)*
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/W0zli4P6IPM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

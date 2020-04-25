@@ -158,8 +158,10 @@ lessons:
   - title: "4.5 Sequential Games & Contestable Markets"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 6** (UNGRADED, for Practice Only)'
+    assignment: "06-problem-set"
 
-  - title: '<i class="fas fa-laptop-code"></i> **Op-Ed due last day of class**'
+  - title: '<i class="fas fa-laptop-code"></i> **Op-Ed due by Fri May 1 by Email**'
     assignment: "op-ed"
     
   - title: '<i class="fas fa-star"></i> **Final Exam**'
+    assignment: "03-exam"
