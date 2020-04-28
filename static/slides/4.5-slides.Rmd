@@ -36,11 +36,13 @@ update_geom_defaults("label", list(family = "Fira Sans Condensed"))
 set.seed(256)
 ```
 
-# Game Theory: Generalizations
+class: inverse, center, middle
+
+# Game Theory: Some Generalizations
 
 ---
 
-# Game Theory: Generalizations
+# Game Theory: Some Generalizations
 
 .pull-left[
 .center[
@@ -50,31 +52,17 @@ set.seed(256)
 
 .pull-right[
 
-- As explore other aspects of firm behavior, we need more tools from game theory beyond a one-shot prisoners' dilemma
+There's a *lot* more to game theory than a one-shot prisoners' dilemma:
 
-- We've seen examples of .hi-purple[continuous strategies] in Cournot, Bertrand, & Stackelberg competition
-  - Firms can choose a wide range of prices, outputs
-  - One-shot prisoners' dilemma we had two .hi-purple[discrete] choices
+- one shot vs. repeated game
 
-]
+- discrete vs. continuous strategies
 
----
+- perfect vs. incomplete vs. and asymmetric information
 
-# Game Theory: Generalizations
+- simultaneous vs. sequential game
 
-.pull-left[
-.center[
-![:scale 100%](https://www.dropbox.com/s/tymdsxbqaq2scxq/chessknights.jpg?raw=1)
-]
-]
-
-.pull-right[
-
-- Seen .hi-purple[simultaneous] (prisoners' dilemma) vs. .hi-purple[sequential] game (Stackelberg)
-
-- Assumed .hi-purple[common knowledge] about the game structure. Everyone knows all players, all their potential strategies, and all of their payoffs
-
-- .hi[Perfect information] (players can observe moves of others, as in sequential game) vs. .hi[Imperfect information] players cannot observe moves of others (Prisoners' Dilemma)
+- See my [game theory course](https://ryansafner.com/courses/econ316/) for more (likely taught next in Fall 2021)
 ]
 
 ---
@@ -92,7 +80,7 @@ set.seed(256)
 - We use .hi-purple["solution concepts"] to allow us to predict an .hi-purple[equilibrium] of a game
 
 - .hi[Nash Equilibrium] is the primarly solution concept
-  - Note it has many variants depending on if games are sequential vs. simultaneous, perfect vs. imperfect information, etc.
+  - Note it has *many* variants depending on if games are sequential vs. simultaneous, perfect vs. imperfect information, etc.
 
 ]
 
@@ -125,13 +113,204 @@ set.seed(256)
 
 .pull-right[
 
-- Important about N.E.:
-  - N.E. $\neq$ the "best" pr optimal outcome
-    - Recall the Prisoners' Dilemma!
-  - Game may have **multiple** N.E.
-  - Game may have **no** N.E. (in "pure" strategies)
+- Important about Nash equilibrium:
+
+- N.E. $\neq$ the "*best*" or *optimal* outcome
+  - Recall the Prisoners' Dilemma!
+
+- Game may have *multiple* N.E.
+
+- Game may have *no* N.E. (in "pure" strategies)
 
 ]
+
+---
+
+# Example: Coordination Game
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/k431qrlyj2nbnc3/standards_game.png?raw=1)
+]
+]
+
+.pull-right[
+
+- A .hi-purple[Coordination Game]
+  - No dominant strategies
+
+]
+
+---
+
+# Example: Coordination Game
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/a0i4xlq2uipi360/standards_game_Nashes.png?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi-purple[Two Nash equilibria]: (.red[A],.blue[A]) and (.red[B],.blue[B])
+  - Either just as good
+  - Coordination is most important
+
+]
+
+---
+
+# Example: Coordination Game
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/a0i4xlq2uipi360/standards_game_Nashes.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Two general methods to solve for Nash equilibria:
+
+.hi-purple[1) Cell-by-Cell Inspection]: look in each cell, does either player want to deviate?
+  - .hi-purple[If no: a Nash equilibrium]
+  - If yes: *not a Nash equilibrium*
+
+]
+
+---
+
+# Example: Coordination Game
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/k431qrlyj2nbnc3/standards_game.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Two general methods to solve for Nash equilibria:
+
+.hi-purple[2) Best-Response Analysis]: take the perspective of each player. If the other player plays a particular strategy, what is your strategy(s) that gets you the highest payoff?
+  - Ties are allowed
+  - .hi-purple[Any cell where both players are playing a best response is a Nash Equilibrium]
+
+]
+
+---
+
+# Example: Coordination Game
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/cn8l8c81yy6tcwh/standards_game_1br.png?raw=1)
+
+.red[Player 1's] best responses
+]
+]
+
+.pull-right[
+
+- Two general methods to solve for Nash equilibria:
+
+.hi-purple[2) Best-Response Analysis]: take the perspective of each player. If the other player plays a particular strategy, what is your strategy(s) that gets you the highest payoff?
+  - Ties are allowed
+  - .hi-purple[Any cell where both players are playing a best response is a Nash Equilibrium]
+
+]
+
+---
+
+# Example: Coordination Game
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/etk1nlasbo788h8/standards_game_2br.png?raw=1)
+
+.blue[Player 2's] best responses
+]
+]
+
+.pull-right[
+
+- Two general methods to solve for Nash equilibria:
+
+.hi-purple[2) Best-Response Analysis]: take the perspective of each player. If the other player plays a particular strategy, what is your strategy(s) that gets you the highest payoff?
+  - Ties are allowed
+  - .hi-purple[Any cell where both players are playing a best response is a Nash Equilibrium]
+
+]
+
+---
+
+# Example: Coordination Game
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/8yzrc25hzb6fd9x/standards_game_brnashes.png?raw=1)
+
+.hi-purple[N.E.]: each player is playing a best response
+]
+]
+
+.pull-right[
+
+- Two general methods to solve for Nash equilibria:
+
+.hi-purple[2) Best-Response Analysis]: take the perspective of each player. If the other player plays a particular strategy, what is your strategy(s) that gets you the highest payoff?
+  - Ties are allowed
+  - .hi-purple[Any cell where both players are playing a best response is a Nash Equilibrium]
+
+]
+
+---
+
+# A Change in the Game
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/8r7nkpwplojj4pd/standards_game_lockin.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Two Nash equilibria again: (.red[A],.blue[A]) and (.red[B],.blue[B])
+
+- But here (.red[A],.blue[A]) $\succ$ (.red[B],.blue[B])!
+
+]
+
+---
+
+# A Change in the Game
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/8r7nkpwplojj4pd/standards_game_lockin.png?raw=1)
+]
+]
+
+.pull-right[
+- .hi-purple[Path Dependence]: early choices may affect later ability to choose or switch
+
+- .hi-purple[Lock-in]: the switching cost of moving from one equilibrium to another becomes prohibitive
+
+- Suppose we are currently in equilibrium (B,B)
+
+- .hi-purple[Inefficient lock-in]:
+  - Standard A is superior to B
+  - But too costly to switch from B to A
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Sequential Games
 
 ---
 
@@ -150,7 +329,7 @@ set.seed(256)
 
 - A sequence of play: .hi-red[Entrant] moves first, .hi-blue[Incumbent] moves second
 
-- Note: the magnitude of the payoffs don't really matter, only their **relative sizes**
+- Note: the magnitude of the payoffs don't really matter, only their *relative sizes*
   - Hence, my simple numbers
 ]
 
@@ -224,7 +403,7 @@ set.seed(256)
 
 ---
 
-# Solving a Sequential Game
+# Solving a Sequential Game: Backward Induction
 
 .pull-left[
 .center[
@@ -234,11 +413,25 @@ set.seed(256)
 
 .pull-right[
 
-- .hi[Backwards induction]: to determine the outcome of the game, start with the **last-mover** (i.e. decision nodes just before terminal nodes)
+- .hi[Backward induction]: to determine the outcome of the game, start with the *last-mover* (i.e. decision nodes just before terminal nodes)
 
 - What is that mover's best choice to maximize their payoff?
 
-- i.e. we start at .blue[I.1] where .hi-blue[Incumbent] can:
+]
+
+---
+
+# Solving a Sequential Game: Backward Induction
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/564ocw8l263kngm/entry_game_extensive.png?raw=1)
+]
+]
+
+.pull-right[
+
+- We start at .blue[I.1] where .hi-blue[Incumbent] can:
   - .blue[Accommodate] to earn .blue[1]
   - .blue[Fight] to earn .blue[0]
 
@@ -246,7 +439,23 @@ set.seed(256)
 
 ---
 
-# Solving a Sequential Game
+# Solving a Sequential Game: Backward Induction
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/hpoouciwsg02d70/entry_game_extensive_last.png?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi-blue[Incumbent] will .hi-blue[Accommodate] if game reaches .hi-blue[I.1]
+
+]
+
+---
+
+# Solving a Sequential Game: Backward Induction
 
 .pull-left[
 .center[
@@ -265,7 +474,7 @@ set.seed(256)
 
 ---
 
-# Solving a Sequential Game
+# Solving a Sequential Game: Backward Induction
 
 .pull-left[
 .center[
@@ -275,7 +484,7 @@ set.seed(256)
 
 .pull-right[
 
-- .hi-red[Entrant] will .red[Enter]
+- .hi-red[Entrant] will .red[Enter] at .red[E.1]
 
 - Continue until we've reached the initial node (beginning)
 
@@ -285,6 +494,7 @@ set.seed(256)
 (.hi-red[Enter], .hi-blue[Accommodate])
 ]
 - Some textbooks call this a .hi-purple["rollback equilibrium"]
+  - more technical name: .hi-purple[subgame perfect Nash equilibrium]
 ]
 
 ---
@@ -374,7 +584,7 @@ class: inverse, center, middle
 
 2. .hi-blue[**Entrant**] decides to **stay out** or **enter** the market, setting its price $\color{blue}{p_E}$
 
-- Bertrand price competition between the two firms with similar products $\implies$ consumers buy only from the firm with the lower price
+- Price competition between 2 firms with similar products $\implies$ .hi-purple[consumers buy only from firm with lower price]
 
 ]
 
@@ -437,13 +647,11 @@ MC(q)&=c\\ \end{align*}$$
 
 - .hi[Nash Equilibrium]: incumbent sets $\color{red}{p_I}=c$, **no entry**
 
-- .hi-purple[A single firm, but the **competitive outcome**!]
-  - $p^*=MC$, $\pi=0$
+- .hi-purple[A market with a single firm, but the **competitive outcome**!]
+  - $p^*=MC$, $\color{green}{\pi=0}$
   - competitive $q^*$
-  - max Consumer Surplus, no DWL
+  - max .hi-blue[Consumer Surplus], no DWL
 ]
-
---
 
 .pull-right[
 
@@ -991,7 +1199,7 @@ William Baumol
   - Attempts to market **uncontestable**
 
 - Business activities or political dealings with the goal to raise $\color{blue}{c_E}>\color{red}{c_I}$
-  - Again: lower your own costs, or raise your rivals'!
+  - ower your own costs, or raise your rivals'!
 
 ]
 
@@ -1069,9 +1277,3 @@ William Baumol
 ![](https://www.dropbox.com/s/17cb7ceqipgi8fs/citymodel.jpg?raw=1)
 ]
 ]
-
----
-
-class: inverse, center, middle
-
-# Thanks for a Great Semester!
