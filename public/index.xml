@@ -2,16 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microeconomic Analysis</title>
-    <link>https://microS20.classes.ryansafner.com/index.html</link>
+    <link>https://microS20.classes.ryansafner.com/</link>
     <description>Recent content on Microeconomic Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 05 May 2016 21:48:51 -0700</lastBuildDate>
     
 	<atom:link href="https://microS20.classes.ryansafner.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-  </channel>
-</rss>pe="application/rss+xml" />
     
     
     <item>
@@ -548,6 +545,25 @@ Class Livestream/Videos      Slides   Lecture Slides  Problem Set 5 Due 11:59PM 
       
       <guid>https://microS20.classes.ryansafner.com/class/4.4-class/</guid>
       <description>Contents  Overview Class Livestream/Videos Slides Note on Assignments Appendix: More on Antitrust   Overview  Thursday, April 23, 2020 Quarantine Lecture 10  Class Livestream/Videos      Slides   Lecture Slides  Note on Assignments Classes end Friday May 1. Please turn in all outstanding assignments (Exam 1 corrections, Exam 2 corrections, HW’s you may not have turned in) by then. The sooner you turn in your assignments, the sooner I can update your grades to be the most accurate on Blackboard.</description>
+    </item>
+    
+    <item>
+      <title>4.5 Sequential Games &amp; Contestable Markets - Readings</title>
+      <link>https://microS20.classes.ryansafner.com/reading/4.5-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://microS20.classes.ryansafner.com/reading/4.5-reading/</guid>
+      <description> Recommended   Ch. 12.1-12.2, 12.4 in Austan Goolsbee, Steven Levitt, and Chad SyversonMicroeconomics, 2nd ed. (USA: Worth Publishers, 2012).
+  </description>
+    </item>
+    
+    <item>
+      <title>4.5: Sequential Games &amp; Contestable Markets - Class Notes</title>
+      <link>https://microS20.classes.ryansafner.com/class/4.5-class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://microS20.classes.ryansafner.com/class/4.5-class/</guid>
+      <description>Contents  Overview Class Livestream/Videos Slides Note on Assignments   Overview  Tuesday, April 28, 2020 Quarantine Lecture 11  Class Livestream/Videos     I mentioned the competition QWERTY and Dvorak keyboard when I was discussing lock-in and coordination games. You can learn more from this IO lecture. If you want to know more about sequential games, see this IO lecture. For more game theory in general, see my game theory course.</description>
     </item>
     
     <item>

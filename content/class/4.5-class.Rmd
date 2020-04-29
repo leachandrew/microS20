@@ -1,0 +1,51 @@
+---
+title: "4.5: Sequential Games & Contestable Markets - Class Notes"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+# Overview
+
+- *Tuesday, April 28, 2020*
+- *Quarantine Lecture 11*
+
+# Class Livestream/Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NfmQY17PNus" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jFtgFf8E9cM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hN_-n4A-vpw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CmHYi8ETHYY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+I mentioned the competition QWERTY and Dvorak keyboard when I was discussing lock-in and coordination games. You can learn more from this [IO lecture](https://ios20.classes.ryansafner.com/class/4.4-class/). If you want to know more about sequential games, see this [IO lecture](https://ios20.classes.ryansafner.com/class/2.4-class/). For more game theory in general, see my [game theory course](https://ryansafner.com/courses/econ316/).
+
+# Slides
+
+- [<i class="fas fa-external-link-square-alt"></i> Lecture Slides](/slides/4.4-slides.html)
+
+# Note on Assignments
+
+Classes end Friday May 1. Please turn in all outstanding assignments (Exam 1 corrections, Exam 2 corrections, HW's you may not have turned in) by then. The sooner you turn in your assignments, the sooner I can update your grades to be the most accurate on Blackboard. All homeworks are graded and the grades are posted (with your homework average) on Blackboard. I have given back all exam corrections I receive in an email with my markup, and your grades are updated on Blackboard.^[I have a few corrections left to grade if you turned them in over the last day or two!]
+
+[Problem Set 6](/assignment/06-problem-set) is posted soon, and will *not* be graded. It is only to help you practice for the Final Exam.
+
+There is also a page for resources about the [Final Exam](/assignment/03-exam).
+
+Again, you can again estimate your final course grade (as defined by the [Syllabus](/syllabus)) with the [<i class="fas fa-calculator"></i> `Grade Calculator`](https://ryansafner.shinyapps.io/306_grade_calculator/) at the top of the [Assignments page](/assignments). 
+
+Additionally, May 1 is the last day to declare that you wish to take any course on a Satisfactory/Unsatisfactory basis. Ask me if you have questions about this, or what the optimal strategy is for this. 

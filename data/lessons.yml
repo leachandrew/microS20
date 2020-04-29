@@ -157,6 +157,8 @@ lessons:
 
   - title: "4.5 Sequential Games & Contestable Markets"
     slides: "4.5-slides"
+    class: "4.5-class"
+    reading: "4.5-reading"
 
   - title: '<i class="fas fa-laptop-code"></i> **Problem Set 6** (UNGRADED, for Practice Only)'
     assignment: "06-problem-set"

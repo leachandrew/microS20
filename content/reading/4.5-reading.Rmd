@@ -1,0 +1,10 @@
+---
+title: "4.5 Sequential Games & Contestable Markets - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+# Recommended
+
+- <i class="fas fas fa-book"></i> Ch. 12.1-12.2, 12.4 in @textbook

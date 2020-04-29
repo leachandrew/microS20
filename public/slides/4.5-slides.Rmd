@@ -1265,11 +1265,26 @@ William Baumol
 
 - Judge them more on their level of contestability, ease of potential entry
 
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/17cb7ceqipgi8fs/citymodel.jpg?raw=1)
+]
+]
+
+---
+
+# So What's the Point of the Models?
+
+.pull-left[
+
 .smallest[
-> "...In that Empire, the Art of Cartography attained such Perfection that the map of a single Province occupied the entirety of a City, and the map of the Empire, the entirety of a Province.  In time, those Unconscionable Maps no longer satisfied, and the Cartographers Guilds struck a Map of the Empire whose size was that of the Empire, and which coincided point for point with  it. The following Generations, who were not so fond of the Study of Cartography as their Forebears had been, saw that that vast Map was Useless..."
+> "...In that Empire, the Art of Cartography attained such Perfection that the map of a single Province occupied the entirety of a City, and the map of the Empire, the entirety of a Province.  In time, those Unconscionable Maps no longer satisfied, and the Cartographers Guilds struck a Map of the Empire whose size was that of the Empire, and which coincided point for point with it. The following Generations, who were not so fond of the Study of Cartography as their Forebears had been, saw that that vast Map was Useless..."
 
 ]
 
+.source[Jorge Luis Borges, 1658, *On Exactitude in Science*]
 ]
 
 .pull-right[
