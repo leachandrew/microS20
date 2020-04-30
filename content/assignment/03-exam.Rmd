@@ -14,7 +14,9 @@ source(file.path(here::here(), "lib", "graphics.R"))
 
 # Exam Instructions (IMPORTANT, PLEASE READ)
 
-This test will be available on Blackboard as a *timed* assignment. You will have **3 hours once you open the test on Blackboard**. You will *not* need the whole time, I have given you some extra to accomodate the difficulties of taking an exam at home. **Please pick a time to take it where you know you will have at least 2 hours**. You may close the exam page and come back to it, but *the timer will continue to run* once the exam is first opened.
+This test will be available on Blackboard as a *timed* assignment. You will have **3 hours once you open the test on Blackboard**. You will *not* need the whole time, I have given you some extra to acommodate the difficulties of taking an exam at home. **Please pick a time to take it where you know you will have at least 2 hours**. You may close the exam page and come back to it, but *the timer will continue to run* once the exam is first opened.
+
+**NEW:** you have the option of **uploading** or **emailing** me before your time runs out, handwritten steps to solving your problems. You can also type out the steps on Blackboard, as usual.
 
 This is an **open note, open book** exam, but **do not use the internet beyond our class website, or contact each other**^[Google won't help you here. Everything you need should be in your notes, homeworks, or slides anyway!] I will interpret substantially-similarly-written answers, or obviously-googled answers as cheating or plagiarism, respectively. Answers should be *in your own words*, I will deduct points for blatant copy-pastes off my slides (those are *my* words!).
 
