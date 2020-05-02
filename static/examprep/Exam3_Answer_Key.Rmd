@@ -1,0 +1,839 @@
+---
+title: ""
+author: ""
+date: ""
+output: 
+  pdf_document:
+    latex_engine: "xelatex"
+
+mainfont: Fira Sans
+fontsize: 12pt
+mathfont: "Fira Sans"
+
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(message=F,
+                      warning=F,
+                      echo=F)
+library(tidyverse)
+library(mosaic)
+```
+
+## True/False/Uncertain and \emph{Explain}
+
+Indicate whether the following statements are **True**, **False**, or **Uncertain**, and give a short (2-3 sentences) **explanation**.
+
+1. The table below describes part of a market demand schedule. Marginal revenue for the 3\textsuperscript{rd} unit is $-$\$5.   
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{rr}
+	$q$ & $p$\\ \hline
+		1 & \$30\\
+		2 & \$25\\
+		3 & \$20\\
+		4 & \$15\\ \hline
+	\end{tabular} 
+\end{table}
+
+---
+
+**False.**
+
+**Marginal revenue, MR(q) is how total revenue changes with output, $MR(q)=\frac{\Delta R(q)}{\Delta q}$ (or the first derivative of total revenue).**
+
+**First, you must find the total revenue at each price. Recall $R(q)=pq$. Then, find MR(q) by subtracting $R_2-R_1$ for each 1 unit change in $q$:**
+
+| $q$ | $p$ | $R(q)$ | $MR(q)$ |
+|-----|-----|-------:|--------:|
+| 1   | $30 | $30    | $-$     |
+| 2   | $25 | $50    | $20     |
+| 3   | $20 | $60    | $10     |
+| 4   | $15 | $45    | -$15    |
+
+**Marginal revenue for the 3rd unit is $10.**
+
+
+\clearpage
+
+2. An industry with very large fixed costs and marginal costs of 0 is likely to lead to a natural monopoly.
+
+
+---
+
+**True.**
+
+**The cost function would only look like:**
+
+$$C(q)=f$$
+
+**Where $f$ is the fixed cost.** 
+
+**There are no variable costs, and thus no average variable costs, either.**
+
+$$\begin{aligned}
+VC(q)&=0\\
+AVC(q)&=0\\
+\end{aligned}$$
+
+**Average fixed costs would be**:
+
+$$AFC(q)=\frac{f}{q}$$
+
+**Recall how average total costs are equal to average variable costs plus average fixed costs. Since average variable costs are 0...**
+
+$$\begin{aligned}
+AC(q)&=AVC(q)+AFC(q)\\
+AC(q)&=0+\frac{f}{q}\\
+AC(q)&=\frac{f}{q}\\
+\end{aligned}$$
+
+**Hence, average total costs and average fixed costs are the same. Since average fixed costs is _always_ decreasing $(f$ is constant, $q$ increases as we move to the right), we have declining average total costs, i.e. _economies of scale._**
+
+**This industry with economies of scale will likely lead to a single firm being able to meet the entire market demand, i.e. a natural monopoly.**
+
+```{r, fig.height=2}
+demand<-function(x){10-x}
+ac_eos<-function(x){20/x}
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand", size = 3)+
+  stat_function(fun=ac_eos, geom="line", size=2, color = "orange")+
+    geom_label(aes(x=9,y=ac_eos(9)), color = "orange", label="AC(q)", size = 3)+
+    scale_x_continuous(breaks=NULL,
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=NULL,
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  guides(fill=F)+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_classic(base_size=14)
+```
+
+
+\clearpage
+
+3. A market reaches equilibrium at a price of \$100 and a quantity of 100 units. If the elasticity of supply at equilibrium is twice as large as the elasticity of demand at equilibrium, then the supply curve is twice as steep as the demand curve.
+
+---
+
+**True.**
+
+**Look at the formula for price elasticity (for supply or demand, they are the same):**
+
+$$\epsilon_{q,p} = \frac{1}{slope} \times \frac{p}{q}$$
+
+**I tell you that the price elasticity of supply is larger than price elasticity of demand at the same price and quantity. So, if you think intuitively, and note that price elasticity is inversely related to slope, then _demand_ must be _steeper_ than supply, because demand is _less elastic_ than supply.**
+
+**If you want proof, I've given you some numbers to make this easy. Plug in $p=100$ and $q=100$:**
+
+$$\begin{aligned}
+\epsilon_{q,p} &= \frac{1}{slope} \times \frac{100}{100}\\
+&=\frac{1}{slope} \\ \end{aligned}$$
+
+**So the price elasticity of demand and the price elasticity of supply at this price and quantity will each be equal to the inverse of the slope of each curve, respectively.**
+
+**The problem assumes that the elasticity of supply is twice as large as that of demand:**
+
+$$\begin{aligned}
+\epsilon_{Supply} &= 2\epsilon_{Demand}\\
+\frac{1}{\text{Supply slope}} &= \frac{2}{\text{Demand slope}}\\ 
+\frac{1}{\text{Supply slope}} &= \frac{2}{\text{Demand slope}}\\ 
+2 \times \text{Supply slope} &= \text{Demand slope}\\
+\end{aligned}$$
+
+**By cross-multiplying, you can see that the _demand_ slope must be _twice as steep (large)_ as supply.**
+
+```{r, fig.height=2}
+demand_e<-function(x){300-2*x}
+supply_e<-function(x){x}
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand_e, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=140,y=demand_e(140)), color = "blue", label="Demand slope = 2x", size = 3)+
+  stat_function(fun=supply_e, geom="line", size=2, color = "red")+
+    geom_label(aes(x=140,y=supply_e(140)), color = "red", label="Supply slope = x", size = 3)+
+  geom_segment(x=0,xend=100, y=100,yend=100, size=1, linetype="dotted")+
+  geom_segment(x=100,xend=100, y=0,yend=100, size=1, linetype="dotted")+
+    scale_x_continuous(breaks=c(0,100),
+                     limits=c(0,300),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,100),
+                     limits=c(0,300),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  guides(fill=F)+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_classic(base_size=14)
+```
+
+**Demand would have a higher choke price than supply, and thus generate more consumer surplus than producer surplus.**
+
+\clearpage
+
+4. A firm with market power will charge a *larger* markup on products that are *more* elastic.
+
+---
+
+**False.**
+
+**A firm can charge a _larger_ markup on products that are _less_ elastic (more inelastic). Think of the Lerner index:**
+
+$$L=\frac{p-MC}{p}=-\frac{1}{\epsilon}$$
+
+**The middle term is the markup $(p-MC)$ as a fraction of price. This is inversely related to demand price elasticity $(\epsilon)$. See the slides in 4.1 for a visual confirmation.** 
+
+\clearpage
+
+5. Consumers that view a good as a necessity are likely to earn greater consumer surplus than consumers who view a good as a luxury.
+
+---
+
+**True.**
+
+**Viewing a good as a necessity means consumer demand is _less elastic_ (more inelastic). An inelastic demand generates _more_ consumer surplus than an elastic demand at the same price.**
+
+```{r, fig.height=3}
+demand_1=function(x){10-x}
+demand_el=function(x){7-0.4*x}
+cs_el<-tribble(
+  ~x, ~y,
+  0, 7,
+  0, 5,
+  5, 5
+)
+cs_1<-tribble(
+  ~x, ~y,
+  0, 10,
+  0, 5,
+  5, 5
+)
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  geom_polygon(data=cs_1, aes(x=x,y=y), fill="blue", alpha=0.3)+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+  geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Inelastic Demand", size = 3)+
+geom_polygon(data=cs_el, aes(x=x,y=y), fill="blue", alpha=0.7)+
+    stat_function(fun=demand_el, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=9,y=demand_el(9)), color = "darkblue", label="Elastic Demand", size = 3)+
+  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+    scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)),
+                     labels = function(x){paste("$", x, sep="")})+
+  labs(x = "Quantity (q)",
+       y = "Price (p)")+
+  theme_classic(base_size=20)
+```
+
+
+\clearpage
+
+6. A prisoners' dilemma is a game where there is an outcome from the Nash Equilibrium that is a Pareto improvement for all players, but is not itself a Nash equilibrium.
+
+---
+
+**True.**
+
+---
+
+\clearpage
+
+## Short Answer
+
+If applicable, show all work and clearly label all graphs.
+
+7. Over the last few years, the supply of rental housing has increased, and yet the price of housing on the market has risen. Draw a graph that illustrates this new equilibrium in the market for rental housing.
+
+---
+
+**Supply and demand _both_ increase, but supply demand increases _more_ than supply increases.**
+
+
+```{r, fig.height=5}
+demand_h1<-function(x){10-x}
+supply_h1<-function(x){x}
+demand_h2<-function(x){16-x}
+supply_h2<-function(x){-2+x}
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand_h1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=8,y=demand_h1(8)), color = "blue", label="Demand 1", size = 3)+
+  stat_function(fun=demand_h2, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=14,y=demand_h2(14)), color = "darkblue", label="Demand 2", size = 3)+
+  
+  stat_function(fun=supply_h1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=10,y=supply_h1(10)), color = "red", label="Supply 1", size = 3)+
+  stat_function(fun=supply_h2, geom="line", size=2, color = "darkred")+
+    geom_label(aes(x=10,y=supply_h2(10)), color = "darkred", label="Supply 2", size = 3)+
+
+    geom_segment(x=0,xend=5, y=5,yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5,xend=5, y=0,yend=5, size=1, linetype="dotted")+
+  
+    geom_segment(x=0,xend=9, y=7,yend=7, size=1, linetype="dotted")+
+  geom_segment(x=9,xend=9, y=0,yend=7, size=1, linetype="dotted")+
+    scale_x_continuous(breaks=c(0,5,9),
+                       labels=c(0, expression(q[1]),expression(q[2])),
+                     limits=c(0,20),
+                     expand=expand_scale(mult=c(0,0.1)))+
+    scale_y_continuous(breaks=c(0,5,7),
+                       labels=c(0, expression(p[1]),expression(p[2])),
+                     limits=c(0,20),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  guides(fill=F)+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_classic(base_size=14)
+```
+
+
+\clearpage
+
+8. Explain why markets with less elastic demand generate more consumer surplus than markets with more elastic demand. 
+
+---
+
+**Surplus for each party (consumer and producer) measures how much a party benefits from the transaction. It is defined as the difference between what they actually pay/receive and what they would have been willing to pay/receive.**
+
+**Consumers that have less elastic demand may view a product as a necessity, have few substitutes, or be rushed to make a decision, etc. Because of this, they would be willing to pay _a lot_ to receive the product. Since they have only to pay the _market price_, rather than their _maximum_ willingness to pay, and they would have been willing to pay _a lot_, they earn a _lot_ of consumer surplus because of that large gap.**
+
+**If you think in terms of the choke price being the absolute maximum willingness to pay for a demand, look at the graph from question 5 and notice, for the same equilibrium price, an inelastic demand generates more surplus because there is a greater distance between the choke price and the market price, than on the elastic demand curve.**
+
+---
+
+9. Describe *four* different examples of barriers to entry.
+
+---
+
+- Patents and copyrights
+- Exclusive franchises (i.e. natural monopoly grants)
+- Occupational licensing
+- Technological barriers
+- First mover advantage
+- High fixed, and/or sunk, costs
+
+\clearpage
+
+10. Explain why, even if they were legal, cartels are economically unstable. 
+
+---
+
+**It is easiest to see the difficulty of cartels by framing them as a prisoners' dilemma between two firms.**
+
+**The Nash equilibrium is for both firms to lower price, since that is a dominant strategy for each firm. If both firms raise their price (cooperate with other firm), they can increase their profits by forming a cartel. However, this is not a Nash equilibrium, since each firm has an incentive to lower their prices and cheat the cartel if the other firm maintains a high price.**
+
+**Cartels must find ways to enforce the agreement between members to keep prices high and outputs low. Cartel members must be able to monitor each other's behavior and detect and punish cheating or chiseling the agreement. Cartels also have to worry about competition from entrants (who are not cartel members), and detection from the government.**
+
+
+\clearpage
+
+11. Explain, and depict on a graph, the *complete* economic consequences of monopoly.
+
+---
+
+```{r, fig.height=4}
+demand<-function(x){10-x}
+mc<-function(x){4}
+mr<-function(x){10-2*x}
+
+cs_2<-tribble(
+  ~x, ~y,
+  0,10,
+  0,7,
+  3,7
+)
+
+dwl<-tribble(
+  ~x, ~y,
+  3,7,
+  3,4,
+  6,4
+)
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  geom_polygon(data=cs_2, aes(x=x,y=y), fill="blue", alpha=0.5)+
+  geom_polygon(data=dwl, aes(x=x,y=y), fill="black", alpha=0.5)+
+  geom_rect(xmin=0,xmax=3,ymin=4,ymax=7, fill="green",alpha=0.4)+
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=8,y=demand(8)), color = "blue", label="Demand", size = 3)+
+  stat_function(fun=mr, geom="line", size=2, color = "purple")+
+    geom_label(aes(x=4,y=mr(4)), color = "purple", label="MR(q)", size = 3)+
+  stat_function(fun=mc, geom="line", size=2, color = "red")+
+    geom_label(aes(x=8,y=mc(8)), color = "red", label="MC(q)=AC(q)", size = 3)+
+  geom_segment(x=6, xend=6, y=0, yend=4, size=1, linetype="dotted")+
+  #geom_label(x=6,y=2,label=expression(q[c]))+
+  geom_segment(x=0, xend=3, y=7, yend=7, size=1, linetype="dashed")+
+  geom_segment(x=3, xend=3, y=0, yend=7, size=1, linetype="dashed")+
+  #geom_label(x=3,y=2,label=expression(q[m]))+
+  #geom_label(x=3,y=2,label=expression(q[m]))+
+    scale_x_continuous(breaks=c(0,3,6),
+                       labels=c(0, expression(q[m]),expression(q[c])),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+    scale_y_continuous(breaks=c(0,4,7),
+                       limits=c(0,10),
+                       labels=c(0, expression(p[c]),expression(p[m])),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  guides(fill=F)+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_classic(base_size=14)
+```
+
+**The (perfectly) competitive market outcome would be for the industry to produce $q_c$ and price at $p=MC$ at $p_{C}$. A monopolist, on the other hand, setting $MR=MC$ will:**
+
+- **Produce less output at $q_m$**
+- **Raise the price to $p_m$ at $q_m$**
+- **Reduce consumer surplus (blue)**
+- **Generate deadweight loss (black)**
+- **Earn monopoly profits/rents (green)**
+
+**Furthermore, if the monopoly was achieved via _rent-seeking_, the firm would be willing to expend up to the entirety of the green rectangle in competing to capture those rents.**
+
+---
+
+\clearpage
+
+## Problems
+
+Show all work. You may *not* earn full credit if you only write the answer, even if correct.
+
+12. Suppose you are a restaurant operating in the very competitive high-end restaurant market in downtown Frederick. You have a cost structure as follows, where $q$ is hundreds of premium meals served per day. 
+
+\begin{align*}
+C(q)&=4q^2 +8q+36\\
+MC(q)&=8q+8\\	
+\end{align*}
+
+a. Write the equations for (i) fixed costs, (ii) variable costs, (iii) average fixed costs, (iv), average variable costs, and (v) average (total) costs.
+
+---
+
+| Cost | Equation |
+|------|----------|
+| Fixed Costs | $f=36$ |
+| Average Fixed Costs | $AFC(q)=\frac{36}{q}$ |
+| Variable Costs | $VC(q)=4q^2+8q$ |
+| Average Variable Costs | $AVC(q)=4q+8$ |
+| Average (Total) Costs | $AC(q)=4q+8+\frac{36}{q}$ |
+
+---
+
+b. The market price of premium meals is currently \$40. Calculate the profit-maximizing quantity of meals to serve.
+
+---
+
+**Because the industry is competitive, $Demand=MR(q)=$ market price of $40.**
+
+**The profit-maximizing quantity is always where:**
+
+$$\begin{aligned}
+MR(q)&=MC(q)\\
+40 &= 8q+8\\
+32 &= 8q\\
+4 &= q^*\\
+\end{aligned}$$
+
+\clearpage
+
+c. At the profit-maximizing quantity, calculate the average cost.
+
+---
+
+$$\begin{aligned}
+AC(q)&=4q+8+\frac{36}{q}\\
+AC(4)&=4(4)+8+\frac{36}{4}\\
+AC(4)&=16+8+9\\
+AC(4)&=\$33\\
+\end{aligned}$$
+
+---
+
+d. At the profit-maximizing price and quantity, calculate the total profit. Should your restaurant stay or exit the market in the long run? 
+
+---
+
+$$\begin{aligned}
+\pi&=[p-AC(q)]q\\
+\pi&=[40-33]4\\
+\pi&=7(4)\\
+\pi*=\$28\\
+\end{aligned}$$
+
+**Since your firm is earning profits, it should stay the long run.**
+
+---
+
+e. Below what price should you stop production in the short run?
+
+---
+
+**The shut down price is where:**
+
+$$\begin{aligned}
+MC(q) &= AVC(q)\\
+8q+8 &= 4q+8\\
+8q&=4q\\
+q&=0\\
+\end{aligned}$$
+
+**At an output of 0, the $MC$ or $AVC$ is (using $MC)$:**
+
+$$\begin{aligned}
+MC(0) &= 8(0)+8\\
+MC(0)&=\$8\\
+\end{aligned}$$
+
+**The shutdown price is $8.**
+
+\clearpage
+
+f. What is the lowest price you need to charge in order to break even? 
+
+---
+
+**The breakeven price is where:**
+
+$$\begin{aligned}
+MC(q) &= AC(q)\\
+8q+8 &= 4q+8+\frac{36}{q}\\
+8q&=4q+\frac{36}{q}\\
+4q&=\frac{36}{q}\\
+4q^2&=36\\
+q^2&=9\\
+q&=3\\
+\end{aligned}$$
+
+**At an output of 3, the $MC$ or $AC$ is (using $MC)$:**
+
+$$\begin{aligned}
+MC(3) &= 8(3)+8\\
+MC(3)&=\$32\\
+\end{aligned}$$
+
+**The breakeven price is $32.**
+
+---
+
+g. What must the long run equilibrium market price be for this industry, and why?
+
+---
+
+As this is a competitive industry, in the long run, profits must fall to zero. This would imply a price that is equal to (the minimum of the) average cost (curve), i.e. the break-even price, which is $32. Thus, the market equilibrium price will ultimately settle at $32.  
+
+---
+
+```{r, fig.height=5}
+ac_1=function(x){4*x+8+36/x}
+mc_1=function(x){8*x+8}
+avc_1=function(x){4*x+8}
+price_1=function(x){40}
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  geom_rect(xmin=0,xmax=4,ymin=33,ymax=40, fill="green", alpha=0.3)+
+  stat_function(fun=mc_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=4.5,y=mc_1(4.5)), color = "red", label=expression(MC(q)), size = 3)+
+  stat_function(fun=avc_1, geom="line", size=2, color = "brown")+
+    geom_label(aes(x=7,y=avc_1(7)), color = "brown", label=expression(AVC(q)), size = 3)+
+  stat_function(fun=ac_1, geom="line", size=2, color = "orange")+
+    geom_label(aes(x=8,y=ac_1(8)), color = "orange", label=expression(AC(q)), size = 3)+
+  geom_hline(yintercept=32, size=1, linetype="dashed")+
+  
+  stat_function(fun=price_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=7,y=price_1(8)), color = "blue", label=expression(Demand==MR(q)), size = 3)+
+  geom_label(x=6,y=32, label="Break Even: $32.00", size =2, color="orange")+
+  geom_segment(x=4,xend=4,y=0,yend=40, size=1, linetype="dotted")+
+  geom_segment(x=0,xend=4,y=33,yend=33, size=1, linetype="dotted")+
+  geom_hline(yintercept=8, size=1, linetype="dashed")+
+  geom_label(x=6,y=8, label="Shut Down: $8.00", size =2, color="brown")+
+    scale_x_continuous(breaks=seq(0,10,1),
+                       limits=c(0,10),
+                       expand=c(0,0))+
+  scale_y_continuous(breaks=seq(0,50,4),
+                     limits=c(0,50),
+                     expand=c(0,0),
+                     labels=scales::dollar)+
+  
+  #geom_segment(x=0,xend=0,y=0,yend=23, color="red", size=5)+
+  #geom_segment(x=0,xend=5,y=23,yend=23, color="red", size=3.5)+
+  #stat_function(fun=mc, xlim=c(5,10), geom="line", size=3.5, color = "red")+
+   # geom_label(aes(x=2,y=23), color = "red", label="SUPPLY", size = 5)+
+  #scale_colour_manual("Curves", values = line_colors, guide=F)+
+  labs(x = "Hundreds of Meals, q",
+       y = "Price, p")+
+  theme_light(base_size=14)
+```
+
+\clearpage
+
+13. *Tweed Screeds* is publisher of obscure academic books. It has the following cost structure, where $q$ is hundreds of copies:
+\begin{align*}
+C(q)&=2q^2+100q+200\\
+MC(q)&=4q+100\\	
+\end{align*}
+It estimates that market demand for its new book release is estimated to be:
+\begin{equation*}
+q=17.5-0.125p	
+\end{equation*}
+
+a. Calculate the profit-maximizing quantity of copies and price per copy.
+
+---
+
+**To find the quantity, we set marginal revenue equal to marginal cost, but we first need to find marginal revenue.**
+
+**Recall if we know inverse demand, we can simply double the slope. So in fact, we first need to take demand and solve it for $p$ to get inverse demand:**
+
+$$\begin{aligned}
+q&=17.5-0.125p\\
+q+0.125&=17.5\\
+0.125p&=17.5-q\\
+p&=140-8q\\
+\end{aligned}$$
+
+**Now we know marginal revenue is then**
+
+$$MR(q)=140-16q$$
+
+**So now we can find $q^*$ by setting**
+
+$$\begin{aligned}
+MR(q)&=MC(q)\\
+140-16q&=4q+100\\
+140&=20q+100\\
+40&=20q\\
+2&=q^*\\
+\end{aligned}$$
+
+**Next, we need to find the price. Since it has market power, the firm raises the price all the way to demand (Max WTP) at $q^*$:**
+
+$$\begin{aligned}
+p&=140-8q\\
+p&=140-8(2)\\
+p^*&=\$124\\
+\end{aligned}$$
+
+---
+
+b. Calculate the publisher's total profits. 
+
+---
+
+**We can take total revenues minus total costs, or our usual $\pi=[p-AC(q)]q$. I'll do the latter so you can see it on the graph. First, find the function for average cost, and then find average cost at $q^*=2$:**
+
+$$\begin{aligned}
+AC(q)&=2q+100+\frac{200}{q}\\
+AC(2)&=2(2)+100+\frac{200}{(2)}\\
+AC(2)&=4+100+100\\
+AC(2)&=\$204\\
+\end{aligned}$$
+
+**Now plug in:**
+
+$$\begin{aligned}
+\pi&=[p-AC(q)]q\\
+\pi&=[124-204]2\\
+\pi&=[-80]2\\
+\pi&=-\$160\\
+\end{aligned}$$
+
+---
+
+c. Should this publisher stay or exit the industry in the long run? 
+
+---
+
+**Since it is earning losses, it should exit in the long run.**
+
+\clearpage
+
+d. What is the lowest price it would need to charge in order to break even?
+
+---
+
+**We know a firm breaks even when $p=AC$, and the lowest part of the average cost curve is at the quantity where:**
+
+$$\begin{aligned}
+AC(q)&=MC(q)\\
+2q+100+\frac{200}{q}&=4q+100\\
+2q+\frac{200}{q}&=4q\\
+\frac{200}{q}&=2q\\
+200&=2q^2\\
+100&=q^2\\
+10&=q\\
+\end{aligned}$$
+
+**At an output of 0, the $MC$ or $AC$ is (using $MC)$:**
+
+$$\begin{aligned}
+MC(10) &= 4(10)+100\\
+MC(0)&=\$140\\
+\end{aligned}$$
+
+**The breakeven price is $140.**
+
+---
+
+e. Should it shut down production in the short run?
+
+---
+
+**We need to find the average variable cost function first, which is $AVC(q)=2q+100$, and set it equal to $MC$ to find the breakeven price:**
+
+$$\begin{aligned}
+AVC(q)&=MC(q)\\
+2q+100&=4q+100\\
+2q&=4q\\
+q&=0\\
+\end{aligned}$$
+
+**At an output of 0, the $MC$ or $AVC$ is (using $MC)$:**
+
+$$\begin{aligned}
+MC(0) &= 4(0)+100\\
+MC(0)&=\$100\\
+\end{aligned}$$
+
+**The shutdown price is $100.**
+
+**Since the profit-maximizing price it is currently charging is $124. above its' $100 shut down price, it should _not_ shut down production. It should keep producing in the short run.**
+
+---
+
+f. Calculate how much of the publisher's price is markup above cost.
+
+---
+
+**We'll use the Lerner index, which needs the profit maximizing price, and the marginal cost at the profit-maximizing quantity, which we need to find first:**
+
+$$\begin{aligned}
+MC(q)&=4q+100\\
+MC(2)&=4(2)+100\\
+MC(2)&=108\\
+\end{aligned}$$
+
+**Now plug this into the lefthand side of the Lerner index equation:**
+
+$$\begin{aligned}
+L&=\frac{p^*-MC(q^*)}{p^*}\\
+L&=\frac{124-108}{124}\\
+L&=\frac{16}{108}\\
+L&\approx 0.15\\
+\end{aligned}$$
+
+**About 15% of the price is markup above marginal cost (despite the fact the firm is still losing money!)**
+
+---
+
+g. Estimate the elasticity of demand for this book at the price you found in part a.
+
+---
+
+**We can simply find elasticity using the righthand side of the Lerner index equation:**
+
+$$\begin{aligned}
+L&=-\frac{1}{\epsilon}\\
+0.15&=-\frac{1}{\epsilon}\\
+0.15\epsilon&=-1\\
+\epsilon & \approx -6.67\\
+\end{aligned}$$
+
+**Demand is relatively elastic. For every 1% the price rises (falls), consumers will buy 6.67% less (more).**
+
+```{r, fig.height=5}
+ac_2=function(x){2*x+100+200/x}
+mc_2=function(x){4*x+100}
+avc_2=function(x){2*x+100}
+demand_2=function(x){140-8*x}
+mr_2=function(x){140-16*x}
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  geom_rect(xmin=0,xmax=2,ymin=124,ymax=204, fill="green", alpha=0.3)+
+  stat_function(fun=mc_2, geom="line", size=2, color = "red")+
+    geom_label(aes(x=6,y=mc_2(6)), color = "red", label=expression(MC(q)), size = 3)+
+  stat_function(fun=avc_2, geom="line", size=2, color = "brown")+
+    geom_label(aes(x=8,y=avc_2(8)), color = "brown", label=expression(AVC(q)), size = 3)+
+  stat_function(fun=ac_2, geom="line", size=2, color = "orange")+
+    geom_label(aes(x=3,y=ac_2(3)), color = "orange", label=expression(AC(q)), size = 3)+
+  stat_function(fun=demand_2, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=8,y=demand_2(8)), color = "blue", label="Demand", size = 3)+
+  stat_function(fun=mr_2, geom="line", size=2, color = "purple")+
+    geom_label(aes(x=8,y=mr_2(8)), color = "purple", label="MR(q)", size = 3)+
+  geom_hline(yintercept=140, size=1, linetype="dashed")+
+  geom_label(x=4,y=140, label="Break Even: $140.00", size =2, color="orange")+
+  geom_segment(x=2,xend=2,y=0,yend=204, size=1, linetype="dotted")+
+  geom_segment(x=0,xend=2,y=204,yend=204, size=1, linetype="dotted")+
+  geom_segment(x=0,xend=2,y=124,yend=124, size=1, linetype="dotted")+
+  geom_hline(yintercept=100, size=1, linetype="dashed")+
+  geom_label(x=8,y=100, label="Shut Down: $100.00", size =2, color="brown")+
+    scale_x_continuous(breaks=seq(0,10,1),
+                       limits=c(0,10),
+                       expand=c(0,0))+
+  scale_y_continuous(breaks=seq(0,220,20),
+                     limits=c(0,220),
+                     expand=c(0,0),
+                     labels=scales::dollar)+
+  
+  #geom_segment(x=0,xend=0,y=0,yend=23, color="red", size=5)+
+  #geom_segment(x=0,xend=5,y=23,yend=23, color="red", size=3.5)+
+  #stat_function(fun=mc, xlim=c(5,10), geom="line", size=3.5, color = "red")+
+   # geom_label(aes(x=2,y=23), color = "red", label="SUPPLY", size = 5)+
+  #scale_colour_manual("Curves", values = line_colors, guide=F)+
+  labs(x = "Hundreds of Books, q",
+       y = "Price, p")+
+  theme_light(base_size=14)
+```
+
+\clearpage 
+
+## Short Essay
+
+Please answer clearly and concisely (2-5 sentences is sufficient). If applicable, show all work and clearly label all graphs.
+
+14. Is price discrimination "good" or "bad" for society? Explain your reasoning.
+
+---
+
+**Bad: probably your natural reaction to hearing about "price discrimination"**
+
+- **It may cause (some) consumers to pay higher prices than they otherwise would pay if a single price was charged. In the limit, consumers may earn no consumer surplus.**
+
+- **There is a change in distribution, with wealth (surplus) being transferred from consumers to producers.**
+
+**Good**:
+- **Consumers *still* benefit from buying the product (otherwise they would not buy it!) A firm's goal is to create value (surplus) for consumers, and then try to capture (transfer) *some* (or, in the perfect case, all) of that surplus as profit.**
+
+- **Even a pure monopoly will act more competitively if it is able to price discriminate, compared to a monopoly that charges a single price. The price-discriminating monopolist will produce closer to the competitive amount of output, rather than reducing its output to where $MR=MC$. Since it is closer to the competitive outcome, this maximizes allocative efficiency by reducing deadweight loss. (See graph in question 11 for what a monopolist that _cannot_ price discriminate would do. If the monopolist _could_ price discriminate, it would produce closer to $q_c$ and reduce deadweight loss)**
+
+- **The hope of higher profits via price discrimination may allow a firm to take more risks, to innovate, and to spend more on research and development. Since all of these activities raise fixed costs, the hope of being able to earn more revenues to cover these higher fixed costs may make such activity profitable only if the firm can price discriminate when it comes time to sell its output.**
+
+\clearpage
+
+15. Based (only) on what we discussed about the efficiency of markets in class, outline a theory of when government intervention in the economy may be warranted.
+
+---
+
+**Markets are great when they:**
+
+1. **Are competitive: have many buyers and many sellers**
+2. **Allow prices to adjust so they can reach equilibrium**
+3. **Have no externalities**
+
+**Therefore, markets can fail in the presence of monopoly or monoposony power, high transactions costs (or policies that prevent prices from adjusting), and externalities. These are areas where there is a potential role for government intervention.**
+
+\clearpage
+
+16. When are markets efficient as a means of allocating resources? What are the benefits of using markets, and what specifically is the role of prices in coordinating this process?
+
+---
+
+**See above answer for _when_ markets are efficient.**
+
+**Prices are "signals wrapped in an incentive." Prices encode and spread information, as well as provide an incentive for buyers, sellers, and entrepreneurs to act on that information to reallocate resources to higher-valued uses. Prices also tap into tacit knowledge about opportunities, technologies, and constraints that local actors know, but are not able to articulate to others. Lastly, they economize on the knowledge necessary to those people in a place to act on that information. Millions of peopel need not be an expert on technology or geopolitics, they only need to know the _relative_ prices to adequately make economic decisions.**
